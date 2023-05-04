@@ -96,7 +96,7 @@ block page
 
     .fixed__bg
 
-    .technics
+    section.technics
         .container
             h2.technics__title.block__title Наша спецтехника
 
@@ -158,181 +158,47 @@ block page
                     +technics_item(item.imgUrl, item.name, item.price, item.offers)
 
 
+    section.about
+        .container
 
-    <section class="technics">
-        <div class="container">
-            <h2 class="technics__title block__title">Наша спецтехника</h2>
+            h2.about__title.block__title Главное о нас
 
-            <div class="technics__wrapper">
-                <div class="technics__item">
-                    <a href="#"></a>
+            .about__wrapper
+                .about__top.element-animation
+                    .about__light
+                        .about__first
+                            p.about__number 37
+                            p.about__text единиц строительной техники
+                            p.about__number 22
+                            p.about__text единицы автотехники
 
-                    <div class="technics__img">
-                        <img src="./images/technics/1.png" alt="" />
-                    </div>
+                        .about__second
+                            p У нас каждый заказчик найдет технику, подходящую для решения собственных задач. Экскаваторы, погрузчики, бульдозеры, самосвалы, строительства зданий, дорог, земляных работ — все это найдется в ассортименте спецтехники «БауАренда».
 
-                    <p class="technics__name">Бульдозеры</p>
+                    .about__dark
+                        h4.about__subtitle Взаимопонимание с клиентом
 
-                    <p class="technics__price">70 BYN в час</p>
+                        p.about__description Стремимся найти взаимопонимание с клиентом, ведь только так можно добиться высокого уровня оказания услуг.
 
-                    <p class="technics__offers">26 предложений</p>
-                </div>
+                .about__bottom.element-animation
+                    .about__dark
+                        h4.about__subtitle Работаем быстро
+                        p.about__description Работаем быстро, без промедлений. Ценим свое и чужое время. Вы сразу убедитесь в этом, обратившись к нам.
 
-                <div class="technics__item">
-                    <a href="#"></a>
-                    <div class="technics__img">
-                        <img src="./images/technics/2.png" alt="" />
-                    </div>
+                    .about__light
+                        .about__first
+                            h4 Работаем по всей Беларуси
+                            img(src="./images/about/about-map.svg" alt="map")
 
-                    <p class="technics__name">Буры</p>
+                        .about__second
+                            p С нами воспользоваться нужной спецтехникой могут клиенты по всей Беларуси, а не только жители столицы и ее пригородов. Звоните и заказывайте технику, нужную для решения Ваших задач, и мы доставим ее в любую точку страны.
 
-                    <p class="technics__price">от 120 BYN в час</p>
-
-                    <p class="technics__offers">4 предложений</p>
-                </div>
-
-                <div class="technics__item">
-                    <a href="#"></a>
-
-                    <div class="technics__img">
-                        <img src="./images/technics/3.png" alt="" />
-                    </div>
-
-                    <p class="technics__name">Мини техника</p>
-
-                    <p class="technics__price">от 50 BYN в час</p>
-
-                    <p class="technics__offers">34 предложений</p>
-                </div>
-
-                <div class="technics__item">
-                    <a href="#"></a>
-
-                    <div class="technics__img">
-                        <img src="./images/technics/4.png" alt="" />
-                    </div>
-
-                    <p class="technics__name">Самосвалы</p>
-
-                    <p class="technics__price">от 65 BYN в час</p>
-
-                    <p class="technics__offers">8 предложений</p>
-                </div>
-
-                <div class="technics__item">
-                    <a href="#"></a>
-
-                    <div class="technics__img">
-                        <img src="./images/technics/5.png" alt="" />
-                    </div>
-
-                    <p class="technics__name">Тралы и низкорамные площадки</p>
-
-                    <p class="technics__price">от 100 BYN в час</p>
-
-                    <p class="technics__offers">4 предложений</p>
-                </div>
-
-                <div class="technics__item">
-                    <a href="#"></a>
-
-                    <div class="technics__img">
-                        <img src="./images/technics/6.png" alt="" />
-                    </div>
-
-                    <p class="technics__name">Фронтальные погрузчики</p>
-
-                    <p class="technics__price">от 50 BYN в час</p>
-
-                    <p class="technics__offers">16 предложений</p>
-                </div>
-
-                <div class="technics__item">
-                    <a href="#"></a>
-
-                    <div class="technics__img">
-                        <img src="./images/technics/7.png" alt="" />
-                    </div>
-
-                    <p class="technics__name">Колесные экскаваторы</p>
-
-                    <p class="technics__price">от 60 BYN в час</p>
-
-                    <p class="technics__offers">40 предложений</p>
-                </div>
-
-                <div class="technics__item">
-                    <a href="#"></a>
-
-                    <div class="technics__img">
-                        <img src="./images/technics/8.png" alt="" />
-                    </div>
-
-                    <p class="technics__name">Экскаваторы-погрузчики</p>
-
-                    <p class="technics__price">от 70 BYN в час</p>
-
-                    <p class="technics__offers">36 предложений
+            a.about__link.btn__link.btn__yellow(href="#") Подробнее
 
 
 
 
-    <section class="about">
-        <div class="container">
-            <h2 class="about__title block__title">Главное о нас</h2>
 
-            <div class="about__wrapper">
-                <div class="about__top element-animation">
-                    <div class="about__light">
-                        <div class="about__first">
-                            <p class="about__number">37</p>
-
-                            <p class="about__text">единиц строительной техники</p>
-
-                            <p class="about__number">22</p>
-
-                            <p class="about__text">единиц автотехники</p>
-                        </div>
-
-                        <div class="about__second">
-                            <p>У нас каждый заказчик найдет технику, подходящую для решения собственных задач. Экскаваторы, погрузчики, бульдозеры, самосвалы, строительства зданий, дорог, земляных работ — все это найдется в ассортименте спецтехники «БауАренда».
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="about__dark">
-                        <h4 class="about__subtitle">Взаимопонимание с клиентом</h4>
-
-                        <p class="about__description"> Стремимся найти взаимопонимание с клиентом, ведь только так можно добиться высокого уровня оказания услуг.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="about__bottom element-animation">
-                    <div class="about__dark">
-                        <h4 class="about__subtitle">Работаем быстро</h4>
-
-                        <p class="about__description">Работаем быстро, без промедлений. Ценим свое и чужое время. Вы сразу убедитесь в этом, обратившись к нам.
-                        </p>
-                    </div>
-
-                    <div class="about__light">
-                        <div class="about__first">
-                            <h4>Работаем по всей Беларуси</h4>
-                            <img src="./images/about/about-map.svg" alt="map" />
-                        </div>
-
-                        <div class="about__second">
-                            <p>С нами воспользоваться нужной спецтехникой могут клиенты по всей Беларуси, а не только жители столицы и ее пригородов. Звоните и заказывайте технику, нужную для решения Ваших задач, и мы доставим ее в любую точку страны.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#" class="about__link btn__link btn__yellow">Подробнее</a>
-        </div>
-    </section>
 
     <section class="catalog">
         <div class="container">
