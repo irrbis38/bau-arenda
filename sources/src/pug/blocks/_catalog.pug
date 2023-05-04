@@ -1,0 +1,47 @@
+section.catalog
+    .container
+        h2.catalog__title.block__title Каталог техники
+
+        .catalog__nav
+            .catalog__search
+                input.catalog__input(type="text" placeholder="Поиск")
+                img.catalog__icon(src="./images/catalog/search.svg" alt="search")
+
+            .catalog__sort
+                span.catalog__sort-type Сортировать по
+                img.catalog__arrow(src="./images/catalog/arrow-down.svg" alt="")
+
+                .catalog__sort-list
+                    p.catalog__sort-item(data-type="popularity" data-text="По популярности") Популярности
+                    p.catalog__sort-item(data-type="fromMinToMax" data-text="По возрастанию") Возрастанию цены
+                    p.catalog__sort-item(data-type="fromMaxToMin" data-text="По убыванию") Убыванию цены
+
+        .catalog__categories-wrapper
+            ul.catalog__categories
+                -
+                    const catalog_list = [
+                        { name: 'Все', type: 'all' },
+                        { name: 'Экскаваторы-погрузчики', type: 'excavator' },
+                        { name: 'Бульдозеры', type: 'tipper' },
+                        { name: 'Гусеничный экскаватор', type: 'dozer' },
+                        { name: 'Погрузчик', type: 'loader' },
+                        { name: 'Фронтальный погрузчик', type: 'fLoader' },
+                        { name: 'Колесный экскаватор', type: 'wheelDigger' },
+                        { name: 'Тралы и низкорамные площадки', type: 'flail' },
+                        { name: 'Грунтовой каток', type: 'truck' },
+                        { name: 'Автокран', type: 'crane' },
+                        { name: 'Автогрейдер', type: 'grader' },
+                        { name: 'Телескопический погрузчик', type: 'telescopicLoader' },
+                        { name: 'Мини-техника', type: 'mini' },
+                        { name: 'Гидромолоты', type: 'hydraulicHammer' },
+                        { name: 'Ямобур (буровая техника)', type: 'drillingEquipment' },
+                        ];
+
+                each item in catalog_list
+                    +catalog_catogory(item.name, item.type)
+
+            .clearfix
+
+        .catalog__wrapper
+
+        button.catalog__more.btn__link.btn__grey Показать больше

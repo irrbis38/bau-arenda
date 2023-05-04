@@ -196,61 +196,44 @@ block page
             a.about__link.btn__link.btn__yellow(href="#") Подробнее
 
 
+    include ./blocks/_catalog.pug
 
 
 
+    //- <section class="catalog">
+    //-     <div class="container">
 
-    <section class="catalog">
-        <div class="container">
-            <h2 class="catalog__title block__title">Каталог техники</h2>
 
-            <div class="catalog__nav">
-                <div class="catalog__search">
-                    <input type="text" class="catalog__input" placeholder="Поиск" />
-                    <img src="./images/catalog/search.svg" alt="" class="catalog__icon" />
-                </div>
+    //-         <div class="catalog__categories-wrapper">
 
-                <div class="catalog__sort">
-                    <span class="catalog__sort-type" onpointerdown="return false" onselectstart="return false">Сортировать по</span>
-                    <img src="./images/catalog/arrow-down.svg" alt="" class="catalog__arrow" />
-                    <div class="catalog__sort-list">
-                        <p class="catalog__sort-item" data-type="popularity" data-text="По популярности">Популярности</p>
-                        <p class="catalog__sort-item" data-type="fromMinToMax"  data-text="По возрастанию">Возрастанию цены</p>
-                        <p class="catalog__sort-item" data-type="fromMaxToMin"  data-text="По убыванию">Убыванию цены</p>
-                    </div>
-                </div>
-            </div>
+    //-             <ul class="catalog__categories" onpointerdown="return false" onselectstart="return false">
+    //-                 <li class="catalog__category active" data-type="all">Все</li>
+    //-                 <li class="catalog__category" data-type="excavator">Экскаваторы-погрузчики</li>
+    //-                 <li class="catalog__category" data-type="tipper">Самосвалы</li>
+    //-                 <li class="catalog__category" data-type="dozer">Бульдозеры</li>
+    //-                 <li class="catalog__category" data-type="digger">Гусеничный экскаватор</li>
+    //-                 <li class="catalog__category" data-type="loader">Погрузчик</li>
+    //-                 <li class="catalog__category" data-type="fLoader">Фронтальный погрузчик</li>
+    //-                 <li class="catalog__category" data-type="wheelDigger">Колесный экскаватор</li>
+    //-                 <li class="catalog__category" data-type="flail">Тралы и низкорамные площадки</li>
+    //-                 <li class="catalog__category" data-type="truck">Грунтовой каток</li>
+    //-                 <li class="catalog__category" data-type="crane">Автокран</li>
+    //-                 <li class="catalog__category" data-type="grader">Автогрейдер</li>
+    //-                 <li class="catalog__category" data-type="telescopicLoader">Телескопический погрузчик</li>
+    //-                 <li class="catalog__category" data-type="mini">Мини-техника</li>
+    //-                 <li class="catalog__category" data-type="hydraulicHammer">Гидромолоты</li>
+    //-                 <li class="catalog__category" data-type="drillingEquipment">Ямобур (буровая техника)</li>
+    //-             </ul>
 
-            <div class="catalog__categories-wrapper">
+    //-             <div class="clearfix"></div>
 
-                <ul class="catalog__categories" onpointerdown="return false" onselectstart="return false">
-                    <li class="catalog__category active" data-type="all">Все</li>
-                    <li class="catalog__category" data-type="excavator">Экскаваторы-погрузчики</li>
-                    <li class="catalog__category" data-type="tipper">Самосвалы</li>
-                    <li class="catalog__category" data-type="dozer">Бульдозеры</li>
-                    <li class="catalog__category" data-type="digger">Гусеничный экскаватор</li>
-                    <li class="catalog__category" data-type="loader">Погрузчик</li>
-                    <li class="catalog__category" data-type="fLoader">Фронтальный погрузчик</li>
-                    <li class="catalog__category" data-type="wheelDigger">Колесный экскаватор</li>
-                    <li class="catalog__category" data-type="flail">Тралы и низкорамные площадки</li>
-                    <li class="catalog__category" data-type="truck">Грунтовой каток</li>
-                    <li class="catalog__category" data-type="crane">Автокран</li>
-                    <li class="catalog__category" data-type="grader">Автогрейдер</li>
-                    <li class="catalog__category" data-type="telescopicLoader">Телескопический погрузчик</li>
-                    <li class="catalog__category" data-type="mini">Мини-техника</li>
-                    <li class="catalog__category" data-type="hydraulicHammer">Гидромолоты</li>
-                    <li class="catalog__category" data-type="drillingEquipment">Ямобур (буровая техника)</li>
-                </ul>
+    //-         </div>
 
-                <div class="clearfix"></div>
+    //-         <div class="catalog__wrapper"></div>
 
-            </div>
-
-            <div class="catalog__wrapper"></div>
-
-            <button class="catalog__more btn__link btn__grey">Показать больше</button>
-        </div>
-    </section>
+    //-         <button class="catalog__more btn__link btn__grey">Показать больше</button>
+    //-     </div>
+    //- </section>
 
     <section class="feedback first__feedback">
         <div class="container">
