@@ -198,110 +198,56 @@ block page
 
     include ./blocks/_catalog.pug
 
+    section.feedback.first__feedback
+        .container
+            .feedback__wrapper
+                h2.feedback__title.block__title Обратная связь
+
+                p.feedback__subtitle Нет времени выбирать? Заполните заявку и сотрудник вас проконсультирует.
+
+                form.feedback__form#second(action="#" novalidate)
+                    p.error__message Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.
+                    .feedback__item
+                        input.feedback__name(type="text" placeholder="Имя*" name="name" minlength="2" required)
+
+                    .feedback__item
+                        input.feedback__phone(type="text" placeholder="Телефон*" name="phone" minlength="9" required)
+
+                    input.feedback__submit.btn__link.btn__yellow#second_btn(type="submit" value="Отправить" name="submit")
+
+    section.services
+        .container
+            h2.services__title.block__title Услуги, которые выполняет наша фирма
+
+            .services__wrapper
+
+                .services__item.services1.element-animation
+                    .services__item-bg
+                    .services__info
+                        h4.services__header Все услуги
+                        p.services__text Работаем не только в Минске, но и по всей Беларуси. К Вашим услугам 59 единиц полностью исправной техники.
+
+                .services__item.services2.element-animation
+                    .services__info
+                        h4.services__header Уборка и вывоз снега для утилизации
+                        p.services__text Компания «БауАренда» оказывает услуги по уборке снега в Минске круглосуточно и ежедневно.
+
+                .services__item.services3.element-animation
+                    .services__info
+                        h4.services__header Вывоз мусора со стройплощадки
+                        p.services__text Если вам нужно срочно вывезти строительный мусор компания «Бауаренда» поможет вам.
+
+                .services__item.services4.element-animation
+                    .services__info
+                        h4.services__header Вывоз и утилизация грунта
+                        p.services__text Мы предлагаем самую низкую стоимость вывоза грунта за куб в Минске и области при традиционно высоком качестве оказываемых услуг.
+
+                .services__item.services5.element-animation
+                    .services__info
+                        h4.services__header Продажа строительного песка
+                        p.services__text Компания «БауАренда» поставляет поставку сырья, для которого нет альтернативной замены.
 
 
-    //- <section class="catalog">
-    //-     <div class="container">
-
-
-    //-         <div class="catalog__categories-wrapper">
-
-    //-             <ul class="catalog__categories" onpointerdown="return false" onselectstart="return false">
-    //-                 <li class="catalog__category active" data-type="all">Все</li>
-    //-                 <li class="catalog__category" data-type="excavator">Экскаваторы-погрузчики</li>
-    //-                 <li class="catalog__category" data-type="tipper">Самосвалы</li>
-    //-                 <li class="catalog__category" data-type="dozer">Бульдозеры</li>
-    //-                 <li class="catalog__category" data-type="digger">Гусеничный экскаватор</li>
-    //-                 <li class="catalog__category" data-type="loader">Погрузчик</li>
-    //-                 <li class="catalog__category" data-type="fLoader">Фронтальный погрузчик</li>
-    //-                 <li class="catalog__category" data-type="wheelDigger">Колесный экскаватор</li>
-    //-                 <li class="catalog__category" data-type="flail">Тралы и низкорамные площадки</li>
-    //-                 <li class="catalog__category" data-type="truck">Грунтовой каток</li>
-    //-                 <li class="catalog__category" data-type="crane">Автокран</li>
-    //-                 <li class="catalog__category" data-type="grader">Автогрейдер</li>
-    //-                 <li class="catalog__category" data-type="telescopicLoader">Телескопический погрузчик</li>
-    //-                 <li class="catalog__category" data-type="mini">Мини-техника</li>
-    //-                 <li class="catalog__category" data-type="hydraulicHammer">Гидромолоты</li>
-    //-                 <li class="catalog__category" data-type="drillingEquipment">Ямобур (буровая техника)</li>
-    //-             </ul>
-
-    //-             <div class="clearfix"></div>
-
-    //-         </div>
-
-    //-         <div class="catalog__wrapper"></div>
-
-    //-         <button class="catalog__more btn__link btn__grey">Показать больше</button>
-    //-     </div>
-    //- </section>
-
-    <section class="feedback first__feedback">
-        <div class="container">
-            <div class="feedback__wrapper">
-
-                <h2 class="feedback__title block__title">Обратная связь</h2>
-
-                <p class="feedback__subtitle"> Нет времени выбирать? Заполните заявку и сотрудник вас проконсультирует.
-                </p>
-
-                <form action="#" class="feedback__form" id="second" novalidate>
-                    <p class="error__message">Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.</p>
-                    <div class="feedback__item">
-                        <input type="text" class="feedback__name" placeholder="Имя*" name="name" minlength="2" required/>
-                    </div>
-                    <div class="feedback__item">
-                        <input type="text" class="feedback__phone" placeholder="Телефон*"  name="phone" minlength="9" required/>
-                    </div>
-                    <input type="submit" class="feedback__submit btn__link btn__yellow" value="Отправить" name="submit" id="second_btn"/>
-                </form>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <h2 class="services__title block__title">Услуги, которые выполняет наша фирма</h2>
-
-            <div class="services__wrapper">
-                <div class="services__item services1 element-animation">
-                    <div class="services__item-bg"></div>
-                    <div class="services__info">
-                        <h4 class="services__header">Все услуги</h4>
-                        <p class="services__text">Работаем не только в Минске, но и по всей Беларуси. К Вашим услугам 59 единиц полностью исправной техники.</p>
-                    </div>
-                </div>
-
-                <div class="services__item services2 element-animation">
-                    <div class="services__info">
-                        <h4 class="services__header">Уборка и вывоз снега для утилизации</h4>
-                        <p class="services__text">Компания «БауАренда» оказывает услуги по уборке снега в Минске круглосуточно и ежедневно.</p>
-                    </div>
-                </div>
-
-                <div class="services__item services3 element-animation">
-                    <div class="services__info">
-                        <h4 class="services__header">Вывоз мусора со стройплощадки</h4>
-                        <p class="services__text">Если вам нужно срочно вывезти строительный мусор компания «Бауаренда» поможет вам.</p>
-                    </div>
-                </div>
-
-                <div class="services__item services4 element-animation">
-                    <div class="services__info">
-                        <h4 class="services__header">Вывоз и утилизация грунта</h4>
-                        <p class="services__text">Мы предлагаем самую низкую стоимость вывоза грунта за куб в Минске и области при традиционно высоком качестве оказываемых услуг.</p>
-                    </div>
-                </div>
-
-                <div class="services__item services5 element-animation">
-                    <div class="services__info">
-                        <h4 class="services__header">Продажа строительного песка</h4>
-                        <p class="services__text">Компания «БауАренда» поставляет поставку сырья, для которого нет альтернативной замены.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="advantage">
         <div class="container">
