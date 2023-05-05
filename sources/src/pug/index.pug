@@ -556,44 +556,36 @@ block page
                         .reviews__navButton
                         img(src="./images/intro/intro-next.svg" alt="next")
 
-        <div class="reviews__pagination">
-            <div class="reviews__dot"></div>
-            <div class="reviews__dot"></div>
-            <div class="reviews__dot"></div>
-        </div>
+        .reviews__pagination
+            .reviews__dot
+            .reviews__dot
+            .reviews__dot
 
-        <div class="reviews__fullscreen">
-            <div class="reviews__fullscreen-wrapper">
+        .reviews__fullscreen
+            .reviews__fullscreen-wrapper
 
-                <img class="reviews__fullscreen-img" src="./images/reviews/rev1.jpg" alt="скриншот отзыва">
+                img.reviews__fullscreen-img(src="./images/reviews/rev1.jpg" alt="скриншот отзыва")
 
-                <div class="reviews__fullscreen-closer">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.5 1.57617L22.5 22.5762M22.5 1.57617L1.5 22.5762" stroke="white" stroke-width="2"/>
-                    </svg>
-                </div>
+                .reviews__fullscreen-closer
+                    svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M1.5 1.57617L22.5 22.5762M22.5 1.57617L1.5 22.5762" stroke="white" stroke-width="2")
 
-            </div>
 
-        </div>
+    section.feedback.second__feedback
+        .container
 
-    </section>
+            h2.feedback__title.block__title Обратная связь
 
-    <section class="feedback second__feedback">
-        <div class="container">
-            <h2 class="feedback__title block__title">Обратная связь</h2>
+            p.feedback__subtitle Нет времени выбирать? Заполните заявку и сотрудник вас проконсультирует.
 
-            <p class="feedback__subtitle">Нет времени выбирать? Заполните заявку и сотрудник вас проконсультирует.</p>
+            form.feedback__form(action="#" novalidate)
+                p.error__message Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.
 
-            <form action="#" class="feedback__form" novalidate>
-                <p class="error__message">Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.</p>
-                <div class="feedback__item">
-                    <input type="text" class="feedback__name" placeholder="Имя*" name="name" required/>
-                </div>
-                <div class="feedback__item">
-                    <input type="text" class="feedback__phone" placeholder="Телефон*" name="phone" minlength="9" required/>
-                </div>
-                <input type="submit" class="feedback__submit btn__link btn__yellow" value="Отправить" name="submit" />
-            </form>
-        </div>
-    </section>
+                .feedback__item
+                    input.feedback__name(type="text" placeholder="Имя*" name="name" required)
+
+                .feedback__item
+                    input.feedback__phone(type="text" placeholder="Телефон*" name="phone" minlength="9" required)
+
+                input.feedback__submit.btn__link.btn__yellow(type="submit" value="Отправить" name="submit")
+
