@@ -88,10 +88,12 @@ input {
   line-height: 120%;
   color: #1f1e1d;
   transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .btn__yellow {
   background: #ffcb09;
+  cursor: pointer;
 
   &:hover {
     background: #ffd741;
@@ -99,6 +101,7 @@ input {
 }
 
 .btn__grey {
+  cursor: pointer;
   background: #efefef;
 
   &:hover {

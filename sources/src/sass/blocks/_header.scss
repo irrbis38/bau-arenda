@@ -63,18 +63,6 @@
   }
 }
 
-.header__company {
-  height: 341px;
-}
-
-.header__services {
-  height: 304px;
-}
-
-.header__cont {
-  height: 82px;
-}
-
 .dropdown_menu {
   position: absolute;
   top: 32px;
@@ -86,15 +74,9 @@
   box-shadow: 0px 4px 15px rgba(22, 37, 55, 0.1);
   border-radius: 0px 0px 10px 10px;
   cursor: default;
-  overflow: hidden;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
 
   &.dropdown__list {
     display: block;
@@ -110,22 +92,46 @@
   }
 }
 
-.dropdown_show::after {
-  content: "";
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 20px;
-  cursor: default;
+.dropdown_show {
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 20px;
+    cursor: default;
+  }
+
+  &:hover .header__list {
+    color: #ffcb09;
+
+    & path {
+      stroke: #ffcb09;
+    }
+  }
+
+  &.active {
+    &::after {
+      display: block;
+    }
+
+    .dropdown_menu {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .header__list svg {
+      transform: scaleY(-1);
+    }
+  }
 }
 
-.dropdown_show:hover .header__list {
-  color: #ffcb09;
-
-  & path {
-    stroke: #ffcb09;
+.header__list {
+  svg {
+    transition: all 0.2s linear;
   }
 }
 

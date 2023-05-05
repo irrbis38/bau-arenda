@@ -79,6 +79,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
 
   & img {
     position: absolute;
@@ -90,6 +94,7 @@
 }
 
 .intro__navButton {
+  display: inline-block;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -155,6 +160,12 @@
   justify-content: space-between;
 }
 
+.intro__stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .intro__posted,
 .intro__watches,
 .intro__likes {
@@ -162,6 +173,20 @@
   font-size: 14px;
   line-height: 120%;
   color: #acacac;
+}
+
+.intro__watches,
+.intro__likes {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 6px;
+  }
+}
+
+.intro__watches {
+  margin-right: 23px;
 }
 
 /*===== fixed styles =====*/
@@ -186,6 +211,9 @@
   margin-bottom: 13px;
   width: 54px;
   height: 54px;
+  border: none;
+  appearance: none;
+  background-color: transparent;
   cursor: pointer;
 
   & img {
@@ -198,6 +226,7 @@
 }
 
 .button-bg {
+  display: inline-block;
   width: 54px;
   height: 54px;
   background-color: #fff;
@@ -211,10 +240,13 @@
 }
 
 .fixed__showField {
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
 
   & circle {
     transition: fill 0.2s ease-in-out;
@@ -771,6 +803,7 @@
 
 .catalog__more {
   margin: 20px auto 0;
+  cursor: pointer;
 }
 
 /*===== first feedback styles =====*/
@@ -1618,13 +1651,16 @@
 .reviews__prev,
 .reviews__next {
   position: relative;
-  cursor: pointer;
   min-width: 40px;
   min-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
 
   & img {
     position: absolute;
@@ -1805,15 +1841,6 @@ form {
 /*===== max-width 1279px =====*/
 
 @media (max-width: 1279px) {
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  .block__title {
-    font-size: 30px;
-  }
-
   .header {
     display: flex;
     justify-content: space-between;
@@ -2544,6 +2571,10 @@ form {
     padding: 20px;
   }
 
+  .intro__news {
+    margin-bottom: 7px;
+  }
+
   .intro__category {
     font-size: 12px;
   }
@@ -2669,7 +2700,8 @@ form {
     }
 
     & img {
-      width: 42%;
+      // width: 28%;
+      width: 184px;
     }
   }
 
@@ -3133,9 +3165,9 @@ form {
     min-height: 228px;
   }
 
-  .about__first img {
-    width: 71%;
-  }
+  // .about__first img {
+  //   width: 71%;
+  // }
 
   .about__bottom .about__first {
     min-height: 282px;

@@ -6,25 +6,31 @@ window.onload = () => {
   // header menu
 
   const dropdownShow = document.querySelectorAll(".dropdown_show");
-  const dropdownMenu = document.querySelectorAll(".dropdown_menu");
+  // const dropdownMenu = document.querySelectorAll(".dropdown_menu");
 
   dropdownShow.forEach((el) => {
-    el.addEventListener("mouseenter", (e) => {
-      e.target.lastElementChild.classList.add("active");
+    el.addEventListener("mouseenter", () => {
+      el.classList.add("active");
     });
   });
 
-  window.addEventListener("mouseover", (e) => {
-    if (
-      !e.target.matches(".dropdown_show") &&
-      !e.target.matches(".dropdown_menu") &&
-      !e.target.matches(".header__link")
-    ) {
-      dropdownMenu.forEach((el) => {
-        el.classList.remove("active");
-      });
-    }
+  dropdownShow.forEach((el) => {
+    el.addEventListener("mouseleave", () => {
+      el.classList.remove("active");
+    });
   });
+
+  // window.addEventListener("mouseover", (e) => {
+  //   if (
+  //     !e.target.matches(".dropdown_show") &&
+  //     !e.target.matches(".dropdown_menu") &&
+  //     !e.target.matches(".header__link")
+  //   ) {
+  //     dropdownMenu.forEach((el) => {
+  //       el.classList.remove("active");
+  //     });
+  //   }
+  // });
 
   // intro slider
 
