@@ -615,6 +615,21 @@
     z-index: 2;
     cursor: default;
   }
+
+  &.active {
+    .catalog__sort-list {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .catalog__arrow {
+      transform: scaleY(-1);
+    }
+  }
+}
+
+.catalog__arrow {
+  transition: all 0.2s ease-out;
 }
 
 .catalog__sort-list {
@@ -633,11 +648,6 @@
   visibility: hidden;
   opacity: 0;
   transition: color 0.2s ease-in-out;
-
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 
 .catalog__sort-item {

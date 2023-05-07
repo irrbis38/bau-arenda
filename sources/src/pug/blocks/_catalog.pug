@@ -44,4 +44,252 @@ section.catalog
 
         .catalog__wrapper
 
+            -
+                const catalog_data = [
+                // Экскаваторы-погрузчики
+                    {
+                    imgName: "1.jpg",
+                    header: "Аренда экскаваторов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 150,
+                    popularity: 1,
+                    category: 'excavator'
+                    },
+                // Самосвалы
+                    {
+                    imgName: "2.jpg",
+                    header: "Аренда самосвалов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 150,
+                    popularity: 1,
+                    category: 'tipper'
+
+
+                    },
+                    {
+                    imgName: "2.jpg",
+                    header: "Аренда самосвалов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 2,
+                    category: 'tipper'
+
+                    },
+                // Бульдозеры
+                    {
+                    imgName: "3.jpg",
+                    header: "Аренда бульдозеров CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'dozer'
+
+                    },
+                // Гусеничные экскаваторы
+                    {
+                    imgName: "4.jpg",
+                    header: "Аренда экскаваторов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'digger'
+
+                    },
+                // Погрузчик
+                    {
+                    imgName: "5.jpg",
+                    header: "Аренда погрузчиков CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'loader'
+
+                    },
+                // Фронтальный погрузчик
+                    {
+                    imgName: "6.jpg",
+                    header: "Аренда фронтальных погрузчиков CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'frontalLoader'
+
+                    },
+                // Колесный экскаватор
+                    {
+                    imgName: "7.jpg",
+                    header: "Аренда колёсных экскаваторов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'wheelDigger'
+
+                    },
+                // Тралы и низкорамные площадки
+                    {
+                    imgName: "8.jpg",
+                    header: "Аренда тралов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'flail'
+
+                    },
+                // Грунтовой каток
+                    {
+                    imgName: "9.jpg",
+                    header: "Аренда грунтовых катков CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'truck'
+
+                    },
+                // Автокран
+                    {
+                    imgName: "10.jpg",
+                    header: "Аренда автокранов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'crane'
+
+                    },
+                // Автогрейдер
+                    {
+                    imgName: "11.jpg",
+                    header: "Аренда автогрейдеров CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'grader'
+
+                    },
+                // Телескопический погрузчик
+                    {
+                    imgName: "12.jpg",
+                    header: "Аренда телескопических погрузчиков CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'telescopicLoader'
+
+                    },
+                // Мини-техника
+                    {
+                    imgName: "13.jpg",
+                    header: "Аренда мини-техники CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'mini'
+
+                    },
+                // Гидромолоты
+                    {
+                    imgName: "14.jpg",
+                    header: "Аренда гидромолотов CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 1,
+                    category: 'hydraulicHammer'
+
+                    },
+                // Буровая техника
+                    {
+                    imgName: "15.jpg",
+                    header: "Аренда буровой техники CATERPILLAR",
+                    name1: "Объём фронтального ковша",
+                    value1: "1,3 м3",
+                    name2: "Высота выгрузки",
+                    value2: "2690 мм",
+                    name3: "Мощность двигателя",
+                    value3: "100 л.с.",
+                    price: 100,
+                    popularity: 2,
+                    category: 'drillingEquipment'
+
+                    },
+                ];
+
+            each item in catalog_data
+                +catalog_item(item.imgName, item.header, item.name1, item.value1, item.name2, item.value2, item.name3, item.value3, item.price)
+
+
+
         button.catalog__more.btn__link.btn__grey Показать больше

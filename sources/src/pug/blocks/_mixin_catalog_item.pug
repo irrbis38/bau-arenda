@@ -1,0 +1,28 @@
+mixin catalog_item(imgName, header, name1, value1, name2, value2, name3, value3, price)
+
+    .catalog__item
+        a.catalog__link(href="#")
+
+        .catalog__img
+            img(src="./images/catalog/" + imgName alt= header)
+
+        a.catalog__button(href="#") Подробнее
+
+        .catalog__info
+            h4.catalog__header= header
+
+            .catalog__options
+
+                .catalog__feature
+                    p.catalog__name= name1
+                    p.catalog__value= value1
+
+                .catalog__feature
+                    p.catalog__name= name2
+                    p.catalog__value= value2
+
+                .catalog__feature
+                    p.catalog__name= name3
+                    p.catalog__value= value3
+
+            p.catalog__price= price + 'BYN'
