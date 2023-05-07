@@ -5,32 +5,119 @@ document.addEventListener("DOMContentLoaded", function (event) {
 window.onload = () => {
   // header menu
 
-  const dropdownShow = document.querySelectorAll(".dropdown_show");
+  const dropdownShow = Array.from(document.querySelectorAll(".dropdown_show"));
   // const dropdownMenu = document.querySelectorAll(".dropdown_menu");
 
-  dropdownShow.forEach((el) => {
-    el.addEventListener("mouseenter", () => {
-      el.classList.add("active");
-    });
-  });
+  // BY HOVER
 
-  dropdownShow.forEach((el) => {
-    el.addEventListener("mouseleave", () => {
+  function showDropdownList(event) {
+    event.target.classList.add("active");
+  }
+
+  function hideDropdownList(event) {
+    event.target.classList.remove("active");
+  }
+
+  // add event-listeners to all dropdown menues in header
+  function addListenersToDropdownByHover() {
+    dropdownShow.forEach((el) => {
+      el.addEventListener("mouseenter", showDropdownList);
+    });
+
+    dropdownShow.forEach((el) => {
+      el.addEventListener("mouseleave", hideDropdownList);
+    });
+  }
+
+  // remove event-listeners to all dropdown menues in header
+
+  function removeListenersToDropdownByHover() {
+    dropdownShow.forEach((el) => {
+      el.removeEventListener("mouseenter", showDropdownList);
+    });
+
+    dropdownShow.forEach((el) => {
+      el.removeEventListener("mouseleave", hideDropdownList);
+    });
+  }
+
+  // END BY HOVER
+
+  // BY CLICK
+  function toggleDropdownList(event) {
+    event.preventDefault();
+
+    const currentLink = event.target;
+    const currentItem = currentLink.closest(".dropdown_show");
+    const currentDropdownMenu = currentItem.children[1];
+    if (currentItem.classList.contains("active")) {
+      dropdownShow.forEach((el) => el.classList.remove("active"));
+      currentDropdownMenu.style.maxHeight = 0;
+    } else {
+      dropdownShow.forEach((el) => el.classList.remove("active"));
+      currentItem.classList.add("active");
+      currentDropdownMenu.style.maxHeight =
+        currentDropdownMenu.scrollHeight + "px";
+    }
+  }
+
+  function addListenersToDropdownByClick() {
+    dropdownShow.forEach((el) => {
+      el.addEventListener("click", toggleDropdownList);
+    });
+  }
+
+  function removeListenersToDropdownByClick() {
+    dropdownShow.forEach((el) => {
+      el.removeEventListener("click", toggleDropdownList);
+    });
+  }
+  // END BY CLICK
+
+  // add or remove event-listeners depend window.innerWidth
+  if (window.innerWidth >= 1280) {
+    addListenersToDropdownByHover();
+  } else {
+    addListenersToDropdownByClick();
+  }
+
+  const mq1280 = window.matchMedia("(min-width: 1280px)");
+  const headerBurger = document.querySelector(".header__burger");
+  // const burgerNav = document.querySelector(".burger__nav");
+
+  mq1280.addEventListener("change", handleMQ);
+
+  function handleMQ(e) {
+    if (e.matches) {
+      addListenersToDropdownByHover();
+      removeListenersToDropdownByClick();
+      header.classList.remove("header__fixed");
+      headerBurger.classList.remove("active");
+      body.classList.remove("lock");
+
+      // set dropdown menu to default
+      dropdownShow.forEach((el) => {
+        el.classList.remove("active");
+        el.children[1].style.maxHeight = 0;
+      });
+    } else {
+      removeListenersToDropdownByHover();
+      addListenersToDropdownByClick();
+    }
+  }
+
+  // ===== БУРГЕР_МЕНЮ
+
+  headerBurger.addEventListener("click", () => {
+    header.classList.toggle("header__fixed");
+    headerBurger.classList.toggle("active");
+    body.classList.toggle("lock");
+    // set dropdown menu to default
+    dropdownShow.forEach((el) => {
       el.classList.remove("active");
+      el.children[1].style.maxHeight = 0;
     });
   });
-
-  // window.addEventListener("mouseover", (e) => {
-  //   if (
-  //     !e.target.matches(".dropdown_show") &&
-  //     !e.target.matches(".dropdown_menu") &&
-  //     !e.target.matches(".header__link")
-  //   ) {
-  //     dropdownMenu.forEach((el) => {
-  //       el.classList.remove("active");
-  //     });
-  //   }
-  // });
 
   // intro slider
 
@@ -139,13 +226,16 @@ window.onload = () => {
   const openHeaderSearch = () => {
     headerSearchFrame.classList.add("active");
     body.classList.add("lock");
-    if (headerBurger.classList.contains("active")) {
-      acc.forEach((el) => {
-        el.lastElementChild.style.maxHeight = null;
-      });
-    }
+    header.classList.remove("header__fixed");
     headerBurger.classList.remove("active");
-    burgerNav.classList.remove("active");
+    body.classList.remove("lock");
+
+    // set dropdown menu to default
+    dropdownShow.forEach((el) => {
+      el.classList.remove("active");
+      el.children[1].style.maxHeight = 0;
+    });
+
     window.addEventListener("keydown", (e) => {
       if (e.code === "Escape") {
         closeHeaderSearch();
@@ -158,7 +248,7 @@ window.onload = () => {
     body.classList.remove("lock");
     headerSearchInput.value = "";
     headerBurger.classList.remove("active");
-    burgerNav.classList.remove("active");
+    // burgerNav.classList.remove("active");
   };
 
   headerSearch.addEventListener("click", openHeaderSearch);
@@ -180,37 +270,6 @@ window.onload = () => {
           elem.classList.remove("active");
         });
         el.classList.add("active");
-      }
-    });
-  });
-
-  // ===== БУРГЕР_МЕНЮ
-
-  const headerBurger = document.querySelector(".header__burger");
-  const burgerNav = document.querySelector(".burger__nav");
-
-  headerBurger.addEventListener("click", () => {
-    if (headerBurger.classList.contains("active")) {
-      acc.forEach((el) => {
-        el.lastElementChild.style.maxHeight = null;
-      });
-    }
-    headerBurger.classList.toggle("active");
-    burgerNav.classList.toggle("active");
-    body.classList.toggle("lock");
-  });
-
-  // Аккордеон в бургер-меню
-
-  let acc = document.querySelectorAll(".acc");
-
-  acc.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      let panel = e.target.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
       }
     });
   });

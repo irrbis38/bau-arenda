@@ -1841,42 +1841,6 @@ form {
 /*===== max-width 1279px =====*/
 
 @media (max-width: 1279px) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 13px 20px;
-  }
-
-  .header .container {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .header__top,
-  .header__contacts {
-    display: none;
-  }
-
-  .header__logo {
-    width: 115px;
-    height: 24px;
-  }
-
-  .logo-big {
-    display: none;
-  }
-
-  .logo-small {
-    display: block;
-  }
-
-  .header__menu-small {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .intro {
     padding-top: 50px;
   }
