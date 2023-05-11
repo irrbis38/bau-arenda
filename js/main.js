@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initCatalog();
   }
 });
+const body = document.body;
 // INIT HEADER
 function initHeader() {
   // HEADER
