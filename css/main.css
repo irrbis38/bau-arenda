@@ -2201,6 +2201,7 @@ body {
 .catalog__sort {
   position: relative;
   width: 14%;
+  min-width: 150px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2356,13 +2357,13 @@ body {
 }
 .catalog__img {
   width: 100%;
-  max-height: 135px;
+  height: 135px;
   border-radius: 10px 10px 0 0
 }
 .catalog__img img {
   display: block;
   width: 100%;
-  max-height: 135px;
+  height: 135px;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
