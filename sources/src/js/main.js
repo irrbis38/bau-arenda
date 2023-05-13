@@ -427,6 +427,7 @@ function initCatalog() {
   selectCategory();
   showCatalogSortList();
   hideCatalogSortList();
+  selectSortOptions();
 
   // select catalog category
   function selectCategory() {
@@ -465,4 +466,22 @@ function initCatalog() {
       catalog_sort.classList.remove("active")
     )
   );
+
+  // select sort-item
+  function selectSortOptions() {
+    const sortOptions = document.querySelectorAll(".catalog__sort-item");
+
+    sortOptions.forEach((option) =>
+      option.addEventListener("click", handleSelectSortOptions)
+    );
+  }
+
+  function handleSelectSortOptions(event) {
+    const sort_type = document.querySelector(".catalog__sort-type");
+    const text = event.target.dataset.text;
+    const type = event.target.dataset.type;
+    if (sort_type.textContent !== text) {
+      sort_type.textContent = text;
+    }
+  }
 }

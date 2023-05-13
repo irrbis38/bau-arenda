@@ -593,6 +593,7 @@
 .catalog__sort {
   position: relative;
   width: 14%;
+  min-width: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -756,13 +757,13 @@
 
 .catalog__img {
   width: 100%;
-  max-height: 135px;
+  height: 135px;
   border-radius: 10px 10px 0 0;
 
   & img {
     display: block;
     width: 100%;
-    max-height: 135px;
+    height: 135px;
     object-fit: cover;
     object-position: center;
     border-radius: 10px 10px 0 0;
