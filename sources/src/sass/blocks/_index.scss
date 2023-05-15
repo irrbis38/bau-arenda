@@ -849,6 +849,10 @@
 .catalog__more {
   margin: 20px auto 0;
   cursor: pointer;
+
+  &.hidden {
+    display: none;
+  }
 }
 
 /*===== first feedback styles =====*/
