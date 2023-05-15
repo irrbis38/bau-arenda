@@ -812,6 +812,40 @@
   color: #1f1e1d;
 }
 
+.catalog__nofound {
+  display: none;
+  padding: 100px 0;
+
+  &.active {
+    display: block;
+  }
+}
+
+.catalog__sorry {
+  max-width: 375px;
+  margin: 0 auto 20px;
+  font-family: var(--font_main);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: #1f1e1d;
+}
+
+.catalog__recommendation {
+  font-family: var(--font_main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  text-align: center;
+  color: #4d5051;
+
+  a {
+    color: #ffcb09;
+  }
+}
+
 .catalog__more {
   margin: 20px auto 0;
   cursor: pointer;
