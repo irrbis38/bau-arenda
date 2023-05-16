@@ -279,7 +279,7 @@ function initAnimationShowByScroll() {
 function initIndexPage() {
   // intro slider
 
-  const introSlider = new Swiper(".swiper", {
+  const introSlider = new Swiper(".intro__slider", {
     loop: true,
     navigation: {
       nextEl: ".intro__next",
@@ -289,8 +289,9 @@ function initIndexPage() {
 
   // reviews slider
 
-  const reviewsSlider = new Swiper(".swiper", {
-    loop: true,
+  const reviewsSlider = new Swiper(".reviews__slider", {
+    loop: false,
+    spaceBetween: 20,
     navigation: {
       nextEl: ".reviews__next",
       prevEl: ".reviews__prev",
