@@ -1158,7 +1158,11 @@
   color: #1f1e1d;
   transition: var(--transition);
 
-  &:hover {
+  a {
+    transition: var(--transition);
+  }
+
+  a:hover {
     color: #ffcb09;
   }
 }
