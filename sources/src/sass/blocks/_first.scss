@@ -94,12 +94,15 @@
 }
 
 .first__img {
-  width: 512px;
   img {
     display: block;
     width: 100%;
     height: auto;
   }
+}
+
+.our-partners__page .first__img {
+  width: 512px;
 
   @include md {
     margin-left: -56px;
@@ -107,5 +110,19 @@
 
   @include r(991px) {
     display: none;
+  }
+}
+
+// partners block styles
+
+.partners {
+  padding: 150px 0;
+}
+
+.partners__title {
+  margin-bottom: 30px;
+
+  @include sm {
+    margin-bottom: 20px;
   }
 }
