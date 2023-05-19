@@ -197,25 +197,253 @@ block page
 
             a.about__link.btn__link.btn__yellow(href="#") Подробнее
 
+    -
+        const catalog_data = [
+        // Экскаваторы-погрузчики
+            {
+            imgName: "1.jpg",
+            header: "Аренда экскаваторов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 150,
+            popularity: 1,
+            category: 'excavator'
+            },
+        // Самосвалы
+            {
+            imgName: "2.jpg",
+            header: "Аренда самосвалов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 150,
+            popularity: 1,
+            category: 'tipper'
 
-    include ./blocks/_catalog.pug
 
-    section.feedback.first__feedback
-        .container
-            .feedback__wrapper
-                h2.feedback__title.block__title Обратная связь
+            },
+            {
+            imgName: "2.jpg",
+            header: "Аренда самосвалов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 2,
+            category: 'tipper'
 
-                p.feedback__subtitle Нет времени выбирать? Заполните заявку и сотрудник вас проконсультирует.
+            },
+        // Бульдозеры
+            {
+            imgName: "3.jpg",
+            header: "Аренда бульдозеров CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'dozer'
 
-                form.feedback__form#second(action="#" novalidate)
-                    p.error__message Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.
-                    .feedback__item
-                        input.feedback__name(type="text" placeholder="Имя*" name="name" minlength="2" required)
+            },
+        // Гусеничные экскаваторы
+            {
+            imgName: "4.jpg",
+            header: "Аренда экскаваторов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'digger'
 
-                    .feedback__item
-                        input.feedback__phone(type="text" placeholder="Телефон*" name="phone" minlength="9" required)
+            },
+        // Погрузчик
+            {
+            imgName: "5.jpg",
+            header: "Аренда погрузчиков CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'loader'
 
-                    input.feedback__submit.btn__link.btn__yellow#second_btn(type="submit" value="Отправить" name="submit")
+            },
+        // Фронтальный погрузчик
+            {
+            imgName: "6.jpg",
+            header: "Аренда фронтальных погрузчиков CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'frontalLoader'
+
+            },
+        // Колесный экскаватор
+            {
+            imgName: "7.jpg",
+            header: "Аренда колёсных экскаваторов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'wheelDigger'
+
+            },
+        // Тралы и низкорамные площадки
+            {
+            imgName: "8.jpg",
+            header: "Аренда тралов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'flail'
+
+            },
+        // Грунтовой каток
+            {
+            imgName: "9.jpg",
+            header: "Аренда грунтовых катков CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'truck'
+
+            },
+        // Автокран
+            {
+            imgName: "10.jpg",
+            header: "Аренда автокранов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'crane'
+
+            },
+        // Автогрейдер
+            {
+            imgName: "11.jpg",
+            header: "Аренда автогрейдеров CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'grader'
+
+            },
+        // Телескопический погрузчик
+            {
+            imgName: "12.jpg",
+            header: "Аренда телескопических погрузчиков CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'telescopicLoader'
+
+            },
+        // Мини-техника
+            {
+            imgName: "13.jpg",
+            header: "Аренда мини-техники CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'mini'
+
+            },
+        // Гидромолоты
+            {
+            imgName: "14.jpg",
+            header: "Аренда гидромолотов CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 1,
+            category: 'hydraulicHammer'
+
+            },
+        // Буровая техника
+            {
+            imgName: "15.jpg",
+            header: "Аренда буровой техники CATERPILLAR",
+            name1: "Объём фронтального ковша",
+            value1: "1,3 м3",
+            name2: "Высота выгрузки",
+            value2: "2690 мм",
+            name3: "Мощность двигателя",
+            value3: "100 л.с.",
+            price: 100,
+            popularity: 2,
+            category: 'drillingEquipment'
+
+            },
+        ];
+
+
+    +catalog(catalog_data)
+
+    include ./blocks/_feedback_narrow
 
     section.services
         .container
@@ -536,63 +764,10 @@ block page
 
 
 
-    section.reviews
-        .container
-            h2.reviews__title.block__title Отзывы
+    include ./blocks/_reviews
 
-            .reviews__slider-container
-                .reviews__slider.swiper
-                    .reviews__wrapper.swiper-wrapper
-
-                        -
-                            const reviews_list = [
-                                { imageUrl: './images/reviews/rev1.jpg', header: 'Строительная компания АгриПО, директор Ореховский В.В.', text: 'Выражаем признательность за сотрудничество. Компания «БауАренда» предоставила в аренду тралы для транспортировки леса. Техника полностью отрабатывает потраченные деньги. Никаких «случайностей» в виде выхода из строя не произошло. По организации работы тоже все замечательно. Подписали договор, и уже на следующее утро тралы были в нашем распоряжении. Рекомендуем ООО «БауАренда» как надежного контрагента!' },
-                                { imageUrl: './images/reviews/rev1.jpg', header: 'Строительная компания АгриПО, директор Ореховский В.В.', text: 'Выражаем признательность за сотрудничество. Компания «БауАренда» предоставила в аренду тралы для транспортировки леса. Техника полностью отрабатывает потраченные деньги. Никаких «случайностей» в виде выхода из строя не произошло. По организации работы тоже все замечательно. Подписали договор, и уже на следующее утро тралы были в нашем распоряжении. Рекомендуем ООО «БауАренда» как надежного контрагента!' }
-
-                            ];
-
-                        each item in reviews_list
-                            +reviews_item(item.imageUrl, item.header, item.text)
-
-                .reviews__nav
-                    button.reviews__prev
-                        span.reviews__navButton
-                        img(src="./images/intro/intro-prev.svg" alt="prev")
-
-                    button.reviews__next
-                        span.reviews__navButton
-                        img(src="./images/intro/intro-next.svg" alt="next")
-
-        .reviews__pagination
-            .reviews__dot
-            .reviews__dot
-            .reviews__dot
-
-        .reviews__fullscreen
-            .reviews__fullscreen-wrapper
-
-                img.reviews__fullscreen-img(src="./images/reviews/rev1.jpg" alt="скриншот отзыва")
-
-                .reviews__fullscreen-closer
-                    svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-                        path(d="M1.5 1.57617L22.5 22.5762M22.5 1.57617L1.5 22.5762" stroke="white" stroke-width="2")
+    include ./blocks/_feedback_full_width
 
 
-    section.feedback.second__feedback
-        .container
 
-            h2.feedback__title.block__title Обратная связь
-
-            p.feedback__subtitle Нет времени выбирать? Заполните заявку и сотрудник вас проконсультирует.
-
-            form.feedback__form(action="#" novalidate)
-                p.error__message Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.
-
-                .feedback__item
-                    input.feedback__name(type="text" placeholder="Имя*" name="name" required)
-
-                .feedback__item
-                    input.feedback__phone(type="text" placeholder="Телефон*" name="phone" minlength="9" required)
-
-                input.feedback__submit.btn__link.btn__yellow(type="submit" value="Отправить" name="submit")
 

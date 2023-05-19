@@ -1,0 +1,17 @@
+section.feedback.second__feedback
+    .container
+
+        h2.feedback__title.block__title Обратная связь
+
+        p.feedback__subtitle Нет времени выбирать? Заполните заявку и сотрудник вас проконсультирует.
+
+        form.feedback__form(action="#" novalidate)
+            p.error__message Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.
+
+            .feedback__item
+                input.feedback__name(type="text" placeholder="Имя*" name="name" required)
+
+            .feedback__item
+                input.feedback__phone(type="text" placeholder="Телефон*" name="phone" minlength="9" required)
+
+            input.feedback__submit.btn__link.btn__yellow(type="submit" value="Отправить" name="submit")

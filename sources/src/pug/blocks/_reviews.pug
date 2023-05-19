@@ -1,0 +1,40 @@
+section.reviews
+    .container
+        h2.reviews__title.block__title Отзывы
+
+        .reviews__slider-container
+            .reviews__slider.swiper
+                .reviews__wrapper.swiper-wrapper
+
+                    -
+                        const reviews_list = [
+                            { imageUrl: './images/reviews/rev1.jpg', header: 'Строительная компания АгриПО, директор Ореховский В.В.', text: 'Выражаем признательность за сотрудничество. Компания «БауАренда» предоставила в аренду тралы для транспортировки леса. Техника полностью отрабатывает потраченные деньги. Никаких «случайностей» в виде выхода из строя не произошло. По организации работы тоже все замечательно. Подписали договор, и уже на следующее утро тралы были в нашем распоряжении. Рекомендуем ООО «БауАренда» как надежного контрагента!' },
+                            { imageUrl: './images/reviews/rev1.jpg', header: 'Строительная компания АгриПО, директор Ореховский В.В.', text: 'Выражаем признательность за сотрудничество. Компания «БауАренда» предоставила в аренду тралы для транспортировки леса. Техника полностью отрабатывает потраченные деньги. Никаких «случайностей» в виде выхода из строя не произошло. По организации работы тоже все замечательно. Подписали договор, и уже на следующее утро тралы были в нашем распоряжении. Рекомендуем ООО «БауАренда» как надежного контрагента!' }
+
+                        ];
+
+                    each item in reviews_list
+                        +reviews_item(item.imageUrl, item.header, item.text)
+
+            .reviews__nav
+                button.reviews__prev
+                    span.reviews__navButton
+                    img(src="./images/intro/intro-prev.svg" alt="prev")
+
+                button.reviews__next
+                    span.reviews__navButton
+                    img(src="./images/intro/intro-next.svg" alt="next")
+
+    .reviews__pagination
+        .reviews__dot
+        .reviews__dot
+        .reviews__dot
+
+    .reviews__fullscreen
+        .reviews__fullscreen-wrapper
+
+            img.reviews__fullscreen-img(src="./images/reviews/rev1.jpg" alt="скриншот отзыва")
+
+            .reviews__fullscreen-closer
+                svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M1.5 1.57617L22.5 22.5762M22.5 1.57617L1.5 22.5762" stroke="white" stroke-width="2")
