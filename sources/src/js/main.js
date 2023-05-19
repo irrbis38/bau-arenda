@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   initHeader();
   initHeaderSearch();
-  initToTopButton();
   initToggleFeedbackField();
   initAnimationShowByScroll();
 
-  const index__page = document.querySelector(".index__page");
-  if (index__page) {
+  const index_page = document.querySelector(".index__page");
+  if (index_page) {
+    const intro = document.querySelector(".intro");
+
     initIndexPage();
+    initToTopButton(intro);
+  }
+
+  const our_partners_page = document.querySelector(".our-partners__page");
+  if (our_partners_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
   }
 });
 
@@ -198,15 +206,13 @@ function initHeaderSearch() {
 }
 
 // INIT TO TOP BUTTOP
-function initToTopButton() {
+function initToTopButton(first_block) {
   // to top button
-
   const fixedBlock = document.querySelector(".fixed");
   const toTopButton = document.querySelector(".fixed__toTop");
   const header = document.querySelector(".header");
-  const intro = document.querySelector(".intro");
 
-  let startHeight = header.offsetHeight + intro.offsetHeight;
+  let startHeight = header.offsetHeight + first_block.offsetHeight;
 
   window.addEventListener("scroll", function () {
     if (this.scrollY > startHeight) {
