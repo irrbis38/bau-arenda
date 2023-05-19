@@ -6,19 +6,23 @@
     @content
 
 @mixin md
-  @media (max-width: 1280px)
+  @media (max-width: 1279px)
     @content
 
 @mixin sm
-  @media (max-width: 1024px)
+  @media (max-width: 1023px)
     @content
 
 @mixin xs
-  @media (max-width: 768px)
+  @media (max-width: 767px)
     @content
 
 @mixin xxs
-  @media (max-width: 576px)
+  @media (max-width: 575px)
+    @content
+
+@mixin xxxs
+  @media (max-width: 479px)
     @content
 
 @mixin font-face($font-name,$font-file)
