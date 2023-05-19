@@ -23,6 +23,26 @@ block page
         .container
             h2.partners__title.block__title Узнайте больше о партнерах компании «БауАренда»
 
+            .partners__wrapper
+
+                -
+                    const partners_logo = [
+                        '01.svg',
+                        '02.svg',
+                        '03.svg',
+                        '04.svg',
+                        '05.svg',
+                        '06.svg',
+                        '07.svg',
+                        '08.svg',
+                        '09.svg',
+                        '10.svg',
+                        '11.svg',
+                        '01.svg'
+                    ]
+
+                each logo in partners_logo
+                    +partners_item(logo)
 
     include ./blocks/_feedback_narrow
 
