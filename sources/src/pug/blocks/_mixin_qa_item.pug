@@ -1,0 +1,17 @@
+mixin qa_item(title, first_text, list, last_text)
+
+    .qa__item
+        h3.qa__heading= title
+            svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+
+        .qa__info
+            p.qa__text= first_text
+
+            if list
+                ul.qa__list
+                    each item in list
+                        li= item
+
+            if last_text
+                p.qa__text= last_text

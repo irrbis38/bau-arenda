@@ -3,7 +3,7 @@ block head
     title БауАренда - аренда строительной техники
 block page
 
-    section.first.our-partners__page
+    section.first.qa__page
         .container
             .first__wrapper
                 .first__info
@@ -102,8 +102,8 @@ block page
                         },
                     ]
 
-                //- each logo in partners_logo
-                //-     +partners_item(logo)
+                each item in qa_data
+                    +qa_item(item.title, item.first_text, item.list, item.last_text)
 
 
     include ./blocks/_feedback_narrow

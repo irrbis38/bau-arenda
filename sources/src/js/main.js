@@ -23,6 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsSlider();
     initForms();
   }
+
+  // init qa page
+  const qa_page = document.querySelector(".qa__page");
+  if (qa_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initForms();
+  }
 });
 
 const body = document.body;
