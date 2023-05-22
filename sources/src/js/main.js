@@ -66,7 +66,7 @@ function initHeader() {
   // DROPDOWN BY CLICK
 
   function toggleDropdownList(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     const currentLink = event.target;
     const currentItem = currentLink.closest(".dropdown_show");
