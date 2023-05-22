@@ -4,18 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
   initToggleFeedbackField();
   initAnimationShowByScroll();
 
+  // init index page
   const index_page = document.querySelector(".index__page");
   if (index_page) {
     const intro = document.querySelector(".intro");
 
-    initIndexPage();
+    initIndexPageIntroSlider();
     initToTopButton(intro);
+    initReviewsSlider();
+    initForms();
   }
 
+  // init our_partners page
   const our_partners_page = document.querySelector(".our-partners__page");
   if (our_partners_page) {
     const first = document.querySelector(".first");
     initToTopButton(first);
+    initReviewsSlider();
+    initForms();
   }
 });
 
@@ -281,10 +287,8 @@ function initAnimationShowByScroll() {
   }
 }
 
-// INIT INDEX PAGE
-function initIndexPage() {
-  // intro slider
-
+// intro slider
+function initIndexPageIntroSlider() {
   const introSlider = new Swiper(".intro__slider", {
     loop: true,
     navigation: {
@@ -292,9 +296,10 @@ function initIndexPage() {
       prevEl: ".intro__prev",
     },
   });
+}
 
+function initReviewsSlider() {
   // reviews slider
-
   const reviewsSlider = new Swiper(".reviews__slider", {
     loop: false,
     spaceBetween: 20,
@@ -345,7 +350,9 @@ function initIndexPage() {
       body.classList.remove("lock");
     }
   });
+}
 
+function initForms() {
   // ===== ФОРМЫ
 
   // Отправка форм, расположеных на странице
