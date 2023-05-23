@@ -113,6 +113,28 @@
   }
 }
 
+.qa__page {
+  .first__wrapper {
+    gap: 0 40px;
+
+    @include md {
+      gap: 0;
+    }
+  }
+
+  .first__img {
+    width: 644px;
+
+    @include md {
+      width: 506px;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}
+
 .our-clients__page {
   .first__wrapper {
     gap: 0 77px;
