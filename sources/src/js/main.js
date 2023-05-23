@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initIndexPageIntroSlider();
     initToTopButton(intro);
     initReviewsSlider();
+    initReviewsFullScreen();
     initForms();
   }
 
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const first = document.querySelector(".first");
     initToTopButton(first);
     initReviewsSlider();
+    initReviewsFullScreen();
     initForms();
   }
 
@@ -30,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const first = document.querySelector(".first");
     initToTopButton(first);
     initReviewsSlider();
+    initReviewsFullScreen();
     initForms();
     initQAaccordion();
   }
@@ -40,6 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const first = document.querySelector(".first");
     initToTopButton(first);
     initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init reviews page
+  const reviews_page = document.querySelector(".reviews__page");
+  if (reviews_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsFullScreen();
     initForms();
   }
 });
@@ -334,7 +347,9 @@ function initReviewsSlider() {
       clickable: "true",
     },
   });
+}
 
+function initReviewsFullScreen() {
   // скриншот отзыва на весь экран
 
   const reviewsImages = document.querySelectorAll(".reviews__preview");
