@@ -119,6 +119,10 @@
   font-size: 14px;
   line-height: 170%;
   text-align: center;
+
+  @include xs {
+    font-size: 12px;
+  }
 }
 
 .partners__link {

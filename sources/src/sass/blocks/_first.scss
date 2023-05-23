@@ -112,3 +112,25 @@
     display: none;
   }
 }
+
+.our-clients__page {
+  .first__wrapper {
+    gap: 0 77px;
+
+    @include md {
+      gap: 0 43px;
+    }
+  }
+
+  .first__img {
+    width: 569px;
+
+    @include md {
+      width: 489px;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}
