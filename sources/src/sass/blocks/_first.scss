@@ -156,3 +156,25 @@
     }
   }
 }
+
+.reviews__page {
+  .first__wrapper {
+    gap: 0 89px;
+
+    @include md {
+      gap: 0 28px;
+    }
+  }
+
+  .first__img {
+    width: 544px;
+
+    @include md {
+      width: 428px;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}

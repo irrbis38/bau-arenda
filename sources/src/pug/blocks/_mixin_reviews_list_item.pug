@@ -1,0 +1,10 @@
+mixin reviews_list_item(imageUrl, header, text)
+
+    .reviews__item.swiper-slide
+        .reviews__preview
+            .reviews__img
+                img(src= imageUrl alt="отзыв")
+
+        .reviews__info
+            h4.reviews__header= header
+            p.reviews__text= text
