@@ -33,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
     initForms();
     initQAaccordion();
   }
+
+  // init our_clients page
+  const our_clients_page = document.querySelector(".our-clients__page");
+  if (our_clients_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initForms();
+  }
 });
 
 const body = document.body;
