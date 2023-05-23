@@ -49,6 +49,28 @@
   }
 }
 
+@keyframes logoHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
 .partners__item {
   position: relative;
   overflow: hidden;
@@ -62,7 +84,8 @@
   transition: all 0.2s ease-out;
 
   .partners__item:hover & {
-    transform: scale(1.03);
+    // transform: scale(1.03);
+    animation: logoHover 0.4s ease-out forwards;
   }
 }
 
@@ -84,9 +107,10 @@
   transition: all 0.4s ease-out;
 
   .partners__item:hover & {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
+    animation: textFadeIn 0.3s ease-out 0.3s forwards;
+    // opacity: 1;
+    // visibility: visible;
+    // pointer-events: all;
   }
 }
 
