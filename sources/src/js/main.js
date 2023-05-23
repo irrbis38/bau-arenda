@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initToTopButton(first);
     initReviewsSlider();
     initForms();
+    initQAaccordion();
   }
 });
 
@@ -434,4 +435,40 @@ function initForms() {
 
   feedbackNameAll.forEach(removeOnFocus);
   feedbackPhoneAll.forEach(removeOnFocus);
+}
+
+// question/answer accordion
+
+function initQAaccordion() {
+  const qa_items = document.querySelectorAll(".qa__item");
+  const qa_headings = document.querySelectorAll(".qa__heading");
+
+  qa_headings.forEach((item) =>
+    item.addEventListener("click", handleAccordionClick)
+  );
+
+  function handleAccordionClick(e) {
+    const target = e.target;
+    const qa_item = target.closest(".qa__item");
+    const qa_info = qa_item.children[1];
+    const isActive = qa_item.classList.contains("active");
+    if (isActive) {
+      qa_item.classList.remove("active");
+      qa_info.style.maxHeight = null;
+    } else {
+      qa_items.forEach((item) => {
+        item.classList.remove("active");
+        item.children[1].style.maxHeight = null;
+      });
+      qa_item.classList.add("active");
+      qa_info.style.maxHeight = qa_info.scrollHeight + "px";
+    }
+
+    window.addEventListener("resize", () => {
+      qa_items.forEach((item) => {
+        item.classList.remove("active");
+        item.children[1].style.maxHeight = null;
+      });
+    });
+  }
 }

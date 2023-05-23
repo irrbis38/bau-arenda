@@ -69,12 +69,19 @@
   @include xxs {
     font-size: 12px;
   }
+
+  .qa__item.active & {
+    svg {
+      transform: scaleY(-1);
+    }
+  }
 }
 
-// .qa__info {
-//   max-height: 0;
-//   overflow: hidden;
-// }
+.qa__info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
 
 .qa__text,
 .qa__list {
