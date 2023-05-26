@@ -1,21 +1,21 @@
-.pagination {
+ul.page-numbers {
   max-width: 331px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 0 5px;
-  margin: 0 auto 150px;
+  margin: 50px auto 0;
 
   @include md {
-    margin-bottom: 100px;
+    margin-top: 40px;
   }
 
   @include xs {
-    margin-bottom: 60px;
+    margin-top: 30px;
   }
 }
 
-.pagination__item {
+li .page-numbers {
   width: 37px;
   height: 37px;
   display: flex;
@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.pagination__interactive {
+li a.page-numbers {
   border-radius: 10px;
   cursor: pointer;
   border: 1px solid transparent;
@@ -33,11 +33,46 @@
   line-height: 120%;
   color: #1f1e1d;
 
-  &.active {
-    background: #ffcb09;
+  &:hover {
+    border-color: #ffcb09;
   }
+}
+
+li .page-numbers.current {
+  border-radius: 10px;
+  background: #ffcb09;
+}
+
+li .page-numbers.prev,
+li .page-numbers.next {
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease-out;
+  cursor: pointer;
 
   &:hover {
     border-color: #ffcb09;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+li .page-numbers.prev::after {
+  width: 9px;
+  height: 12px;
+  background: url("./../images/intro/intro-prev.svg") center / contain no-repeat;
+}
+
+li .page-numbers.next::after {
+  width: 9px;
+  height: 12px;
+  background: url("./../images/intro/intro-next.svg") center / contain no-repeat;
 }

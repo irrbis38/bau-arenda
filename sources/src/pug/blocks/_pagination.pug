@@ -1,12 +1,18 @@
-.pagination
-    .pagination__item.pagination__interactive
-        img(src='./images/intro/intro-prev.svg' alt='prev')
-    .pagination__item.pagination__interactive.active 1
-    .pagination__item.pagination__interactive 2
-    .pagination__item.pagination__interactive 3
-    .pagination__item.pagination__interactive 4
-    .pagination__item ...
-    .pagination__item.pagination__interactive 10
-    .pagination__item.pagination__interactive
-        img(src='./images/intro/intro-next.svg' alt='next')
+ul.page-numbers
+    li
+        span.page-numbers.prev
+    li
+        span.page-numbers.current 1
+    li
+        a.page-numbers 2
+    li
+        a.page-numbers 3
+    li
+        a.page-numbers 4
+    li
+        span.page-numbers.dots ...
+    li
+        a.page-numbers 10
+    li
+        span.page-numbers.next
 
