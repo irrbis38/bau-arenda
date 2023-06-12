@@ -3,6 +3,65 @@ mixin catalog(catalog_data)
         .container
             h2.catalog__title.block__title Каталог техники
 
+            .catalog__container
+
+                .catalog__categories.categories
+
+                    .categories__group
+                        .categories__title
+                            span Землеройная техника
+                            span.categories__arrow
+                                svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+                        ul.categories__list
+                            li.categories__item
+                                button.categories__btn Бульдозеры
+                            li.categories__item
+                                button.categories__btn Буры
+                            li.categories__item
+                                button.categories__btn Мини техника
+                            li.categories__item
+                                button.categories__btn Колесные экскаваторы
+                            li.categories__item
+                                button.categories__btn Аренда гусеничного экскаватора
+                            li.categories__item
+                                button.categories__btn Аренда гидромолота
+
+
+                .catalog__content
+                    .catalog__filters.filters
+
+                        .filters__current
+
+                            .filters__elem
+                                span.filters__elemText Глубина копания от 4 до 8
+                                button.filters__elemRemove
+                                    svg(width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M0.515625 1L9.51563 10M9.51563 1L0.515625 10" stroke="#E3E3E3" stroke-linejoin="round")
+
+                            .filters__elem
+                                span.filters__elemText Глубина копания от 4 до 8
+                                button.filters__elemRemove
+                                    svg(width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M0.515625 1L9.51563 10M9.51563 1L0.515625 10" stroke="#E3E3E3" stroke-linejoin="round")
+
+                            button.filters__clear Сбросить фильтры
+
+
+                        button.filters__show
+                            span Фильтры
+                            svg(width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M1 3H18.5" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+                                path(d="M1 12H18.5" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+                                circle(cx="3" cy="3" r="2" fill="white" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+                                circle(cx="17" cy="12" r="2" fill="white" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+                            span.filters__counter 4
+
+                        .filters__list
+
+                    .catalog__wrapper
+                    button.catalog__more.btn__link.btn__grey Показать больше
+
             //- .catalog__nav
             //-     .catalog__search
             //-         input.catalog__input(type="text" placeholder="Поиск")
