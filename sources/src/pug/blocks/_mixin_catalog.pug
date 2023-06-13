@@ -7,25 +7,7 @@ mixin catalog(catalog_data)
 
                 .catalog__categories.categories
 
-                    .categories__group
-                        .categories__title
-                            span Землеройная техника
-                            span.categories__arrow
-                                svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                    path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
-                        ul.categories__list
-                            li.categories__item
-                                button.categories__btn Бульдозеры
-                            li.categories__item
-                                button.categories__btn Буры
-                            li.categories__item
-                                button.categories__btn Мини техника
-                            li.categories__item
-                                button.categories__btn Колесные экскаваторы
-                            li.categories__item
-                                button.categories__btn Аренда гусеничного экскаватора
-                            li.categories__item
-                                button.categories__btn Аренда гидромолота
+                    +categories_group()
 
 
                 .catalog__content
@@ -58,7 +40,22 @@ mixin catalog(catalog_data)
                             span.filters__counter 4
 
                         .filters__list
+                            .filters__heading Разделы
+                            .filters__categories
+                                +categories_group()
 
+                            .filters__heading Фильтры
+                            .filters__wrapper
+                                .filters__block
+                                    h4.filters__name Глубина копания
+                                    .filters__set
+                                        .filters__track
+                                        .filters__inputs
+                                            input.filter__inputMin.filters__range(type='range' min="6" max="9" value="6" step="1")
+                                            input.filter__inputMax.filters__range(type='range' min="6" max="9" value="9" step="1")
+                                    .filters__values
+                                        p.filters__valueMin от #[span 6]
+                                        p.filters__valueMax от #[span 9]
                     .catalog__wrapper
                     button.catalog__more.btn__link.btn__grey Показать больше
 

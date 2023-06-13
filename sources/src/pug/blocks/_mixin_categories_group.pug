@@ -1,0 +1,60 @@
+mixin categories_group()
+    -
+        const categories = [
+            {
+                category: "Землеройная техника",
+                subcategories: [
+                    "Бульдозеры",
+                    "Буры",
+                    "Мини техника",
+                    "Колесные экскаваторы",
+                    "Аренда гусеничного экскаватора",
+                    "Аренда гидромолота",
+                ]
+            },
+            {
+                category: "Грузоподъемная техника",
+                subcategories: [
+                    "Бульдозеры",
+                    "Буры",
+                    "Мини техника",
+                    "Колесные экскаваторы",
+                    "Аренда гусеничного экскаватора",
+                    "Аренда гидромолота",
+                ]
+            },
+            {
+                category: "Грузовой транспорт",
+                subcategories: [
+                    "Бульдозеры",
+                    "Буры",
+                    "Мини техника",
+                ]
+            },
+            {
+                category: "Дорожная техника",
+                subcategories: [
+                    "Бульдозеры",
+                    "Буры",
+                ]
+            },
+            {
+                category: "Погрузочная техника",
+                subcategories: [
+                    "Бульдозеры",
+                    "Буры",
+                ]
+            },
+        ];
+
+    each item in categories
+        .categories__group
+            .categories__title
+                span= item.category
+                span.categories__arrow
+                    svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+            ul.categories__list
+                each subcategory in item.subcategories
+                    li.categories__item
+                        button.categories__btn= subcategory
