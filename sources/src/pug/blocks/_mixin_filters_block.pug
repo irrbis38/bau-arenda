@@ -1,0 +1,12 @@
+mixin filters_block(title, min, max)
+    .filters__block
+        h4.filters__name= title
+        .filters__set
+            .filters__slider
+                .filters__track
+            .filters__inputs
+                input.filter__inputMin.filters__range(type='range' min= min max= max value= min step="1")
+                input.filter__inputMax.filters__range(type='range' min= min max= max value= max step="1")
+        .filters__values
+            p.filters__valueMin от #[span= min]
+            p.filters__valueMax от #[span= max]

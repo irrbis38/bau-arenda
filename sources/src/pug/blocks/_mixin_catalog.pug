@@ -46,16 +46,42 @@ mixin catalog(catalog_data)
 
                             .filters__heading Фильтры
                             .filters__wrapper
-                                .filters__block
-                                    h4.filters__name Глубина копания
-                                    .filters__set
-                                        .filters__track
-                                        .filters__inputs
-                                            input.filter__inputMin.filters__range(type='range' min="6" max="9" value="6" step="1")
-                                            input.filter__inputMax.filters__range(type='range' min="6" max="9" value="9" step="1")
-                                    .filters__values
-                                        p.filters__valueMin от #[span 6]
-                                        p.filters__valueMax от #[span 9]
+                                -
+                                    const filters = [
+                                        {
+                                            title: 'Глубина копания',
+                                            min: 4,
+                                            max: 8,
+                                        },
+                                        {
+                                            title: 'Высота выгрузки',
+                                            min: 6,
+                                            max: 9,
+                                        },
+                                        {
+                                            title: 'Объем ковша',
+                                            min: 0,
+                                            max: 3,
+                                        },
+                                        {
+                                            title: 'Максимальный вылет стрелы',
+                                            min: 4,
+                                            max: 18,
+                                        },
+                                        {
+                                            title: 'Мощность двигателя',
+                                            min: 90,
+                                            max: 265,
+                                        },
+                                        {
+                                            title: 'Высота подъема ковша',
+                                            min: 8,
+                                            max: 12,
+                                        },
+                                    ]
+                                each filter in filters
+                                    +filters_block(filter.title, filter.min, filter.max)
+
                     .catalog__wrapper
                     button.catalog__more.btn__link.btn__grey Показать больше
 
