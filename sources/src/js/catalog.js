@@ -144,8 +144,20 @@ function initCatalog() {
       const newFilter = createNewFilter(title, filterName);
       filters_current_container.prepend(newFilter);
       filters_current_container.classList.add("active");
+
+      // add listener to clear filters__elemText after animation
+      const newElemText = filters_current_container.children[0].children[0];
+      newElemText.addEventListener("animationend", (e) => {
+        e.target.classList.remove("animated");
+      });
+
+      // add listener to remove filter button
+      const removeButton = filters_current_container.children[0].children[1];
+
+      removeButton.addEventListener("click", removeSingleFilter);
     } else {
-      selectedFilter.textContent = title;
+      selectedFilter.children[0].classList.add("animated");
+      selectedFilter.children[0].textContent = title;
     }
   }
 
@@ -162,5 +174,69 @@ function initCatalog() {
     </button>
     `;
     return filtersElem;
+  }
+
+  function removeSingleFilter(event) {
+    const filters_element = event.target.closest(".filters__elem");
+    const dataFilter = filters_element.dataset.filter;
+
+    filters_range_inputs.forEach((input) => {
+      if (input.dataset.filter === dataFilter) {
+        const isMin = input.classList.contains("filter__inputMin");
+        const isMax = input.classList.contains("filter__inputMax");
+        if (isMin) {
+          input.value = input.min;
+          resetInputRangeTrack(input);
+        } else if (isMax) {
+          input.value = input.max;
+          resetInputRangeTrack(input);
+        }
+      }
+    });
+
+    filters_element.remove();
+
+    removeFiltersCurrentActiveClass();
+  }
+
+  function resetInputRangeTrack(input) {
+    const filters_track =
+      input.closest(".filters__set").children[0].children[0];
+    filters_track.style.left = 0;
+    filters_track.style.right = 0;
+  }
+
+  function removeFiltersCurrentActiveClass() {
+    const isAnyFilterEnable = document.querySelector(".filters__elem");
+
+    if (!isAnyFilterEnable) {
+      const filters_current = document.querySelector(".filters__current");
+      filters_current.classList.remove("active");
+    }
+  }
+
+  // add listener to button of clear current filters
+
+  const filters_clear = document.querySelector(".filters__clear");
+
+  filters_clear.addEventListener("click", clearAllActiveFilters);
+
+  function clearAllActiveFilters() {
+    filters_range_inputs.forEach((input) => {
+      const isMin = input.classList.contains("filter__inputMin");
+      if (isMin) {
+        input.value = input.min;
+        resetInputRangeTrack(input);
+      } else {
+        input.value = input.max;
+        resetInputRangeTrack(input);
+      }
+    });
+
+    const filters_elements = document.querySelectorAll(".filters__elem");
+
+    filters_elements.forEach((el) => el.remove());
+
+    removeFiltersCurrentActiveClass();
   }
 }
