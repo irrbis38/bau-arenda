@@ -145,6 +145,9 @@ function initCatalog() {
       filters_current_container.prepend(newFilter);
       filters_current_container.classList.add("active");
 
+      // update counter
+      updateCounter();
+
       // add listener to clear filters__elemText after animation
       const newElemText = filters_current_container.children[0].children[0];
       newElemText.addEventListener("animationend", (e) => {
@@ -197,6 +200,8 @@ function initCatalog() {
     filters_element.remove();
 
     removeFiltersCurrentActiveClass();
+
+    updateCounter(filters_element.length - 1);
   }
 
   function resetInputRangeTrack(input) {
@@ -207,7 +212,8 @@ function initCatalog() {
   }
 
   function removeFiltersCurrentActiveClass() {
-    const isAnyFilterEnable = document.querySelector(".filters__elem");
+    const activeFilters = document.querySelectorAll(".filters__elem");
+    const isAnyFilterEnable = Boolean(activeFilters.length);
 
     if (!isAnyFilterEnable) {
       const filters_current = document.querySelector(".filters__current");
@@ -222,6 +228,7 @@ function initCatalog() {
   filters_clear.addEventListener("click", clearAllActiveFilters);
 
   function clearAllActiveFilters() {
+    // reset all inputs and tracks to default
     filters_range_inputs.forEach((input) => {
       const isMin = input.classList.contains("filter__inputMin");
       if (isMin) {
@@ -233,10 +240,26 @@ function initCatalog() {
       }
     });
 
+    // remove all '.filters__elem' from DOM
     const filters_elements = document.querySelectorAll(".filters__elem");
 
     filters_elements.forEach((el) => el.remove());
 
+    // remove class 'active' from '.filters__current'
+
     removeFiltersCurrentActiveClass();
+
+    // update counter
+    updateCounter(0);
+  }
+
+  function updateCounter(activeFilters = null) {
+    let activeFiltersCount = 0;
+    if (!activeFilters) {
+      const activeFilters = document.querySelectorAll(".filters__elem");
+      activeFiltersCount = activeFilters.length;
+    }
+    const counter = document.querySelector(".filters__counter");
+    counter.textContent = activeFiltersCount;
   }
 }

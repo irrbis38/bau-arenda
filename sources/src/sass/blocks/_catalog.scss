@@ -127,6 +127,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 100px;
+  align-items: flex-start;
   gap: 30px 10px;
   margin-bottom: 30px;
 
@@ -231,8 +232,8 @@
 
 .filters__counter {
   position: absolute;
-  top: -4px;
-  right: -6px;
+  top: -11px;
+  right: -9px;
   width: 14px;
   height: 14px;
   display: flex;
