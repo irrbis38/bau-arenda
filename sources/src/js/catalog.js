@@ -125,6 +125,7 @@ function initCatalog() {
     rangeInput.addEventListener("change", addNewFilter)
   );
 
+  // add new filter to DOM of update existing
   function addNewFilter(e) {
     const filters_block = e.target.closest(".filters__block");
     const filterName = filters_block.children[0].textContent;
@@ -140,6 +141,7 @@ function initCatalog() {
     const valueMax = filters_block.children[2].children[1].textContent;
     const title = `${filterName} ${valueMin} ${valueMax}`;
 
+    // If there is no such filter yet, then create.
     if (!isFilterExist) {
       const newFilter = createNewFilter(title, filterName);
       filters_current_container.prepend(newFilter);
@@ -159,11 +161,13 @@ function initCatalog() {
 
       removeButton.addEventListener("click", removeSingleFilter);
     } else {
+      // Otherwise, update an existing
       selectedFilter.children[0].classList.add("animated");
       selectedFilter.children[0].textContent = title;
     }
   }
 
+  // create and return new filter
   function createNewFilter(title, filterName) {
     const filtersElem = document.createElement("div");
     filtersElem.classList.add("filters__elem");
@@ -179,6 +183,7 @@ function initCatalog() {
     return filtersElem;
   }
 
+  // remove just one filter
   function removeSingleFilter(event) {
     const filters_element = event.target.closest(".filters__elem");
     const dataFilter = filters_element.dataset.filter;
@@ -249,7 +254,7 @@ function initCatalog() {
 
     removeFiltersCurrentActiveClass();
 
-    // update counter
+    // UPDATE COUNTER
     updateCounter(0);
   }
 
@@ -262,4 +267,39 @@ function initCatalog() {
     const counter = document.querySelector(".filters__counter");
     counter.textContent = activeFiltersCount;
   }
+
+  // TOGGEL FILTER LIST
+
+  const filters = document.querySelector(".filters");
+  const filters_list = document.querySelector(".filters__list");
+  const filtersShowButton = document.querySelector(".filters__show");
+
+  // show filter list by 'filters__show' hover button
+  filtersShowButton.addEventListener("mouseenter", () => {
+    filtersShowButton.classList.add("active");
+    filters_list.classList.add("visible");
+  });
+
+  // hide filter list by mouseleave from 'filters__show' and 'filters__list'
+
+  filters.addEventListener("mouseleave", (e) => {
+    const isfiltersList = e.currentTarget.closest(".filters__list");
+    const isfiltersShowButton = e.currentTarget.closest(".filters__show");
+
+    if (!isfiltersList && !isfiltersShowButton) {
+      filtersShowButton.classList.remove("active");
+      filters_list.classList.remove("visible");
+    }
+  });
+
+  // hide filter list by ckick beyond 'filters__show' and 'filters__list'
+
+  window.addEventListener("click", (e) => {
+    const isfiltersList = e.target.closest(".filters__list");
+    const isfiltersShowButton = e.target.closest(".filters__show");
+    if (!isfiltersList && !isfiltersShowButton) {
+      filtersShowButton.classList.remove("active");
+      filters_list.classList.remove("visible");
+    }
+  });
 }
