@@ -268,7 +268,7 @@ function initCatalog() {
     counter.textContent = activeFiltersCount;
   }
 
-  // TOGGEL FILTER LIST
+  // TOGGLE FILTER LIST
 
   const filters = document.querySelector(".filters");
   const filters_list = document.querySelector(".filters__list");
