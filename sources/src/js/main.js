@@ -65,7 +65,9 @@ function initHeader() {
   const body = document.body;
   const header = document.querySelector(".header");
   const headerBurger = document.querySelector(".header__burger");
-  const dropdownShow = Array.from(document.querySelectorAll(".dropdown_show"));
+  const dropdownShow = Array.from(
+    document.querySelectorAll(".menu-item-has-children")
+  );
 
   // DROPDOWN BY HOVER
 
@@ -104,16 +106,24 @@ function initHeader() {
   // DROPDOWN BY CLICK
 
   function toggleDropdownList(event) {
-    // event.preventDefault();
-
     const currentLink = event.target;
-    const currentItem = currentLink.closest(".dropdown_show");
+    const currentItem = currentLink.closest(".menu-item-has-children");
+    const isActive = currentItem.classList.contains("active");
+
+    if (!isActive) {
+      event.preventDefault();
+    }
+
     const currentDropdownMenu = currentItem.children[1];
+    const allDropdownMenus = document.querySelectorAll(
+      ".menu-item-has-children > .sub-menu"
+    );
     if (currentItem.classList.contains("active")) {
       dropdownShow.forEach((el) => el.classList.remove("active"));
       currentDropdownMenu.style.maxHeight = 0;
     } else {
       dropdownShow.forEach((el) => el.classList.remove("active"));
+      allDropdownMenus.forEach((el) => (el.style.maxHeight = 0));
       currentItem.classList.add("active");
       currentDropdownMenu.style.maxHeight =
         currentDropdownMenu.scrollHeight + "px";

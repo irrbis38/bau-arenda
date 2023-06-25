@@ -10,52 +10,50 @@ header.header#top
         .header__top
             .container
                 nav.header__menu
-                    ul
-                        li.header__elem
-                            a.header__link(href="#") Аренда техники
+                    ul.header__menu-list
+                        li
+                            a(href="#") Аренда техники
 
-                        li.header__elem.dropdown_show
-                            a.header__link.header__list(href="#") О компании
-                                svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                    path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
-                            ul.dropdown_menu.dropdown__list
-                                li: a.header__link(href="#") Наши клиенты
-                                li: a.header__link(href="./our-partners.html") Наши партнеры
-                                li: a.header__link(href="#") Статьи
-                                li: a.header__link(href="#") Отзывы
-                                li: a.header__link(href="#") Гарантии
-                                li: a.header__link(href="#") Лицензии и сертификаты
-                                li: a.header__link(href="#") Вакансии
-                                li: a.header__link(href="#") Вопрос/ответ
+                        li.menu-item-has-children
+                            a(href="google.com") О компании
+                                //- svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                //-     path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
+                            ul.sub-menu
+                                li: a(href="#") Наши клиенты
+                                li: a(href="./our-partners.html") Наши партнеры
+                                li: a(href="#") Статьи
+                                li: a(href="#") Отзывы
+                                li: a(href="#") Гарантии
+                                li: a(href="#") Лицензии и сертификаты
+                                li: a(href="#") Вакансии
+                                li: a(href="#") Вопрос/ответ
 
-                        li.header__elem
-                            a.header__link(href="#") Цены
+                        li
+                            a(href="#") Цены
 
-                        li.header__elem.dropdown_show
-                            a.header__link.header__list(href="#") Услуги
-                                svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                    path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
-                            ul.dropdown_menu.dropdown__list
-                                li: a.header__link(href="#") Земляные работы
-                                li: a.header__link(href="#") Бурение отверстий
-                                li: a.header__link(href="#") Вывоз и утилизация грунта
-                                li: a.header__link(href="#") Вывоз строительного мусора
-                                li: a.header__link(href="#") Доставка негабаритных грузов
-                                li: a.header__link(href="#") Продажа строительного песка
-                                li: a.header__link(href="#") Уборка и вывоз снега
+                        li.menu-item-has-children
+                            a(href="#") Услуги
 
-                        li.header__elem
-                            a.header__link(href="#") Новости
+                            ul.sub-menu
+                                li: a(href="#") Земляные работы
+                                li: a(href="#") Бурение отверстий
+                                li: a(href="#") Вывоз и утилизация грунта
+                                li: a(href="#") Вывоз строительного мусора
+                                li: a(href="#") Доставка негабаритных грузов
+                                li: a(href="#") Продажа строительного песка
+                                li: a(href="#") Уборка и вывоз снега
 
-                        li.header__elem
-                            a.header__link(href="#") Акции
+                        li
+                            a(href="#") Новости
 
-                        li.header__elem.dropdown_show
-                            a.header__link.header__list(href="#") Контакты
-                                svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
-                                    path(d="M1 1L4.5 5L8 1" stroke="#1F1E1D" stroke-linecap="round" stroke-linejoin="round")
-                            ul.dropdown_menu.dropdown__list
-                                li: a.header__link(href="#") Горячая линия
+                        li
+                            a(href="#") Акции
+
+                        li.menu-item-has-children
+                            a(href="#") Контакты
+
+                            ul.sub-menu
+                                li: a(href="#") Горячая линия
 
                 .header__search
                     img.header__icon(src="./images/header/search.svg" alt="icon")
