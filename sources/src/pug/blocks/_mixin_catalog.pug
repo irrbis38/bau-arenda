@@ -86,28 +86,16 @@ mixin catalog(catalog_data)
                             +catalog_card()
                             - catalogCounter += 1;
 
+                        .catalog__nofound
+                            p.catalog__sorry Нам жаль, но по вашему запросу ничего не нашлось
+                            .catalog__recommendation
+                                p Скорректируйте ваш запрос или
+                                p
+                                    a(href="#") передите в каталог
+
 
 
 
 
                     button.catalog__more.btn__link.btn__grey Показать больше
 
-
-
-            //- .catalog__wrapper
-
-
-            //-     each item in catalog_data
-            //-         +catalog_item(item.imgName, item.header, item.name1, item.value1, item.name2, item.value2, item.name3, item.value3, item.price)
-
-            //- .catalog__nofound
-            //-     p.catalog__sorry Нам жаль, но по вашему запросу ничего не нашлось
-            //-     .catalog__recommendation
-            //-         p Скорректируйте ваш запрос или
-            //-         p
-            //-             a(href="#") передите в каталог
-
-
-
-
-            //- button.catalog__more.btn__link.btn__grey Показать больше
