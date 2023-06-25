@@ -25,6 +25,7 @@
 .catalog__container {
   display: grid;
   grid-template-columns: 270px 1fr;
+  align-items: flex-start;
   gap: 0 29px;
 
   @include md {
