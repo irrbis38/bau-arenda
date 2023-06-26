@@ -1,0 +1,44 @@
+extends base/_layout
+block head
+    title БауАренда - аренда строительной техники
+block page
+
+    section.first.contacts__page
+        .container
+            .first__wrapper
+                .first__info
+                    .first__breadcrumps
+                        a.first__prev(href="./index.html") Главная
+                        span.first__current Контакты
+                    h1.first__title.intro__title Контакты
+                    p.first__text.intro__text.
+                        Команда «БауАренды» отлично знает, насколько важна оперативность в строительстве, погрузке-разгрузке и выполнении других работ, для которых требуется спецтехника. Поэтому мы остаемся на связи в любое время в режиме 24/7.
+
+                    a.first__link.btn__link.btn__yellow(href="#") Каталог
+                .first__img
+                    +picture('first/first-contacts', 'png', 'x2')
+
+    section.contacts
+        .container
+            h2.contacts__title.block__title Компания «БауАренда» – на связи круглые сутки
+
+            .contacts__wrapper
+
+                .contacts__item
+                .contacts__item
+                .contacts__item
+                .contacts__map
+                .contacts__info
+
+
+
+
+    include ./blocks/_feedback_narrow
+
+    include ./blocks/_popular
+
+    include ./blocks/_reviews
+
+    include ./blocks/_feedback_full_width
+
+    include ./blocks/_fixed_block

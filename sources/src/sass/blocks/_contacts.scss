@@ -1,0 +1,68 @@
+.contacts {
+  padding: 150px 0;
+
+  @include md {
+    padding: 100px 0;
+  }
+
+  @include xxs {
+    padding: 60px 0;
+  }
+}
+
+.contacts__title {
+  max-width: 742px;
+  margin-bottom: 30px;
+
+  @include md {
+    max-width: 100%;
+  }
+
+  @include xxs {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-template-areas:
+    "adress phones email"
+    "map map info";
+}
+
+.contacts__item {
+  background-color: yellow;
+  height: 100px;
+  ////////////////////////
+  padding: 31px 30px 32px;
+  border-radius: 10px;
+  border: 1px solid rgba(227, 227, 227, 0.5);
+  // background: #fff;
+  &:nth-child(1) {
+    grid-area: adress;
+  }
+  &:nth-child(2) {
+    grid-area: phones;
+  }
+  &:nth-child(1) {
+    grid-area: email;
+  }
+}
+
+.contacts__map {
+  height: 100px;
+  background-color: greenyellow;
+  /////////////////////
+  grid-area: map;
+  border-radius: 10px;
+}
+
+.contacts__info {
+  height: 100px;
+  background-color: burlywood;
+  ////////////////////////
+  grid-area: info;
+  border-radius: 10px;
+}

@@ -11,6 +11,7 @@
 }
 
 .popular__title {
+  max-width: 742px;
   margin-bottom: 30px;
 
   @include xxs {
