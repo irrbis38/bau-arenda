@@ -1,3 +1,15 @@
+.reviews-list {
+  padding-top: 150px;
+
+  @include md {
+    padding-top: 100px;
+  }
+
+  @include xs {
+    padding-top: 60px;
+  }
+}
+
 .reviews-list__title {
   margin-bottom: 30px;
 

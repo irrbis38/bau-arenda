@@ -1,0 +1,46 @@
+.popular {
+  padding: 150px 0;
+
+  @include md {
+    padding: 100px 0;
+  }
+
+  @include xs {
+    padding: 60px 0;
+  }
+}
+
+.popular__title {
+  margin-bottom: 30px;
+
+  @include xxs {
+    margin-bottom: 20px;
+  }
+}
+
+.popular__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+
+    .card:last-child {
+      display: none;
+    }
+  }
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card:last-child {
+      display: block;
+    }
+  }
+
+  @include xxs {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
+}

@@ -1,0 +1,11 @@
+section.popular
+    .container
+        h2.popular__title.block__title Популярная техника
+        .popular__wrapper
+
+            - let catalogCounter = 0
+
+            while catalogCounter < 4
+
+                +catalog_card()
+                - catalogCounter += 1;
