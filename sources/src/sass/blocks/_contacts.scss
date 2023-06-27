@@ -30,39 +30,183 @@
   grid-template-areas:
     "adress phones email"
     "map map info";
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "adress phones"
+      "email ."
+      "info info"
+      "map map";
+  }
+
+  @include xs {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "adress"
+      "phones"
+      "email"
+      "info"
+      "map";
+  }
 }
 
 .contacts__item {
-  background-color: yellow;
-  height: 100px;
-  ////////////////////////
   padding: 31px 30px 32px;
   border-radius: 10px;
   border: 1px solid rgba(227, 227, 227, 0.5);
-  // background: #fff;
-  &:nth-child(1) {
-    grid-area: adress;
+  background: #fff;
+
+  @include sm {
+    min-height: 209px;
   }
-  &:nth-child(2) {
-    grid-area: phones;
+
+  @include xs {
+    min-height: 192px;
   }
-  &:nth-child(1) {
-    grid-area: email;
-  }
+}
+
+.contacts__adress {
+  grid-area: adress;
+}
+
+.contacts__phones {
+  grid-area: phones;
+}
+
+.contacts__email {
+  grid-area: email;
 }
 
 .contacts__map {
-  height: 100px;
-  background-color: greenyellow;
-  /////////////////////
   grid-area: map;
+  min-height: 356px;
   border-radius: 10px;
+  overflow: hidden;
+  // background: url("../images/contacts/contacts-map.png") center/ cover no-repeat;
+
+  @include xs {
+    min-height: 359px;
+  }
+
+  @include xxs {
+    min-height: 246px;
+  }
+
+  @include xxxs {
+    min-height: 308px;
+  }
+}
+
+// remove copyrigths from map
+[class*="copyrights-pane"] {
+  display: none !important;
 }
 
 .contacts__info {
-  height: 100px;
-  background-color: burlywood;
-  ////////////////////////
   grid-area: info;
   border-radius: 10px;
+  overflow: hidden;
+  background: url("../images/contacts/contacts-info-bg.png") center/ cover
+    no-repeat;
+  padding: 30px 30px 32px;
+
+  .contacts__title,
+  .contacts__descr {
+    color: var(--color_white);
+  }
+
+  .contacts__descr {
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include md {
+    padding: 20px 4px 20px 14px;
+  }
+
+  @include sm {
+    padding: 30px 45px 37px 30px;
+
+    .contacts__title {
+      margin-bottom: 12px;
+    }
+
+    .contacts__descr {
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+
+  @include xxs {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+.contacts__descr {
+  p {
+    font-size: 14px;
+    line-height: 170%;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.contacts__elem {
+  position: relative;
+  width: max-content;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.contacts__link {
+  font-size: 14px;
+  line-height: 170%;
+  color: var(--color_light_grey);
+  transition: var(--transition);
+
+  svg {
+    margin-right: 8px;
+  }
+
+  path {
+    transition: var(--transition);
+  }
+
+  &:hover {
+    color: var(--color_yellow);
+
+    path {
+      fill: var(--color_yellow);
+    }
+  }
+}
+
+.contacts__elemWithMsg {
+  & path:first-child {
+    transition: var(--transition);
+  }
+
+  &:hover {
+    .header__whatsapp path:first-child {
+      fill: #00e676;
+    }
+    .header__viber path:first-child {
+      fill: #7b519c;
+    }
+  }
 }

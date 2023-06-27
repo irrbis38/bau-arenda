@@ -55,6 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsFullScreen();
     initForms();
   }
+
+  // init reviews page
+  const contacts_page = document.querySelector(".contacts__page");
+  if (contacts_page) {
+    initMap();
+  }
 });
 
 const body = document.body;
@@ -505,4 +511,39 @@ function initQAaccordion() {
       });
     });
   }
+}
+
+// INIT MAP ON CONTACTS PAGE
+
+function initMap() {
+  function init() {
+    let center = [53.94869157061366, 27.61157049999995];
+    let map = new ymaps.Map("contactsMap", {
+      center: center,
+      zoom: 16,
+    });
+
+    let mark = new ymaps.Placemark(
+      center,
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "./../images/contacts/mark.svg",
+        iconImageSize: [24, 32],
+        iconImageOffset: [-5, -30],
+      }
+    );
+
+    map.controls.remove("geolocationControl"); // удаляем геолокацию
+    map.controls.remove("searchControl"); // удаляем поиск
+    map.controls.remove("trafficControl"); // удаляем контроль трафика
+    map.controls.remove("typeSelector"); // удаляем тип
+    map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove("zoomControl"); // удаляем контрол зуммирования
+    map.controls.remove("rulerControl"); // удаляем контрол правил
+    //map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+
+    map.geoObjects.add(mark);
+  }
+  ymaps.ready(init);
 }
