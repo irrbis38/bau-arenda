@@ -178,3 +178,50 @@
     }
   }
 }
+
+.promotions__page {
+  .first__wrapper {
+    gap: 0 46px;
+
+    @include md {
+      gap: 0 33px;
+    }
+  }
+
+  .first__img {
+    width: 584px;
+
+    @include md {
+      width: 436px;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}
+
+.contacts__page {
+  .first__wrapper {
+    gap: 0;
+
+    @include md {
+      gap: 0;
+    }
+  }
+
+  .first__img {
+    position: relative;
+    // left: -53px;
+    margin-left: -53px;
+    width: 735px;
+
+    @include md {
+      width: 555px;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}

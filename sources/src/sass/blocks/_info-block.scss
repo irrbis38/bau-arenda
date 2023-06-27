@@ -1,4 +1,4 @@
-.infoColumns {
+.infoBlock {
   padding-top: 150px;
 
   @include md {
@@ -10,7 +10,7 @@
   }
 }
 
-.infoColumns__title {
+.infoBlock__title {
   margin-bottom: 30px;
 
   @include xs {
@@ -26,8 +26,9 @@
   }
 }
 
-.infoColumns__wrapper {
+.infoBlock__wrapper {
   max-width: 1001px;
+
   p {
     font-size: 14px;
     line-height: 170%;
@@ -38,9 +39,12 @@
     }
   }
 
-  ul {
+  .infoBlock__list {
     padding-top: 10px;
     margin-bottom: 20px;
+  }
+
+  .infoBlock__list--columns {
     column-count: 2;
     column-gap: 28;
 
