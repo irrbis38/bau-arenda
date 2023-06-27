@@ -27,6 +27,7 @@
 }
 
 .infoColumns__wrapper {
+  max-width: 1001px;
   p {
     font-size: 14px;
     line-height: 170%;
@@ -51,7 +52,6 @@
 
   li {
     position: relative;
-    max-width: 343px;
     margin-bottom: 13px;
     padding-left: 28px;
     font-size: 14px;
