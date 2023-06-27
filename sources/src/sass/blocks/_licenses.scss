@@ -1,0 +1,20 @@
+.licenses__promotions {
+  max-width: 1001px;
+  margin-bottom: 150px;
+
+  @include md {
+    margin-bottom: 100px;
+  }
+
+  @include xxs {
+    margin-bottom: 60px;
+  }
+}
+
+.remove__md {
+  @include md {
+    & {
+      display: none;
+    }
+  }
+}
