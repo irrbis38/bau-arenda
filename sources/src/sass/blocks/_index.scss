@@ -1,7 +1,7 @@
 /*===== intro styles =====*/
 
 .intro {
-  padding-top: 122px;
+  padding-top: 74px;
   background: url("./../images/intro/intro-bg.jpg") center / cover no-repeat;
 }
 
@@ -13,6 +13,7 @@
 .intro__about {
   width: 43%;
   margin-right: 6%;
+  padding-top: 55px;
 }
 
 .intro__info {
@@ -30,6 +31,10 @@
   line-height: 120%;
   text-transform: uppercase;
   color: #fff;
+
+  @include lg {
+    font-size: 48px;
+  }
 }
 
 .intro__slider {
@@ -360,7 +365,7 @@
 
 .technics__item {
   position: relative;
-  padding: 10px 30px 30px 30px;
+  padding: 1px 20px 30px;
   border: 1px solid rgba(227, 227, 227, 0.5);
   border-radius: 10px;
   text-align: center;
@@ -382,7 +387,7 @@
 }
 
 .technics__img {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   & img {
     display: block;
     width: 100%;
@@ -395,7 +400,7 @@
   justify-content: center;
   align-items: center;
   min-height: 40px;
-  margin-bottom: 29px;
+  margin-bottom: 19px;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
@@ -430,7 +435,7 @@
 }
 
 .about__wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 49px;
 }
 
 .about__top,
@@ -549,8 +554,8 @@
 }
 
 .feedback__subtitle {
-  margin-bottom: 33px;
-  font-size: 14px;
+  margin-bottom: 28px;
+  font-size: 16px;
   line-height: 170%;
   color: #1f1e1d;
 }
@@ -582,6 +587,30 @@
   &.error .feedback__name::placeholder,
   &.error .feedback__phone::placeholder {
     color: #fc3a3a;
+  }
+}
+
+.feedback.first__feedback {
+  .feedback__subtitle {
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+
+  @include xxs {
+    .feedback__title {
+      margin-bottom: 18px;
+    }
+
+    .feedback__subtitle {
+      margin-bottom: 26px;
+      font-size: 12px;
+    }
+  }
+}
+
+.feedback.second__feedback {
+  .feedback__item {
+    width: 24%;
   }
 }
 
@@ -819,8 +848,25 @@
   transition: box-shadow 0.2s ease-in-out;
 
   &:first-child {
+    padding: 30px 52px 56px;
     border: none;
     background-color: #f5f7fb;
+  }
+
+  @include xxs {
+    padding: 60px 20px 20px;
+
+    &:first-child {
+      padding: 60px 19px 20px;
+    }
+  }
+
+  @include xxxs {
+    padding: 35px 20px 20px;
+
+    &:first-child {
+      padding: 35px 20px 20px;
+    }
   }
 
   &:hover {
@@ -831,7 +877,7 @@
 .news__header {
   height: 92%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-weight: 600;
   font-size: 20px;
@@ -845,6 +891,10 @@
 
   a:hover {
     color: #ffcb09;
+  }
+
+  @include xxs {
+    align-items: flex-start;
   }
 }
 
@@ -1084,7 +1134,7 @@
 
 .reasons {
   padding-top: $block_padding;
-  padding-bottom: $block_padding;
+  padding-bottom: 134px;
 }
 
 .reasons__title {
@@ -1285,7 +1335,7 @@
 /*===== reviews styles =====*/
 
 .reviews {
-  padding-bottom: $block_padding;
+  padding-bottom: 120px;
 }
 
 .reviews__title {
@@ -1590,6 +1640,7 @@ form {
     top: 57px;
     width: 42.1%;
     margin-right: 3.1%;
+    padding-top: 0;
   }
 
   .intro__title {
@@ -1776,6 +1827,13 @@ form {
       margin-right: 0;
       margin-bottom: 22px;
     }
+
+    @include md {
+      &:first-child,
+      & li {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   .need__text {
@@ -1803,6 +1861,10 @@ form {
 
   .causes__title {
     margin-bottom: 30px;
+
+    @include sm {
+      max-width: 630px;
+    }
   }
 
   .causes__text {
@@ -1816,6 +1878,10 @@ form {
 
   .reasons__title {
     width: 100%;
+
+    @include sm {
+      max-width: 630px;
+    }
   }
 
   .reasons__wrapper {
@@ -1889,6 +1955,10 @@ form {
     & .feedback__item {
       width: 28%;
     }
+
+    @include md {
+      padding: 77px 0 70px 70px;
+    }
   }
 }
 
@@ -1947,6 +2017,10 @@ form {
 
   .about__wrapper {
     margin-bottom: 20px;
+
+    @include md {
+      margin-bottom: 12px;
+    }
   }
 
   .about__top,
@@ -2391,7 +2465,7 @@ form {
 
   .services__wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 192px);
+    grid-template-rows: repeat(5, 195px);
     gap: 10px;
   }
 
@@ -2449,6 +2523,10 @@ form {
 
   .advantage__description {
     font-size: 12px;
+  }
+
+  .advantage__link {
+    margin: 0 auto;
   }
 
   .news {
@@ -2523,6 +2601,10 @@ form {
   .need__list li {
     margin-bottom: 14px;
     font-size: 12px;
+
+    @include xxs {
+      margin-bottom: 13px;
+    }
   }
 
   .need__list:first-child {

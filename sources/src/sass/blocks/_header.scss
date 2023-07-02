@@ -20,7 +20,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  // padding: 15px;
+}
+
+.header__bottom {
+  padding: 13px 0;
 }
 
 .header__menu-list {
@@ -167,6 +171,8 @@
 }
 
 .header__search {
+  width: 559px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   width: 33%;
@@ -515,13 +521,13 @@
 
 /*===== max-width 1600px =====*/
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .header .container {
     max-width: 1230px;
   }
 
   .header__menu-list {
-    & > li {
+    & > li:not(:last-child) {
       margin-right: 40px;
     }
   }

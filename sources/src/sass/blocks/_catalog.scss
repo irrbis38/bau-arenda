@@ -13,6 +13,10 @@
 .catalog__title {
   margin-bottom: 30px;
 
+  @include md {
+    margin-bottom: 23px;
+  }
+
   @include sm {
     margin-bottom: 37px;
   }
@@ -229,6 +233,10 @@
     & circle {
       stroke: var(--color_yellow);
     }
+  }
+
+  @include md {
+    font-size: 14px;
   }
 }
 
@@ -481,10 +489,26 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
+
+  @include md {
+    margin-bottom: 17px;
+  }
+
+  @include xxxs {
+    margin-bottom: 13px;
+  }
 }
 
 .card__features {
   margin-bottom: 10px;
+
+  @include md {
+    margin-bottom: 23px;
+  }
+
+  @include xxxs {
+    margin-bottom: 10px;
+  }
 }
 
 .card__feature {
@@ -499,6 +523,14 @@
   font-size: 11px;
   line-height: 170%;
   color: #a3a3a3;
+
+  @include sm {
+    line-height: 180%;
+  }
+
+  @include xxs {
+    line-height: 175%;
+  }
 }
 
 .card__valueName {
@@ -508,10 +540,22 @@
   line-height: 170%;
   text-align: right;
   color: #4d5051;
+
+  @include sm {
+    line-height: 180%;
+  }
+
+  @include xxs {
+    line-height: 175%;
+  }
 }
 
 .card__prices {
-  margin-bottom: 17px;
+  margin-bottom: 13px;
+
+  @include xxxs {
+    margin-bottom: 10px;
+  }
 }
 
 .card__price {
