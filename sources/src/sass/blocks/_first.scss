@@ -164,6 +164,20 @@
 }
 
 .qa__page {
+  padding-bottom: 120px;
+
+  @include sm {
+    padding-bottom: 90px;
+  }
+
+  @include xxs {
+    padding-bottom: 94px;
+  }
+
+  @include xxxs {
+    padding-bottom: 120px;
+  }
+
   .first__wrapper {
     gap: 0 40px;
 
