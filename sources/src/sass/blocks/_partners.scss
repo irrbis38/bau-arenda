@@ -8,22 +8,22 @@
   }
 
   @include sm {
-    padding: 78px 0 100px;
+    padding: 104px 0 100px;
   }
 
   @include xs {
-    padding: 60px 0;
+    padding: 54px 0;
   }
 
-  @include sm {
-    padding: 54px 0;
+  @include xxxs {
+    padding: 60px 0 60px;
   }
 }
 
 .partners__title {
   margin-bottom: 30px;
 
-  @include sm {
+  @include md {
     margin-bottom: 20px;
   }
 }
@@ -31,8 +31,8 @@
 .partners__wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-bottom: 30px;
+  gap: 21px;
+  margin-bottom: 25px;
 
   @include md {
     margin-bottom: 20px;
@@ -40,10 +40,10 @@
 
   @include sm {
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 25px 30px;
   }
 
-  @include sm {
+  @include xs {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
@@ -160,5 +160,11 @@
 
   @include md {
     max-width: 100%;
+  }
+
+  @include xxxs {
+    p {
+      font-size: 12px;
+    }
   }
 }
