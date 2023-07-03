@@ -230,6 +230,20 @@
 }
 
 .promotions__page {
+  padding: 58px 0 90px;
+
+  @include md {
+    padding: 65px 0 110px;
+  }
+
+  @include sm {
+    padding: 44px 0 80px;
+  }
+
+  @include xxs {
+    padding: 34px 0 70px;
+  }
+
   .first__wrapper {
     gap: 0 46px;
 
@@ -239,9 +253,12 @@
   }
 
   .first__img {
+    position: relative;
+    top: 20px;
     width: 584px;
 
     @include md {
+      top: 50px;
       width: 436px;
     }
 
