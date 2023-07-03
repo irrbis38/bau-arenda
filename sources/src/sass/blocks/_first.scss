@@ -292,6 +292,36 @@
 }
 
 .licenses__page {
+  padding-top: 23px;
+  padding-bottom: 80px;
+
+  @include md {
+    padding-top: 64px;
+    padding-bottom: 100px;
+
+    .first__text.intro__text {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include sm {
+    padding-top: 44px;
+    padding-bottom: 80px;
+
+    .first__text.intro__text {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include xxs {
+    padding-top: 35px;
+    padding-bottom: 70px;
+  }
+
+  @include xxxs {
+    padding-bottom: 40px;
+  }
+
   .first__title {
     min-width: 590px;
 
@@ -309,6 +339,8 @@
   }
 
   .first__img {
+    position: relative;
+    top: 70px;
     width: 521px;
 
     @include r(991px) {

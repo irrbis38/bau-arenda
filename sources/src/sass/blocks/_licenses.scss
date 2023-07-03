@@ -1,5 +1,4 @@
 .licenses__promotions {
-  max-width: 1001px;
   margin-bottom: 150px;
 
   @include md {
@@ -8,6 +7,26 @@
 
   @include xxs {
     margin-bottom: 60px;
+  }
+
+  @include xxxs {
+    padding-top: 40px;
+  }
+}
+
+.infoBlock__title {
+  @include xxs {
+    margin-bottom: 20px;
+  }
+}
+
+.infoBlock__wrapper {
+  max-width: 1001px;
+
+  @include xxs {
+    p {
+      font-size: 12px;
+    }
   }
 }
 
