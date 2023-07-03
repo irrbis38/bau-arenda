@@ -222,6 +222,20 @@
 }
 
 .reviews__page {
+  padding: 58px 0 90px;
+
+  @include md {
+    padding: 70px 0 106px;
+  }
+
+  @include sm {
+    padding: 43px 0 80px;
+  }
+
+  @include xxs {
+    padding: 33px 0 70px;
+  }
+
   .first__wrapper {
     gap: 0 89px;
 
@@ -231,9 +245,12 @@
   }
 
   .first__img {
+    position: relative;
+    top: 36px;
     width: 544px;
 
     @include md {
+      top: 13px;
       width: 428px;
     }
 

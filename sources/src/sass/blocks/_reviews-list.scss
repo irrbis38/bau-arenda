@@ -40,6 +40,10 @@
       margin-bottom: 30px;
 
       @include sm {
+        margin-bottom: 40px;
+      }
+
+      @include xxxs {
         margin-bottom: 20px;
       }
     }
@@ -83,6 +87,8 @@
 }
 
 .grateful__title {
+  max-width: 620px;
+
   margin-bottom: 30px;
 
   @include sm {
@@ -91,6 +97,8 @@
 }
 
 .qrateful__wrapper {
+  max-width: 1001px;
+
   p {
     font-weight: 400;
     font-size: 14px;
