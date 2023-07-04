@@ -1,0 +1,204 @@
+.company {
+  padding: 150px 0;
+
+  @include md {
+    padding: 100px 0;
+  }
+
+  @include xs {
+    padding: 60px 0;
+  }
+}
+
+.company__title {
+  margin-bottom: 40px;
+
+  @include md {
+    margin-bottom: 30px;
+  }
+
+  @include sm {
+    margin-bottom: 20px;
+  }
+}
+
+.company__wrapper {
+  display: grid;
+  grid-template-columns: 27.27% 18.19% 27.27% 27.27%;
+  gap: 2px 0;
+  grid-template-areas:
+    "company1 company2 company2 company2"
+    "company3 company3 company4 company5";
+
+  @include md {
+    grid-template-columns: 31.71% 18.09% 50.2%;
+    grid-template-areas:
+      "company1 company2 company2"
+      "company3 company3 company3"
+      "company4 company4 company5";
+  }
+
+  @include sm {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "company1 company2"
+      "company3 company3"
+      "company5 company4";
+  }
+
+  @include xs {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "company1"
+      "company2"
+      "company3"
+      "company4"
+      "company5";
+  }
+}
+
+.company__block {
+  border-radius: 10px;
+
+  &:nth-child(1) {
+    grid-area: company1;
+    padding: 30px;
+    border: 1px solid rgba(227, 227, 227, 0.5);
+  }
+
+  &:nth-child(2) {
+    grid-area: company2;
+    display: flex;
+    align-items: center;
+    padding: 30px 136px 30px 30px;
+    background: url("../images/company/company2-bg.png") center / cover
+      no-repeat;
+  }
+
+  &:nth-child(3) {
+    grid-area: company3;
+    display: flex;
+    align-items: center;
+    padding: 58px 30px;
+    background: url("../images/company/company3-bg.png") center / cover
+      no-repeat;
+  }
+
+  &:nth-child(4) {
+    grid-area: company4;
+    padding: 50px 30px;
+    border: 1px solid rgba(227, 227, 227, 0.5);
+  }
+
+  &:nth-child(5) {
+    grid-area: company5;
+    padding: 50px 30px;
+    border: 1px solid rgba(227, 227, 227, 0.5);
+  }
+
+  @include md {
+    &:nth-child(2) {
+      padding: 30px 34px 30px 30px;
+    }
+
+    &:nth-child(3) {
+      padding: 105px 70px 105px 30px;
+    }
+  }
+
+  @include sm {
+    &:nth-child(2) {
+      padding: 30px 30px 26px 30px;
+    }
+
+    &:nth-child(3) {
+      padding: 88px 30px;
+    }
+  }
+
+  @include xs {
+    &:nth-child(1) {
+      padding: 20px;
+    }
+
+    &:nth-child(2) {
+      padding: 45px 20px 53px;
+    }
+
+    &:nth-child(3) {
+      padding: 39px 20px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      padding: 53px 20px;
+    }
+  }
+
+  @include xxxs {
+    &:nth-child(1) {
+      padding: 20px 10px 20px 20xp;
+    }
+
+    &:nth-child(2) {
+      padding: 29px 17px 20px 20px;
+    }
+
+    &:nth-child(3) {
+      padding: 20px 17px 18px 20px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      padding: 61px 10px 61px 20px;
+    }
+  }
+}
+
+.company__part {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.company__numbers {
+  color: var(--color_dark);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 120%;
+
+  @include xxs {
+    font-size: 48px;
+  }
+}
+
+.company__text {
+  &.company__text--white {
+    p {
+      color: var(--color_white);
+    }
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    color: var(--color_dark);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include xxs {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    color: var(--color_light_grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 170%;
+
+    @include xxs {
+      padding: 12px;
+    }
+  }
+}
