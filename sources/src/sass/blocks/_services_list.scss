@@ -1,0 +1,138 @@
+.services-list {
+  padding: 25px 0 150px;
+
+  @include md {
+    padding: 0 0 100px;
+  }
+
+  @include xs {
+    padding: 0 0 60px;
+  }
+}
+
+.services-list__title {
+  margin-bottom: 30px;
+
+  @include xxs {
+    margin-bottom: 20px;
+  }
+}
+
+.services-list__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xxs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.services-list__block {
+  min-height: 253px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+
+  &:nth-child(1) {
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 66px 87px;
+    background: var(--color_light_blue);
+  }
+
+  &:not(:first-child) {
+    padding: 40px;
+    padding-top: 68px;
+    border: 1px solid rgba(227, 227, 227, 0.5);
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    color: var(--color_dark);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  p {
+    color: var(--color_light_grey);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 170%;
+  }
+
+  @include md {
+    min-height: 304px;
+
+    &:nth-child(1) {
+      padding: 40px 25px 40px 35px;
+    }
+
+    &:not(:first-child) {
+      padding: 81px 9px 40px;
+    }
+  }
+
+  @include sm {
+    min-height: 253px;
+
+    &:nth-child(1) {
+      min-height: 280px;
+      padding: 40px 50px;
+    }
+
+    &:not(:first-child) {
+      padding: 56px 19px 56px 30px;
+    }
+
+    h3,
+    p {
+      text-align: left;
+    }
+  }
+
+  @include xxs {
+    min-height: 192px;
+
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      min-height: 240px;
+      padding: 40px 20px;
+    }
+
+    &:not(:first-child) {
+      padding: 60px 20px 20px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  @include xxxs {
+    min-height: 234px;
+
+    &:nth-child(1) {
+      padding: 80px 20px;
+    }
+
+    &:not(:first-child) {
+      padding: 71px 20px 20px;
+    }
+  }
+}
