@@ -446,3 +446,31 @@
     padding: 30px 0 35px;
   }
 }
+
+.jobs__page {
+  padding: 71px 0 120px;
+
+  .first__img {
+    position: relative;
+    top: 60px;
+    left: 50px;
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+
+  .first__text.intro__text {
+    @include md {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include sm {
+    padding: 55px 0 80px;
+  }
+
+  @include xxxs {
+    padding: 30px 0 110px;
+  }
+}
