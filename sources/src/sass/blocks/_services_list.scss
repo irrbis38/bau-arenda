@@ -43,7 +43,7 @@
     justify-content: center;
     grid-column-start: 1;
     grid-column-end: 3;
-    padding: 66px 87px;
+    padding: 66px 87px 40px;
     background: var(--color_light_blue);
   }
 
@@ -87,7 +87,7 @@
 
     &:nth-child(1) {
       min-height: 280px;
-      padding: 40px 50px;
+      padding: 40px 40px 40px 30px;
     }
 
     &:not(:first-child) {

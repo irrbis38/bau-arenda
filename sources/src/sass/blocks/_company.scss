@@ -86,17 +86,18 @@
 
   &:nth-child(4) {
     grid-area: company4;
-    padding: 50px 30px;
+    padding: 96px 30px 20px;
     border: 1px solid rgba(227, 227, 227, 0.5);
   }
 
   &:nth-child(5) {
     grid-area: company5;
-    padding: 50px 30px;
+    padding: 96px 30px 20px;
     border: 1px solid rgba(227, 227, 227, 0.5);
   }
 
   @include md {
+    min-height: 307px;
     &:nth-child(2) {
       padding: 30px 34px 30px 30px;
     }
@@ -107,6 +108,8 @@
   }
 
   @include sm {
+    min-height: 320px;
+
     &:nth-child(2) {
       padding: 30px 30px 26px 30px;
     }
@@ -114,30 +117,39 @@
     &:nth-child(3) {
       padding: 88px 30px;
     }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      padding-top: 28px;
+    }
   }
 
   @include xs {
     &:nth-child(1) {
+      min-height: 238px;
       padding: 20px;
     }
 
     &:nth-child(2) {
+      min-height: 238px;
       padding: 45px 20px 53px;
     }
 
     &:nth-child(3) {
+      min-height: 238px;
       padding: 39px 20px;
     }
 
     &:nth-child(4),
     &:nth-child(5) {
-      padding: 53px 20px;
+      min-height: 180px;
+      padding: 43px 23px 10px 20px;
     }
   }
 
   @include xxxs {
     &:nth-child(1) {
-      padding: 20px 10px 20px 20xp;
+      padding: 20px 10px 20px 20px;
     }
 
     &:nth-child(2) {
@@ -188,6 +200,7 @@
 
     @include xxs {
       margin-bottom: 10px;
+      font-size: 18px;
     }
   }
 
@@ -198,7 +211,7 @@
     line-height: 170%;
 
     @include xxs {
-      padding: 12px;
+      font-size: 12px;
     }
   }
 }
