@@ -1,213 +1,127 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@use 'sass:math';
+
+%svg-common {
+	background: url("../images/sprites/main.svg") no-repeat;
+}
+
+.svg-image-hotline1 {
+	@extend %svg-common;
+	background-position: 0 0;
+	background-size: math.div(74, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-hotline1 {
+	background-position: 0 0;
+}
+@mixin svg-image-hotline1-hover {
+	.svg-image-hotline1 {
+		@include svg-pos-image-hotline1-hover
+	}
+}
+
+.svg-image-hotline1:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-hotline1-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-image-hotline2 {
+	@extend %svg-common;
+	background-position: 100% 0;
+	background-size: math.div(74, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-hotline2 {
+	background-position: 100% 0;
+}
+@mixin svg-image-hotline2-hover {
+	.svg-image-hotline2 {
+		@include svg-pos-image-hotline2-hover
+	}
+}
+
+.svg-image-hotline2:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-hotline2-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-image-hotline3 {
+	@extend %svg-common;
+	background-position: 0 100%;
+	background-size: math.div(74, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-hotline3 {
+	background-position: 0 100%;
+}
+@mixin svg-image-hotline3-hover {
+	.svg-image-hotline3 {
+		@include svg-pos-image-hotline3-hover
+	}
+}
+
+.svg-image-hotline3:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-hotline3-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-image-hotline4 {
+	@extend %svg-common;
+	background-position: 100% 100%;
+	background-size: math.div(74, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-hotline4 {
+	background-position: 100% 100%;
+}
+@mixin svg-image-hotline4-hover {
+	.svg-image-hotline4 {
+		@include svg-pos-image-hotline4-hover
+	}
+}
+
+.svg-image-hotline4:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-hotline4-dims {
+	width: 37px;
+	height: 37px;
+}
+
+
+.image-by-height { width:auto; }
+.image-by-height:before { content:none; }
+.image-by-height > svg { height: inherit; }
+.image-by-height > img { height: inherit !important; vertical-align: top !important; margin: 0 !important; padding: 0 !important; max-width: none !important; max-height: none !important; border: 0 !important; opacity: 0 !important; }

@@ -1,0 +1,76 @@
+extends base/_layout
+block head
+    title БауАренда - аренда строительной техники
+block page
+
+    section.first.hotline__page
+        .container
+            .first__wrapper
+                .first__info
+                    .first__breadcrumps
+                        a.first__prev(href="./index.html") Главная
+                        a.first__prev(href="./contacts.html") Контакты
+                        span.first__current Горячая линия
+                    h1.first__title.intro__title Горячая линия
+                    p.first__text.intro__text.
+                        Мы создали горячую линию, чтобы Вам было легче сотрудничать с нашей компанией. Теперь узнать о решении проблем, аренде техники и сотрудничестве стало гораздо проще – ведь мы стали ещё ближе.
+
+                    a.first__link.btn__link.btn__yellow(href="#") Каталог
+                .first__img
+                    +picture('first/first-hotline', 'png', 'x2')
+
+
+    section.advantage.hotline__advantage
+        .container
+            .advantage__container
+                .advantage__main
+                    h2.advantage__title.block__title Есть проблемы или сложности?
+
+                    .advantage__text
+                        p Услуги нашей компании успешно охватили все сферы, где может понадобится специальная техника – от сложной стройки до сезонной уборки снега. 
+                        p У нас найдутся точки соприкосновения с любой компанией, которой вообще может потребоваться бульдозер, самосвал или погрузочный экскаватор. Не обошли мы вниманием и обычных людей – мы работаем с физическими лицами.
+                        p Вы можете воспользоваться нашими услугами в любое комфортное время – мы работаем без выходных, круглые сутки, и мы будем рады Вам помочь.
+
+
+                .advantage__wrapper
+
+                    .advantage__item
+                        .advantage__icon
+                            +icon('hotline1')
+                        h4.advantage__header Уважаемые клиенты и партнёры
+                        p.advantage__description Данный раздел создан с целью улучшения качества сотрудничества с нашей компанией, и желанием руководства и собственников быть максимально ближе к вам.
+
+                    .advantage__border
+
+                    .advantage__item
+                        .advantage__icon
+                            +icon('hotline2')
+                        h4.advantage__header Есть проблемы или сложности?
+                        p.advantage__description C сотрудниками нашего предприятия или у вас появились предложения, будем искренне признательны и благодарны, если вы нам об этом сообщите.
+
+                    .advantage__item
+                        .advantage__icon
+                            +icon('hotline3')
+                        h4.advantage__header Напишите нам через данную форму
+                        p.advantage__description Данная форма обратной связи, напрямую отправляет сообщение собственнику, в свою очередь, вам гарантирована полная конфиденциальность и молниеносная реакция на ваше обращение.
+
+                    .advantage__border
+
+                    .advantage__item
+                        .advantage__icon
+                            +icon('hotline4')
+                        h4.advantage__header Для желающих заказать сейчас
+                        p.advantage__description Этот раздел создан специально для тех, кому техника «нужна ещё вчера». Наберите на линию, и мы договоримся.
+
+
+
+
+    include ./blocks/_feedback_narrow
+
+    include ./blocks/_popular
+
+    include ./blocks/_reviews
+
+    include ./blocks/_feedback_full_width
+
+    include ./blocks/_fixed_block

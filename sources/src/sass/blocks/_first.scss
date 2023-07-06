@@ -474,3 +474,15 @@
     padding: 30px 0 110px;
   }
 }
+
+.hotline__page {
+  .first__img {
+    // position: relative;
+    // top: 60px;
+    // left: 50px;
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}

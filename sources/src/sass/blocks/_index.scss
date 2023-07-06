@@ -798,6 +798,39 @@
   color: #4d5051;
 }
 
+// === hotline__advantage styles
+
+.hotline__advantage {
+  padding-top: 150px;
+
+  .advantage__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .advantage__icon {
+    width: 35px;
+    height: 35px;
+
+    span {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include md {
+    padding-top: 100px;
+  }
+
+  @include xxs {
+    padding-top: 60px;
+  }
+}
+
 /*===== news styles =====*/
 
 .news {
