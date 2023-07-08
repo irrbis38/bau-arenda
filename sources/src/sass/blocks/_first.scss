@@ -1,6 +1,7 @@
 .first {
   padding: 71px 0 70px;
   background-color: var(--color_light_blue);
+  overflow: hidden;
 
   @include md {
     padding: 81px 0 120px;
@@ -484,5 +485,43 @@
     @include r(991px) {
       display: none;
     }
+  }
+}
+
+.warranties__page {
+  padding: 47px 0 97px;
+
+  .first__img {
+    position: relative;
+    top: 40px;
+    left: 80px;
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+
+  @include md {
+    padding: 52px 0 90px;
+
+    .first__text.intro__text {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include sm {
+    padding: 28px 0 63px;
+  }
+
+  @include xxs {
+    padding: 22px 0 60px;
+
+    .first__text.intro__text {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include xxxs {
+    padding: 31px 0 30px;
   }
 }

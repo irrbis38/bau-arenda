@@ -1,0 +1,177 @@
+.warranties {
+  padding: 150px 0;
+
+  @include md {
+    padding: 100px 0;
+  }
+
+  @include xxs {
+    padding: 60px 0;
+  }
+}
+
+.warranties__title {
+  max-width: 735px;
+  margin-bottom: 30px;
+
+  @include md {
+    max-width: 614px;
+  }
+
+  @include sm {
+    max-width: 100%;
+  }
+
+  @include xxs {
+    margin-bottom: 20px;
+  }
+}
+
+.warranties__about {
+  margin-bottom: 30px;
+  padding: 79px 84px 93px;
+  background: url("../images/warranties/warranties-bg.png") center / cover
+    no-repeat;
+  color: var(--color_white);
+  border-radius: 10px;
+
+  @include md {
+    padding: 60px 43px 50px 30px;
+  }
+
+  @include sm {
+    padding: 54px 35px 44px 30px;
+  }
+
+  @include xs {
+    margin-bottom: 10px;
+    padding: 20px 17px 11px 20px;
+  }
+
+  @include xxxs {
+    padding: 20px 17px 6px 20px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include md {
+      margin-bottom: 10px;
+    }
+
+    @include xxs {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 170%;
+
+    @include xxs {
+      font-size: 12px;
+    }
+
+    @include xxxs {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.warranties__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+
+  @include xxs {
+    gap: 10px;
+  }
+}
+
+.warranties__block {
+  &:not(:last-child) {
+    min-height: 296px;
+    padding: 30px 35px 30px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(227, 227, 227, 0.5);
+  }
+
+  &:last-child {
+    display: flex;
+    align-items: center;
+  }
+
+  @include md {
+    &:not(:last-child) {
+      min-height: 344px;
+    }
+
+    &:last-child {
+      display: block;
+      padding-top: 100px;
+    }
+  }
+
+  @include sm {
+    &:not(:last-child) {
+      min-height: 248px;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  @include xxs {
+    &:not(:last-child) {
+      min-height: 234px;
+      padding: 20px 14px 20px 20px;
+    }
+
+    &:last-child {
+      padding-top: 10px;
+    }
+  }
+
+  @include xxs {
+    &:not(:last-child) {
+      min-height: 336px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    color: var(--color_dark);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include xxs {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+  }
+
+  p {
+    color: var(--color_light_grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 170%;
+
+    @include xxs {
+      font-size: 12px;
+      line-height: 165%;
+    }
+  }
+}
