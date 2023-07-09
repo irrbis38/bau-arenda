@@ -1,0 +1,42 @@
+extends base/_layout
+block head
+    title БауАренда - аренда строительной техники
+block page
+
+    section.news-item
+        .container
+            .first__breadcrumps
+                a.first__prev(href="./index.html") Главная
+                a.first__prev(href="./news.html") Новости
+                span.first__current Особенности организации вывоза строительного мусора и грунта
+            h2.news-item__title.block__title Особенности организации вывоза строительного мусора и грунта
+
+            .news-item__intro
+                .news-item__bg
+                    +picture('news/news-item-intro-bg', 'png', 'x2')
+                .news-item__info
+                    p.news-item__publised сегодня 10:00
+                    .news-stat
+                        .news__read
+                            +icon('time-white')
+                            span 15 мин
+                        .news__views
+                            +icon('views-white')
+                            span 236
+                        .news__comments
+                            +icon('comments-white')
+                            span 0
+
+
+
+    section.news
+        .container
+            h2.news__title.block__title Читать также
+
+            include ./blocks/_news_wrapper
+
+            a.news__more.btn__link.btn__grey(href="#") Посмотреть все
+
+    include ./blocks/_feedback_full_width
+
+    include ./blocks/_fixed_block

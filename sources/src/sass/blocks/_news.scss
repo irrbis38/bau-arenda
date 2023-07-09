@@ -77,3 +77,155 @@
     }
   }
 }
+
+// ===== news-item styles
+
+.news-item {
+  padding-top: 100px;
+
+  @include md {
+    padding-top: 70px;
+  }
+
+  @include sm {
+    padding-top: 50px;
+  }
+
+  @include xs {
+    padding-top: 40px;
+  }
+
+  .first__breadcrumps {
+    @include md {
+      margin-bottom: 20px;
+    }
+
+    @include xxxs {
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.news-item__title {
+  margin-bottom: 30px;
+  font-size: 56px;
+
+  @include md {
+    font-size: 30px;
+  }
+
+  @include xxs {
+    font-size: 24px;
+  }
+
+  @include xxxs {
+    margin-bottom: 20px;
+  }
+}
+
+.news-item__intro {
+  position: relative;
+  width: 100%;
+  min-height: 356px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  padding: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--color_white);
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include sm {
+    margin-bottom: 20px;
+  }
+
+  @include xxs {
+    min-height: 277px;
+  }
+
+  @include xxxs {
+    min-height: 220px;
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.news-item__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    #c4c4c4;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news-item__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include xxxs {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.news-stat {
+  display: flex;
+  align-items: flex-end;
+
+  .svg-image-time-white {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+
+  .svg-image-views-white {
+    display: block;
+    width: 16px;
+    height: 11px;
+    margin-right: 6px;
+  }
+
+  .svg-image-comments-white {
+    display: block;
+    width: 14px;
+    height: 11px;
+    margin-right: 6px;
+  }
+}
+
+.news__read,
+.news__views,
+.news__comments {
+  display: flex;
+  align-items: center;
+}
+
+.news__read,
+.news__views {
+  margin-right: 21px;
+
+  @include xxxs {
+    margin-right: 10px;
+  }
+}

@@ -4,10 +4,39 @@
 	background: url("../images/sprites/main.svg") no-repeat;
 }
 
+.svg-image-comments-white {
+	@extend %svg-common;
+	background-position: 97.36842105263158% 50.81967213114754%;
+	background-size: math.div(92, 16)*100% auto;
+	width: 16px;
+
+}
+@mixin svg-pos-image-comments-white {
+	background-position: 97.36842105263158% 50.81967213114754%;
+}
+@mixin svg-image-comments-white-hover {
+	.svg-image-comments-white {
+		@include svg-pos-image-comments-white-hover
+	}
+}
+
+.svg-image-comments-white:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(13, 16)*100%;
+}
+
+.svg-image-comments-white-dims {
+	width: 16px;
+	height: 13px;
+}
+
 .svg-image-hotline1 {
 	@extend %svg-common;
 	background-position: 0 0;
-	background-size: math.div(74, 37)*100% auto;
+	background-size: math.div(92, 37)*100% auto;
 	width: 37px;
 
 }
@@ -35,13 +64,13 @@
 
 .svg-image-hotline2 {
 	@extend %svg-common;
-	background-position: 100% 0;
-	background-size: math.div(74, 37)*100% auto;
+	background-position: 67.27272727272727% 0;
+	background-size: math.div(92, 37)*100% auto;
 	width: 37px;
 
 }
 @mixin svg-pos-image-hotline2 {
-	background-position: 100% 0;
+	background-position: 67.27272727272727% 0;
 }
 @mixin svg-image-hotline2-hover {
 	.svg-image-hotline2 {
@@ -65,7 +94,7 @@
 .svg-image-hotline3 {
 	@extend %svg-common;
 	background-position: 0 100%;
-	background-size: math.div(74, 37)*100% auto;
+	background-size: math.div(92, 37)*100% auto;
 	width: 37px;
 
 }
@@ -93,13 +122,13 @@
 
 .svg-image-hotline4 {
 	@extend %svg-common;
-	background-position: 100% 100%;
-	background-size: math.div(74, 37)*100% auto;
+	background-position: 67.27272727272727% 100%;
+	background-size: math.div(92, 37)*100% auto;
 	width: 37px;
 
 }
 @mixin svg-pos-image-hotline4 {
-	background-position: 100% 100%;
+	background-position: 67.27272727272727% 100%;
 }
 @mixin svg-image-hotline4-hover {
 	.svg-image-hotline4 {
@@ -118,6 +147,64 @@
 .svg-image-hotline4-dims {
 	width: 37px;
 	height: 37px;
+}
+
+.svg-image-time-white {
+	@extend %svg-common;
+	background-position: 100% 0;
+	background-size: math.div(92, 18)*100% auto;
+	width: 18px;
+
+}
+@mixin svg-pos-image-time-white {
+	background-position: 100% 0;
+}
+@mixin svg-image-time-white-hover {
+	.svg-image-time-white {
+		@include svg-pos-image-time-white-hover
+	}
+}
+
+.svg-image-time-white:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(18, 18)*100%;
+}
+
+.svg-image-time-white-dims {
+	width: 18px;
+	height: 18px;
+}
+
+.svg-image-views-white {
+	@extend %svg-common;
+	background-position: 100% 29.508196721311474%;
+	background-size: math.div(92, 18)*100% auto;
+	width: 18px;
+
+}
+@mixin svg-pos-image-views-white {
+	background-position: 100% 29.508196721311474%;
+}
+@mixin svg-image-views-white-hover {
+	.svg-image-views-white {
+		@include svg-pos-image-views-white-hover
+	}
+}
+
+.svg-image-views-white:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(13, 18)*100%;
+}
+
+.svg-image-views-white-dims {
+	width: 18px;
+	height: 13px;
 }
 
 
