@@ -59,7 +59,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // init reviews page
   const contacts_page = document.querySelector(".contacts__page");
   if (contacts_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
     initMap();
+  }
+
+  // init company page
+  const company_page = document.querySelector(".company__page");
+  if (company_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
   }
 });
 
