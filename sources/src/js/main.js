@@ -96,6 +96,36 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsFullScreen();
     initForms();
   }
+
+  // init licenses page
+  const licenses_page = document.querySelector(".licenses__page");
+  if (licenses_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init promotioins page
+  const promotions_page = document.querySelector(".promotions__page");
+  if (promotions_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init warranties page
+  const warranties_page = document.querySelector(".warranties__page");
+  if (warranties_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
 });
 
 const body = document.body;
