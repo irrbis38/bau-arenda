@@ -1,0 +1,23 @@
+extends base/_layout
+block head
+    title БауАренда - аренда строительной техники
+block page
+
+    section.news.news__page
+        .container
+            .first__breadcrumps
+                a.first__prev(href="./index.html") Главная
+                span.first__current Новости
+            h2.news__title.block__title Новости
+
+            include ./blocks/_news_wrapper
+
+            include ./blocks/_news_wrapper
+
+            include ./blocks/_pagination
+
+    include ./blocks/_reviews
+
+    include ./blocks/_feedback_full_width
+
+    include ./blocks/_fixed_block
