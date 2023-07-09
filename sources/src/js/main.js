@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initForms();
   }
 
-  // init reviews page
+  // init contacts page
   const contacts_page = document.querySelector(".contacts__page");
   if (contacts_page) {
     const first = document.querySelector(".first");
@@ -70,6 +70,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // init company page
   const company_page = document.querySelector(".company__page");
   if (company_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init hotline page
+  const hotline_page = document.querySelector(".hotline__page");
+  if (hotline_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init jobs page
+  const jobs_page = document.querySelector(".jobs__page");
+  if (jobs_page) {
     const first = document.querySelector(".first");
     initToTopButton(first);
     initReviewsSlider();
