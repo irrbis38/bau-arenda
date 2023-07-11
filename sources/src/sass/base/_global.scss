@@ -74,7 +74,7 @@ input {
   font-weight: 600;
   font-size: 36px;
   line-height: 120%;
-  color: #1f1e1d;
+  color: var(--color_dark);
 }
 
 .btn__link {
@@ -87,7 +87,7 @@ input {
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
-  color: #1f1e1d;
+  color: var(--color_dark);
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
 }
