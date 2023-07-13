@@ -6,13 +6,13 @@
 
 .svg-image-comments-close {
 	@extend %svg-common;
-	background-position: 92.5% 69.84126984126983%;
-	background-size: math.div(92, 12)*100% auto;
+	background-position: 90.9090909090909% 92%;
+	background-size: math.div(111, 12)*100% auto;
 	width: 12px;
 
 }
 @mixin svg-pos-image-comments-close {
-	background-position: 92.5% 69.84126984126983%;
+	background-position: 90.9090909090909% 92%;
 }
 @mixin svg-image-comments-close-hover {
 	.svg-image-comments-close {
@@ -35,13 +35,13 @@
 
 .svg-image-comments-white {
 	@extend %svg-common;
-	background-position: 97.36842105263158% 50.81967213114754%;
-	background-size: math.div(92, 16)*100% auto;
+	background-position: 77.89473684210526% 93.87755102040816%;
+	background-size: math.div(111, 16)*100% auto;
 	width: 16px;
 
 }
 @mixin svg-pos-image-comments-white {
-	background-position: 97.36842105263158% 50.81967213114754%;
+	background-position: 77.89473684210526% 93.87755102040816%;
 }
 @mixin svg-image-comments-white-hover {
 	.svg-image-comments-white {
@@ -65,7 +65,7 @@
 .svg-image-hotline1 {
 	@extend %svg-common;
 	background-position: 0 0;
-	background-size: math.div(92, 37)*100% auto;
+	background-size: math.div(111, 37)*100% auto;
 	width: 37px;
 
 }
@@ -93,13 +93,13 @@
 
 .svg-image-hotline2 {
 	@extend %svg-common;
-	background-position: 67.27272727272727% 0;
-	background-size: math.div(92, 37)*100% auto;
+	background-position: 50% 0;
+	background-size: math.div(111, 37)*100% auto;
 	width: 37px;
 
 }
 @mixin svg-pos-image-hotline2 {
-	background-position: 67.27272727272727% 0;
+	background-position: 50% 0;
 }
 @mixin svg-image-hotline2-hover {
 	.svg-image-hotline2 {
@@ -122,13 +122,13 @@
 
 .svg-image-hotline3 {
 	@extend %svg-common;
-	background-position: 0 100%;
-	background-size: math.div(92, 37)*100% auto;
+	background-position: 0 50%;
+	background-size: math.div(111, 37)*100% auto;
 	width: 37px;
 
 }
 @mixin svg-pos-image-hotline3 {
-	background-position: 0 100%;
+	background-position: 0 50%;
 }
 @mixin svg-image-hotline3-hover {
 	.svg-image-hotline3 {
@@ -151,13 +151,13 @@
 
 .svg-image-hotline4 {
 	@extend %svg-common;
-	background-position: 67.27272727272727% 100%;
-	background-size: math.div(92, 37)*100% auto;
+	background-position: 50% 50%;
+	background-size: math.div(111, 37)*100% auto;
 	width: 37px;
 
 }
 @mixin svg-pos-image-hotline4 {
-	background-position: 67.27272727272727% 100%;
+	background-position: 50% 50%;
 }
 @mixin svg-image-hotline4-hover {
 	.svg-image-hotline4 {
@@ -178,15 +178,131 @@
 	height: 37px;
 }
 
-.svg-image-time-white {
+.svg-image-prices1 {
 	@extend %svg-common;
 	background-position: 100% 0;
-	background-size: math.div(92, 18)*100% auto;
+	background-size: math.div(111, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-prices1 {
+	background-position: 100% 0;
+}
+@mixin svg-image-prices1-hover {
+	.svg-image-prices1 {
+		@include svg-pos-image-prices1-hover
+	}
+}
+
+.svg-image-prices1:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-prices1-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-image-prices2 {
+	@extend %svg-common;
+	background-position: 100% 50%;
+	background-size: math.div(111, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-prices2 {
+	background-position: 100% 50%;
+}
+@mixin svg-image-prices2-hover {
+	.svg-image-prices2 {
+		@include svg-pos-image-prices2-hover
+	}
+}
+
+.svg-image-prices2:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-prices2-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-image-prices3 {
+	@extend %svg-common;
+	background-position: 0 100%;
+	background-size: math.div(111, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-prices3 {
+	background-position: 0 100%;
+}
+@mixin svg-image-prices3-hover {
+	.svg-image-prices3 {
+		@include svg-pos-image-prices3-hover
+	}
+}
+
+.svg-image-prices3:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-prices3-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-image-prices4 {
+	@extend %svg-common;
+	background-position: 50% 100%;
+	background-size: math.div(111, 37)*100% auto;
+	width: 37px;
+
+}
+@mixin svg-pos-image-prices4 {
+	background-position: 50% 100%;
+}
+@mixin svg-image-prices4-hover {
+	.svg-image-prices4 {
+		@include svg-pos-image-prices4-hover
+	}
+}
+
+.svg-image-prices4:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(37, 37)*100%;
+}
+
+.svg-image-prices4-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-image-time-white {
+	@extend %svg-common;
+	background-position: 79.56989247311827% 79.56989247311827%;
+	background-size: math.div(111, 18)*100% auto;
 	width: 18px;
 
 }
 @mixin svg-pos-image-time-white {
-	background-position: 100% 0;
+	background-position: 79.56989247311827% 79.56989247311827%;
 }
 @mixin svg-image-time-white-hover {
 	.svg-image-time-white {
@@ -209,13 +325,13 @@
 
 .svg-image-views-white {
 	@extend %svg-common;
-	background-position: 100% 29.508196721311474%;
-	background-size: math.div(92, 18)*100% auto;
+	background-position: 98.9247311827957% 75.51020408163265%;
+	background-size: math.div(111, 18)*100% auto;
 	width: 18px;
 
 }
 @mixin svg-pos-image-views-white {
-	background-position: 100% 29.508196721311474%;
+	background-position: 98.9247311827957% 75.51020408163265%;
 }
 @mixin svg-image-views-white-hover {
 	.svg-image-views-white {

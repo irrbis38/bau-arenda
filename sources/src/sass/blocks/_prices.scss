@@ -22,10 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 41px;
+  margin-bottom: 39px;
 
   @include xxs {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 }
 
@@ -35,11 +35,15 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 170%;
+
+  @include xxs {
+    font-size: 14px;
+  }
 }
 
 .prices__list {
   &:not(:last-child) {
-    margin-bottom: 41px;
+    margin-bottom: 39px;
 
     @include xxs {
       margin-bottom: 45px;
@@ -54,7 +58,7 @@
   gap: 0 35px;
 
   &:not(:last-child) {
-    margin-bottom: 41px;
+    margin-bottom: 40px;
 
     @include xxs {
       margin-bottom: 45px;
@@ -92,5 +96,34 @@
 
   @include xxs {
     font-size: 14px;
+  }
+}
+
+.advantage.prices__advantage {
+  padding-top: 0;
+}
+
+.infoBlock.prices__infoBlock {
+  padding-top: 0;
+  padding-bottom: 150px;
+
+  @include md {
+    padding-bottom: 100px;
+  }
+
+  @include xxs {
+    padding-bottom: 60px;
+  }
+
+  ul {
+    max-width: 772px;
+  }
+
+  b {
+    font-size: 16px;
+
+    @include xxs {
+      font-size: 14px;
+    }
   }
 }

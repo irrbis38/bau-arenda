@@ -526,11 +526,45 @@
   }
 }
 
-.first__page {
+.prices__page {
+  padding: 24px 0 74px;
+
+  @include md {
+    padding: 39px 0 74px;
+
+    .first__text.intro__text {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include sm {
+    padding: 10px 0 50px;
+
+    .first__text.intro__text {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include xxs {
+    padding: 20px 0 50px;
+  }
+
+  @include xxxs {
+    padding: 35px 0 30px;
+  }
+
+  .first__info {
+    max-width: 690px;
+  }
+
+  .first__text {
+    max-width: 570px;
+  }
+
   .first__img {
     position: relative;
-    top: 40px;
-    left: 80px;
+    top: 110px;
+    left: 20px;
 
     @include r(991px) {
       display: none;
