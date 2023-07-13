@@ -4,6 +4,35 @@
 	background: url("../images/sprites/main.svg") no-repeat;
 }
 
+.svg-image-comments-close {
+	@extend %svg-common;
+	background-position: 92.5% 69.84126984126983%;
+	background-size: math.div(92, 12)*100% auto;
+	width: 12px;
+
+}
+@mixin svg-pos-image-comments-close {
+	background-position: 92.5% 69.84126984126983%;
+}
+@mixin svg-image-comments-close-hover {
+	.svg-image-comments-close {
+		@include svg-pos-image-comments-close-hover
+	}
+}
+
+.svg-image-comments-close:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(11, 12)*100%;
+}
+
+.svg-image-comments-close-dims {
+	width: 12px;
+	height: 11px;
+}
+
 .svg-image-comments-white {
 	@extend %svg-common;
 	background-position: 97.36842105263158% 50.81967213114754%;

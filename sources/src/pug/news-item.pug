@@ -108,14 +108,83 @@ block page
 
     section.news-item__commments.comments
         .container
-            h2.comments__title Добавить комментарий
-            .comments__new
+            h2.comments__title.block__title Добавить комментарий
+            //- add className comments__error to comments__new to show error
+            //- to show author avatar set class 'logged' to form
+            form.comments__new(action="#")
+
+                .comments__person
+                    .comments__avatar
+                        img(src="./images/news/ava.svg" alt="avatar")
+                    p.comments__name Кривонос Наталья
+                    +icon('comments-close')
+
+                .comments__block
+                    p.comments__error-msg Комментарий не может быть пустым
+                    input.comments__input(type="text" placeholder="Ваш комментарий..." required)
+
+                .comments__auth
+
+                    p.comments__error-msg Пожалуйста используйте любую из предложенных социальный сетей, чтобы оставить комментарий
+
+                    .comments__auth-block
+                        span Авторизоваться:
+                        ul
+                            li: button 
+                                include ./blocks/_icon_ok
+
+                            li: button 
+                                include ./blocks/_icon_vk
+
+                            li: button 
+                                include ./blocks/_icon_facebook
+
+                            li: button 
+                                include ./blocks/_icon_twitter
+
+                button.comments__submit.btn__link.btn__yellow(type="submit") Отправить
+
+            p.comments__successful Спасибо, ваш комментарий опубликован!
+
             .comments__wrapper
-                ul.comments__list 
+                ul.comments__list
+
                     li.comments__item
+                        .comments__info
+                            .comments__person
+                                .comments__avatar
+                                    img(src="./images/news/ava.svg" alt="avatar")
+                                p.comments__name Кривонос Наталья
+                            span.comments__published 02.03.2021 в 13.44
+                        p.comments__text Хочу поблагодарить компании за оказанную помощь при строительстве участка. Ваши специалисты помогли вывезти грунт и подготовить территорию к дальнейшей работы.
+
                     li.comments__item
+                        .comments__info
+                            .comments__person
+                                .comments__avatar
+                                    img(src="./images/news/ava.svg" alt="avatar")
+                                p.comments__name Кривонос Наталья
+                            span.comments__published 02.03.2021 в 13.44
+                        p.comments__text Спасибо компании "Бауаренда" и ее сотрудникам. Брал в аренду экскаватор-погрузчик. Сотрудники компании помогли подобрать нужный вариант экскаватора. Профессионалы и очень приятные люди! Успехов и побольше довольных клиентов!
+
                     li.comments__item
+                        .comments__info
+                            .comments__person
+                                .comments__avatar
+                                    img(src="./images/news/ava.svg" alt="avatar")
+                                p.comments__name Кривонос Наталья
+                            span.comments__published 02.03.2021 в 13.44
+                        p.comments__text Хочу поблагодарить компании за оказанную помощь при строительстве участка. Ваши специалисты помогли вывезти грунт и подготовить территорию к дальнейшей работы.
+
                     li.comments__item
+                        .comments__info
+                            .comments__person
+                                .comments__avatar
+                                    img(src="./images/news/ava.svg" alt="avatar")
+                                p.comments__name Кривонос Наталья
+                            span.comments__published 02.03.2021 в 13.44
+                        p.comments__text Выражаем признательность за сотрудничество. Компания «БауАренда» предоставила в аренду тралы для транспортировки леса. Техника полностью отрабатывает потраченные деньги. Никаких «случайностей» в виде выхода из строя не произошло. По организации работы тоже все замечательно. Подписали договор, и уже на следующее утро тралы были в нашем распоряжении. Рекомендуем ООО «БауАренда» как надежного контрагента!
+
                 include ./blocks/_pagination
 
 
