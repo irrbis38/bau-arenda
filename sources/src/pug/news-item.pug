@@ -81,21 +81,28 @@ block page
             .share__container
                 h2.share__title Поделиться:
                 ul.share__list
-                    li.share__item: button(onclick = 'window.open("https://vk.com/share.php?url=https://www.google.com/","sharer","status=0,toolbar=0,width=650,height=500")')
+                    li.share__item: a(href="mailto:?subject=Subject%20line&body=Email%20body")
                         include ./blocks/_icon_share
+
                     li.share__item: button 
                         include ./blocks/_icon_instagram
-                    li.share__item: button 
+
+                    li.share__item: button(onclick = 'window.open("https://connect.ok.ru/offer?url=https://www.google.com/&title=TITLE","sharer","status=0,toolbar=0,width=650,height=500")')
                         include ./blocks/_icon_ok
-                    li.share__item: button 
+
+                    li.share__item: button(onclick = 'window.open("https://vk.com/share.php?url=https://www.google.com/","sharer","status=0,toolbar=0,width=650,height=500")')
                         include ./blocks/_icon_vk
-                    li.share__item: button 
+
+                    li.share__item: button(onclick = 'window.open("https://www.facebook.com/sharer.php?u=https://www.google.com/","sharer","status=0,toolbar=0,width=650,height=500")')
                         include ./blocks/_icon_facebook
-                    li.share__item: button 
+
+                    li.share__item: button(onclick ='window.open("https://twitter.com/intent/tweet?text=ТАЙТЛ_СТРАНИЦЫ. ОПИСАНИЕ. СССЫЛКА","sharer","status=0,toolbar=0,width=650,height=500")')
                         include ./blocks/_icon_twitter
-                    li.share__item: button 
+
+                    li.share__item: button(onclick ='window.open("https://www.linkedin.com/sharing/share-offsite/?url=http://example.com","sharer","status=0,toolbar=0,width=650,height=500")')
                         include ./blocks/_icon_linkedin
-                    li.share__item: button 
+
+                    li.share__item: button(onclick ='window.open("https://ru.pinterest.com/pin/create/button/?url=АДРЕС_СТРАНИЦЫ","sharer","status=0,toolbar=0,width=650,height=500")')
                         include ./blocks/_icon_pinterest
 
 
