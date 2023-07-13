@@ -525,3 +525,15 @@
     padding: 31px 0 30px;
   }
 }
+
+.first__page {
+  .first__img {
+    position: relative;
+    top: 40px;
+    left: 80px;
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}
