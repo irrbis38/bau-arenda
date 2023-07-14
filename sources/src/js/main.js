@@ -127,13 +127,41 @@ document.addEventListener("DOMContentLoaded", function () {
     initForms();
   }
 
-  // init warranties page
+  // init catalog page
   const catalog_page = document.querySelector(".catalog__page");
   if (catalog_page) {
     const first = document.querySelector(".first");
     initToTopButton(first);
     initReviewsSlider();
     initReviewsFullScreen();
+    initForms();
+  }
+
+  // init prices page
+  const prices_page = document.querySelector(".prices__page");
+  if (prices_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init news page
+  const news_page = document.querySelector(".news__page");
+  if (news_page) {
+    const news_title = document.querySelector(".news__title");
+    initToTopButton(news_title);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init news-item page
+  const news_item_page = document.querySelector(".news-item");
+  if (news_item_page) {
+    const news_item_title = document.querySelector(".news-item__title");
+    initToTopButton(news_item_title);
     initForms();
   }
 });
