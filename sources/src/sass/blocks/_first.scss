@@ -616,6 +616,14 @@
     top: 40px;
     left: 50px;
 
+    @include lg {
+      left: 100px;
+    }
+
+    @include md {
+      left: 50px;
+    }
+
     @include r(991px) {
       display: none;
     }

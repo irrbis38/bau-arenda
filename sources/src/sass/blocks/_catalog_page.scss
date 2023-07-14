@@ -1,0 +1,27 @@
+// catalog 'show more' button
+
+.catalog__more {
+  margin: 0 auto;
+}
+
+.infoBlock.catalog__infoBlock {
+  margin-top: 220px;
+
+  .infoBlock__title {
+    margin-bottom: 20px;
+  }
+
+  @include lg {
+    margin-top: 150px;
+  }
+
+  @include md {
+    margin-top: 100px;
+  }
+}
+
+.advantage.catalog__advantage {
+  @include lg {
+    padding-top: 100px;
+  }
+}

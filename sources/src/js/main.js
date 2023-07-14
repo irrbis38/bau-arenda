@@ -126,6 +126,16 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsFullScreen();
     initForms();
   }
+
+  // init warranties page
+  const catalog_page = document.querySelector(".catalog__page");
+  if (catalog_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
 });
 
 const body = document.body;

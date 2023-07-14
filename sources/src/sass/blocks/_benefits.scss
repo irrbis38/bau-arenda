@@ -8,6 +8,12 @@
   @include xxs {
     margin: 60px 0;
   }
+
+  &.benefits__second {
+    @include lg {
+      margin-bottom: 140px;
+    }
+  }
 }
 
 .benefits__title {
@@ -68,6 +74,11 @@
   max-width: 1170px;
   columns: 2;
   column-gap: 30px;
+
+  @include xs {
+    columns: unset;
+    column-gap: 0;
+  }
 }
 
 .columns_break {

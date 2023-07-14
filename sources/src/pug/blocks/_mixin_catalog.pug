@@ -1,4 +1,4 @@
-mixin catalog(catalog_data)
+mixin catalog(catalog_data, is_catalog_page)
     section.catalog
         .container
             h2.catalog__title.block__title Каталог техники
@@ -95,7 +95,11 @@ mixin catalog(catalog_data)
 
 
 
+                    if is_catalog_page
 
+                        include ./_pagination
 
-                    button.catalog__more.btn__link.btn__grey Показать больше
+                    else
+
+                        button.catalog__more.btn__link.btn__grey Показать больше
 

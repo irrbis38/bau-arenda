@@ -13,6 +13,14 @@ ul.page-numbers {
   @include xs {
     margin-top: 30px;
   }
+
+  .catalog & {
+    margin-right: 0;
+
+    @include md {
+      margin-right: auto;
+    }
+  }
 }
 
 li .page-numbers {
