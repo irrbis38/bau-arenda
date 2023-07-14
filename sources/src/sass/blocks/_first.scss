@@ -116,6 +116,10 @@
   @include xxs {
     font-size: 14px;
   }
+
+  p {
+    margin-bottom: 10px;
+  }
 }
 
 .first__img {
@@ -565,6 +569,52 @@
     position: relative;
     top: 110px;
     left: 20px;
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}
+
+.catalog__page {
+  padding: 18px 0 70px;
+
+  @include md {
+    padding: 34px 0 70px;
+
+    .first__info {
+      max-width: 530px;
+    }
+
+    .first__text.intro__text {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include sm {
+    padding: 5px 0 40px;
+
+    .first__info {
+      max-width: 600px;
+    }
+
+    .first__text.intro__text {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include xxs {
+    padding: 0 0 40px;
+  }
+
+  @include xxxs {
+    padding: 35px 0 31px;
+  }
+
+  .first__img {
+    position: relative;
+    top: 40px;
+    left: 50px;
 
     @include r(991px) {
       display: none;

@@ -745,6 +745,21 @@
   padding-bottom: $block_padding;
 }
 
+.advantage.catalog__advantage {
+  padding-top: 150px;
+  padding-bottom: 0;
+
+  @include md {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  @include xxs {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
 .advantage__container {
   display: flex;
   justify-content: space-between;

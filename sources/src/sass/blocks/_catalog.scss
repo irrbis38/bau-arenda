@@ -625,3 +625,11 @@
 .catalog__more {
   margin: 0 auto;
 }
+
+.infoBlock.catalog__infoBlock {
+  margin-top: 220px;
+
+  .infoBlock__title {
+    margin-bottom: 20px;
+  }
+}
