@@ -629,3 +629,56 @@
     }
   }
 }
+
+.rental__page {
+  padding: 25px 0 70px;
+
+  @include md {
+    padding: 40px 0 75px;
+  }
+
+  @include sm {
+    padding: 40px 0 80px;
+  }
+
+  @include xxs {
+    padding: 34px 0 71px;
+  }
+
+  @include xxxs {
+    padding: 31px 0 30px;
+  }
+
+  .first__info {
+    max-width: 650px;
+  }
+
+  .first__text.intro__text {
+    margin-bottom: 40px;
+    max-width: 560px;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+
+    @include sm {
+      max-width: 650px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .first__img {
+    position: relative;
+    top: 60px;
+    left: 30px;
+
+    @include md {
+      top: 50px;
+      left: 0;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}

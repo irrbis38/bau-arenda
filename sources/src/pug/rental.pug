@@ -1,0 +1,19 @@
+extends base/_layout
+block head
+    title БауАренда - аренда строительной техники
+block page
+
+    section.first.rental__page
+        .container
+            .first__wrapper
+                .first__info
+                    .first__breadcrumps
+                        a.first__prev(href="./index.html") Главная
+                        span.first__current Услуги строительной техники
+                    h1.first__title.intro__title Услуги строительной техники
+                    p.first__text.intro__text.
+                        Необходимость в аренде дорожно-строительной техники может возникнуть в следующих случаях: у физических лиц – разовое производство земляных работ, у юридических лиц – отсутствие собственного парка техники, необходимость в сжатые сроки нарастить производственные мощности, тестирование техники перед покупкой.
+
+                    a.first__link.btn__link.btn__yellow(href="#") Заказать технику
+                .first__img
+                    +picture('first/first-rental-main', 'png', 'x2')
