@@ -164,6 +164,19 @@ document.addEventListener("DOMContentLoaded", function () {
     initToTopButton(news_item_title);
     initForms();
   }
+
+  // init rental page
+  const rental_page = document.querySelector(".rental__page");
+  if (rental_page) {
+    console.log("rental");
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+    initQAaccordion();
+    initYoutubeVideo();
+  }
 });
 
 const body = document.body;
@@ -649,4 +662,57 @@ function initMap() {
     map.geoObjects.add(mark);
   }
   ymaps.ready(init);
+}
+
+// lazyLoading video from youtube
+
+function initYoutubeVideo() {
+  // get all video elements on the page
+  const videos = document.querySelectorAll(".video__block");
+
+  // generate video url
+  const generateUrl = (id) => {
+    const query = "?rel=0&showinfo=0&autoplay=1";
+    return "https://www.youtube.com/embed/" + id + query;
+  };
+
+  // create iframe element
+  const createIframe = (id) => {
+    const iframe = document.createElement("iframe");
+    iframe.classList.add("video__iframe");
+    iframe.setAttribute("src", generateUrl(id));
+    iframe.setAttribute("title", "YouTube video player");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+    );
+
+    return iframe;
+  };
+
+  // handling each video element
+  videos.forEach((el) => {
+    const videoHref = el.dataset.video;
+    const deletedLength = "https://youtu.be/".length;
+
+    const videoId = videoHref.substring(deletedLength, videoHref.length);
+
+    const img = el.querySelector("img");
+
+    const youtubeImgSrc =
+      "https://i.ytimg.com/vi/" + videoId + "/maxresdefault.jpg";
+
+    img.setAttribute("src", youtubeImgSrc);
+
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let iframe = createIframe(videoId);
+      el.querySelector("img").remove();
+      el.querySelector("button").remove();
+      el.append(iframe);
+    });
+  });
 }

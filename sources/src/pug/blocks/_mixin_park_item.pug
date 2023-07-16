@@ -1,0 +1,8 @@
+mixin park_item(imgUrl, name, price, amount)
+
+    .park__item 
+        .park__image 
+            img(src='./images/rental/' + imgUrl alt= name)
+        p.park__name= name
+        p.park__price= price
+        p.park__amount= amount
