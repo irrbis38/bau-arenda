@@ -34,6 +34,14 @@
   @include xxs {
     font-size: 18px;
   }
+
+  a {
+    transition: var(--transition);
+  }
+
+  a:hover {
+    color: var(--color_yellow);
+  }
 }
 
 .park__wrapper {
