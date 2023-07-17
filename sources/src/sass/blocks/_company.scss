@@ -1,12 +1,12 @@
 .company {
-  padding: 150px 0;
+  margin: 150px 0;
 
   @include md {
-    padding: 100px 0;
+    margin: 100px 0;
   }
 
   @include xs {
-    padding: 60px 0;
+    margin: 60px 0;
   }
 }
 
