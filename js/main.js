@@ -1,20 +1,184 @@
 document.addEventListener("DOMContentLoaded", function () {
   initHeader();
   initHeaderSearch();
-  initToTopButton();
   initToggleFeedbackField();
   initAnimationShowByScroll();
 
-  const index__page = document.querySelector(".index__page");
-  if (index__page) {
-    initIndexPage();
+  // init index page
+  const index_page = document.querySelector(".index__page");
+  if (index_page) {
+    const intro = document.querySelector(".intro");
+
+    initIndexPageIntroSlider();
+    initToTopButton(intro);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
   }
 
-  const catalog = document.querySelector(".catalog");
-  if (catalog) {
-    initCatalog();
+  // init our_partners page
+  const our_partners_page = document.querySelector(".our-partners__page");
+  if (our_partners_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init qa page
+  const qa_page = document.querySelector(".qa__page");
+  if (qa_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+    initQAaccordion();
+  }
+
+  // init our_clients page
+  const our_clients_page = document.querySelector(".our-clients__page");
+  if (our_clients_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init reviews page
+  const reviews_page = document.querySelector(".reviews__page");
+  if (reviews_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init contacts page
+  const contacts_page = document.querySelector(".contacts__page");
+  if (contacts_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+    initMap();
+  }
+
+  // init company page
+  const company_page = document.querySelector(".company__page");
+  if (company_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init hotline page
+  const hotline_page = document.querySelector(".hotline__page");
+  if (hotline_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init jobs page
+  const jobs_page = document.querySelector(".jobs__page");
+  if (jobs_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init licenses page
+  const licenses_page = document.querySelector(".licenses__page");
+  if (licenses_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init promotioins page
+  const promotions_page = document.querySelector(".promotions__page");
+  if (promotions_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init warranties page
+  const warranties_page = document.querySelector(".warranties__page");
+  if (warranties_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init catalog page
+  const catalog_page = document.querySelector(".catalog__page");
+  if (catalog_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init prices page
+  const prices_page = document.querySelector(".prices__page");
+  if (prices_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init news page
+  const news_page = document.querySelector(".news__page");
+  if (news_page) {
+    const news_title = document.querySelector(".news__title");
+    initToTopButton(news_title);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
+
+  // init news-item page
+  const news_item_page = document.querySelector(".news-item");
+  if (news_item_page) {
+    const news_item_title = document.querySelector(".news-item__title");
+    initToTopButton(news_item_title);
+    initForms();
+  }
+
+  // init rental page
+  const rental_page = document.querySelector(".rental__page");
+  if (rental_page) {
+    console.log("rental");
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+    initQAaccordion();
+    initYoutubeVideo();
   }
 });
+
 const body = document.body;
 // INIT HEADER
 function initHeader() {
@@ -23,7 +187,9 @@ function initHeader() {
   const body = document.body;
   const header = document.querySelector(".header");
   const headerBurger = document.querySelector(".header__burger");
-  const dropdownShow = Array.from(document.querySelectorAll(".dropdown_show"));
+  const dropdownShow = Array.from(
+    document.querySelectorAll(".menu-item-has-children")
+  );
 
   // DROPDOWN BY HOVER
 
@@ -62,16 +228,24 @@ function initHeader() {
   // DROPDOWN BY CLICK
 
   function toggleDropdownList(event) {
-    event.preventDefault();
-
     const currentLink = event.target;
-    const currentItem = currentLink.closest(".dropdown_show");
+    const currentItem = currentLink.closest(".menu-item-has-children");
+    const isActive = currentItem.classList.contains("active");
+
+    if (!isActive) {
+      event.preventDefault();
+    }
+
     const currentDropdownMenu = currentItem.children[1];
+    const allDropdownMenus = document.querySelectorAll(
+      ".menu-item-has-children > .sub-menu"
+    );
     if (currentItem.classList.contains("active")) {
       dropdownShow.forEach((el) => el.classList.remove("active"));
       currentDropdownMenu.style.maxHeight = 0;
     } else {
       dropdownShow.forEach((el) => el.classList.remove("active"));
+      allDropdownMenus.forEach((el) => (el.style.maxHeight = 0));
       currentItem.classList.add("active");
       currentDropdownMenu.style.maxHeight =
         currentDropdownMenu.scrollHeight + "px";
@@ -202,15 +376,13 @@ function initHeaderSearch() {
 }
 
 // INIT TO TOP BUTTOP
-function initToTopButton() {
+function initToTopButton(first_block) {
   // to top button
-
   const fixedBlock = document.querySelector(".fixed");
   const toTopButton = document.querySelector(".fixed__toTop");
   const header = document.querySelector(".header");
-  const intro = document.querySelector(".intro");
 
-  let startHeight = header.offsetHeight + intro.offsetHeight;
+  let startHeight = header.offsetHeight + first_block.offsetHeight;
 
   window.addEventListener("scroll", function () {
     if (this.scrollY > startHeight) {
@@ -279,22 +451,22 @@ function initAnimationShowByScroll() {
   }
 }
 
-// INIT INDEX PAGE
-function initIndexPage() {
-  // intro slider
-
-  const introSlider = new Swiper(".swiper", {
+// intro slider
+function initIndexPageIntroSlider() {
+  const introSlider = new Swiper(".intro__slider", {
     loop: true,
     navigation: {
       nextEl: ".intro__next",
       prevEl: ".intro__prev",
     },
   });
+}
 
+function initReviewsSlider() {
   // reviews slider
-
-  const reviewsSlider = new Swiper(".swiper", {
-    loop: true,
+  const reviewsSlider = new Swiper(".reviews__slider", {
+    loop: false,
+    spaceBetween: 20,
     navigation: {
       nextEl: ".reviews__next",
       prevEl: ".reviews__prev",
@@ -307,7 +479,9 @@ function initIndexPage() {
       clickable: "true",
     },
   });
+}
 
+function initReviewsFullScreen() {
   // скриншот отзыва на весь экран
 
   const reviewsImages = document.querySelectorAll(".reviews__preview");
@@ -342,7 +516,9 @@ function initIndexPage() {
       body.classList.remove("lock");
     }
   });
+}
 
+function initForms() {
   // ===== ФОРМЫ
 
   // Отправка форм, расположеных на странице
@@ -417,71 +593,126 @@ function initIndexPage() {
   feedbackPhoneAll.forEach(removeOnFocus);
 }
 
-// INIT CATALOG
-function initCatalog() {
-  const catalog_categories = Array.from(
-    document.querySelectorAll(".catalog__category")
-  );
-  const catalog_sort = document.querySelector(".catalog__sort");
+// question/answer accordion
 
-  selectCategory();
-  showCatalogSortList();
-  hideCatalogSortList();
-  selectSortOptions();
+function initQAaccordion() {
+  const qa_items = document.querySelectorAll(".qa__item");
+  const qa_headings = document.querySelectorAll(".qa__heading");
 
-  // select catalog category
-  function selectCategory() {
-    catalog_categories.forEach((el) =>
-      el.addEventListener("click", (e) => {
-        const isActive = e.target.classList.contains("active");
-        if (!isActive) {
-          catalog_categories.forEach((item) => item.classList.remove("active"));
-          e.target.classList.add("active");
-        }
-      })
-    );
-  }
-
-  // show and hide catalog sort list by hover
-
-  function showCatalogSortList() {
-    catalog_sort.addEventListener("mouseenter", () => {
-      catalog_sort.classList.add("active");
-    });
-  }
-
-  function hideCatalogSortList() {
-    catalog_sort.addEventListener("mouseleave", () => {
-      catalog_sort.classList.remove("active");
-    });
-  }
-
-  // hide catalog sort list by click category
-  const catalog_sort_items = Array.from(
-    document.querySelectorAll(".catalog__sort-item")
+  qa_headings.forEach((item) =>
+    item.addEventListener("click", handleAccordionClick)
   );
 
-  catalog_sort_items.forEach((item) =>
-    item.addEventListener("click", () =>
-      catalog_sort.classList.remove("active")
-    )
-  );
-
-  // select sort-item
-  function selectSortOptions() {
-    const sortOptions = document.querySelectorAll(".catalog__sort-item");
-
-    sortOptions.forEach((option) =>
-      option.addEventListener("click", handleSelectSortOptions)
-    );
-  }
-
-  function handleSelectSortOptions(event) {
-    const sort_type = document.querySelector(".catalog__sort-type");
-    const text = event.target.dataset.text;
-    const type = event.target.dataset.type;
-    if (sort_type.textContent !== text) {
-      sort_type.textContent = text;
+  function handleAccordionClick(e) {
+    const target = e.target;
+    const qa_item = target.closest(".qa__item");
+    const qa_info = qa_item.children[1];
+    const isActive = qa_item.classList.contains("active");
+    if (isActive) {
+      qa_item.classList.remove("active");
+      qa_info.style.maxHeight = null;
+    } else {
+      qa_items.forEach((item) => {
+        item.classList.remove("active");
+        item.children[1].style.maxHeight = null;
+      });
+      qa_item.classList.add("active");
+      qa_info.style.maxHeight = qa_info.scrollHeight + "px";
     }
+
+    window.addEventListener("resize", () => {
+      qa_items.forEach((item) => {
+        item.classList.remove("active");
+        item.children[1].style.maxHeight = null;
+      });
+    });
   }
+}
+
+// INIT MAP ON CONTACTS PAGE
+
+function initMap() {
+  function init() {
+    let center = [53.94869157061366, 27.61157049999995];
+    let map = new ymaps.Map("contactsMap", {
+      center: center,
+      zoom: 16,
+    });
+
+    let mark = new ymaps.Placemark(
+      center,
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "./../images/contacts/mark.svg",
+        iconImageSize: [24, 32],
+        iconImageOffset: [-5, -30],
+      }
+    );
+
+    map.controls.remove("geolocationControl"); // удаляем геолокацию
+    map.controls.remove("searchControl"); // удаляем поиск
+    map.controls.remove("trafficControl"); // удаляем контроль трафика
+    map.controls.remove("typeSelector"); // удаляем тип
+    map.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove("zoomControl"); // удаляем контрол зуммирования
+    map.controls.remove("rulerControl"); // удаляем контрол правил
+    //map.behaviors.disable(["scrollZoom"]); // отключаем скролл карты (опционально)
+
+    map.geoObjects.add(mark);
+  }
+  ymaps.ready(init);
+}
+
+// lazyLoading video from youtube
+
+function initYoutubeVideo() {
+  // get all video elements on the page
+  const videos = document.querySelectorAll(".video__block");
+
+  // generate video url
+  const generateUrl = (id) => {
+    const query = "?rel=0&showinfo=0&autoplay=1";
+    return "https://www.youtube.com/embed/" + id + query;
+  };
+
+  // create iframe element
+  const createIframe = (id) => {
+    const iframe = document.createElement("iframe");
+    iframe.classList.add("video__iframe");
+    iframe.setAttribute("src", generateUrl(id));
+    iframe.setAttribute("title", "YouTube video player");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+    );
+
+    return iframe;
+  };
+
+  // handling each video element
+  videos.forEach((el) => {
+    const videoHref = el.dataset.video;
+    const deletedLength = "https://youtu.be/".length;
+
+    const videoId = videoHref.substring(deletedLength, videoHref.length);
+
+    const img = el.querySelector("img");
+
+    const youtubeImgSrc =
+      "https://i.ytimg.com/vi/" + videoId + "/maxresdefault.jpg";
+
+    img.setAttribute("src", youtubeImgSrc);
+
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let iframe = createIframe(videoId);
+      el.querySelector("img").remove();
+      el.querySelector("button").remove();
+      el.append(iframe);
+    });
+  });
 }
