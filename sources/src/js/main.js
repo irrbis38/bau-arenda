@@ -737,10 +737,8 @@ function initViewSlider() {
     spaceBetween: 10,
     grabCursor: true,
     slidesPerView: 2,
-    navigation: {
-      prevEl: ".view__prev",
-      nextEl: ".view__next",
-    },
+    freeMode: true,
+    watchSlidesProgress: true,
     breakpoints: {
       479: {
         slidesPerView: 2,
@@ -752,6 +750,17 @@ function initViewSlider() {
         slidesPerView: 4,
         spaceBetween: 30,
       },
+    },
+  });
+
+  const viewSliderFullsize = new Swiper(".view__fullsize", {
+    effect: "fade",
+    navigation: {
+      nextEl: ".view__next",
+      prevEl: ".view__prev",
+    },
+    thumbs: {
+      swiper: viewSlider,
     },
   });
 }

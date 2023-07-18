@@ -16,26 +16,36 @@ block page
             .details__block.details__block--first
 
                 .details__view.view
-                    .view__fullsize
-                        img(src="./images/details/details-full1.png" alt="бульдозер")
+                    .view__fullsize.swiper
                         span.view__status Готов к работе
                         .view__nav
-                            button.view__prev
+                            button.view__prev.view__btn
                                 +icon('intro-prev')
-                            button.view__next
+                            button.view__next.view__btn
                                 +icon('intro-next')
-                    .view__slider.swiper
+                        .view__fullsize-wrapper.swiper-wrapper
+                            .view__fullsize-item.swiper-slide
+                                img(src="./images/details/details-full1.png" alt="бульдозер")
+                            .view__fullsize-item.swiper-slide
+                                img(src="./images/details/komatsu_d65px12_1_0.jpg" alt="бульдозер")
+                            .view__fullsize-item.swiper-slide
+                                img(src="./images/details/komatsu_d65px12_2_0.jpg" alt="бульдозер")
+                            .view__fullsize-item.swiper-slide
+                                img(src="./images/details/10010_d65px_1.jpg" alt="бульдозер")
+                            .view__fullsize-item.swiper-slide
+                                img(src="./images/details/komatsu_d65px12_3.jpg" alt="бульдозер")
+                    .view__slider.swiper(thumbsSlider="")
                         .view__wrapper.swiper-wrapper
                             .view__item.swiper-slide
-                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                                img(src="./images/details/details-full1.png" alt="бульдозер")
                             .view__item.swiper-slide
-                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                                img(src="./images/details/komatsu_d65px12_1_0.jpg" alt="бульдозер")
                             .view__item.swiper-slide
-                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                                img(src="./images/details/komatsu_d65px12_2_0.jpg" alt="бульдозер")
                             .view__item.swiper-slide
-                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                                img(src="./images/details/10010_d65px_1.jpg" alt="бульдозер")
                             .view__item.swiper-slide
-                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                                img(src="./images/details/komatsu_d65px12_3.jpg" alt="бульдозер")
 
                 .details__specs.specs
 
