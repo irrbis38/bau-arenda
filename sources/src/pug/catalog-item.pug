@@ -3,7 +3,7 @@ block head
     title БауАренда - аренда строительной техники
 block page
 
-    section.details
+    section.details.catalog-item-page
         .container
             .details__breadcrumps.breadcrumps
                 a(href="./index.html") Главная
@@ -13,14 +13,50 @@ block page
 
             h2.details__title.block__title Аренда бульдозера KOMATSU D65 PX-12 с рыхлителем
 
-            .details__wrapper 
+            .details__block.details__block--first
 
                 .details__view.view
+                    .view__fullsize
+                        img(src="./images/details/details-full1.png" alt="бульдозер")
+                        span.view__status Готов к работе
+                        .view__nav
+                            button.view__prev
+                                +icon('intro-prev')
+                            button.view__next
+                                +icon('intro-next')
+                    .view__slider.swiper
+                        .view__wrapper.swiper-wrapper
+                            .view__item.swiper-slide
+                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                            .view__item.swiper-slide
+                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                            .view__item.swiper-slide
+                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                            .view__item.swiper-slide
+                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
+                            .view__item.swiper-slide
+                                img(src="./images/details/details-preview1.png" alt="бульдозер" data-src="details-full1.png")
 
                 .details__specs.specs
 
+            .details__block.details__block--second
+
                 .details__description.description
 
-                .details__backlink.backlink 
+                .details__cta
 
-                .details__book.book
+                    .details__backlink.backlink 
+
+                    .details__book.book
+
+
+
+
+
+    include ./blocks/_reviews
+
+    include ./blocks/_feedback_full_width
+
+    include ./blocks/_popular
+
+    include ./blocks/_fixed_block

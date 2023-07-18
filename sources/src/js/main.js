@@ -137,6 +137,17 @@ document.addEventListener("DOMContentLoaded", function () {
     initForms();
   }
 
+  // init catalog-item page
+  const catalog_item_page = document.querySelector(".catalog-item-page");
+  if (catalog_item_page) {
+    const view = document.querySelector(".view");
+    initToTopButton(view);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+    initViewSlider();
+  }
+
   // init prices page
   const prices_page = document.querySelector(".prices__page");
   if (prices_page) {
@@ -714,5 +725,33 @@ function initYoutubeVideo() {
       el.querySelector("button").remove();
       el.append(iframe);
     });
+  });
+}
+
+// ========= CATALOG-ITEM PAGE
+
+function initViewSlider() {
+  // view slider
+  const viewSlider = new Swiper(".view__slider", {
+    loop: false,
+    spaceBetween: 10,
+    grabCursor: true,
+    slidesPerView: 2,
+    navigation: {
+      prevEl: ".view__prev",
+      nextEl: ".view__next",
+    },
+    breakpoints: {
+      479: {
+        slidesPerView: 2,
+      },
+      575: {
+        slidesPerView: 3,
+      },
+      767: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
   });
 }
