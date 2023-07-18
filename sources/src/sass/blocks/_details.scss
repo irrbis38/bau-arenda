@@ -1,0 +1,35 @@
+.details {
+  margin: 100px 0 169px;
+
+  @include md {
+    margin: 70px 0 100px;
+  }
+
+  @include sm {
+    margin: 50px 0 100px;
+  }
+
+  @include xxs {
+    margin: 40px 0 60px;
+  }
+}
+
+.details__breadcrumps {
+  margin-bottom: 20px;
+
+  @include xxxs {
+    margin-bottom: 10px;
+  }
+}
+
+.details__title {
+  margin-bottom: 30px;
+
+  @include md {
+    margin-bottom: 37px;
+  }
+
+  @include sm {
+    margin-bottom: 20px;
+  }
+}

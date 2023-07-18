@@ -1,0 +1,27 @@
+.breadcrumps {
+  a {
+    font-family: var(--font_main);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 170%;
+    color: #a3a3a3;
+    transition: all 0.2s ease-out;
+
+    &::after {
+      content: "/";
+      margin: 0 6px;
+    }
+
+    &:hover {
+      color: #4d5051;
+    }
+  }
+
+  span {
+    font-family: var(--font_main);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 170%;
+    color: #4d5051;
+  }
+}
