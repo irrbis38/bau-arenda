@@ -1,3 +1,23 @@
+.features {
+  padding: 150px 0;
+
+  @include md {
+    padding: 100px 0;
+  }
+
+  @include xxs {
+    padding: 60px 0;
+  }
+}
+
+.features__title {
+  margin-bottom: 30px;
+
+  @include xxs {
+    margin-bottom: 20px;
+  }
+}
+
 .feature__header {
   display: flex;
   align-items: center;
