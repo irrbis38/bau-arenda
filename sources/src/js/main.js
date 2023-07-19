@@ -740,15 +740,21 @@ function initViewSlider() {
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
-      479: {
-        slidesPerView: 2,
-      },
-      575: {
+      480: {
         slidesPerView: 3,
+      },
+      576: {
+        slidesPerView: 4,
       },
       767: {
         slidesPerView: 4,
         spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 4,
       },
     },
   });

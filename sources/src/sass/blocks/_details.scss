@@ -34,16 +34,28 @@
   }
 }
 
-.details__wrapper {
+.details__block {
   display: grid;
   gap: 0 30px;
 
   &.details__block--first {
-    grid-template-columns: 1fr 470px;
+    width: 100%;
+    max-width: 1170px;
+    grid-template-columns: 670px 470px;
+    margin-bottom: 30px;
+
+    @include md {
+      grid-template-columns: 57.27% 40.17%;
+    }
 
     @include sm {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
       gap: 31px 0;
+      margin-bottom: 100px;
+    }
+
+    @include xs {
+      margin-bottom: 60px;
     }
 
     @include xxxs {
@@ -66,12 +78,21 @@
   }
 }
 
+// .view {
+//   max-width: 670px;
+// }
+
 .view__fullsize {
   position: relative;
   height: 317px;
-  max-width: 670px;
+  // max-width: 670px;
+  width: 100%;
   margin-bottom: 30px;
   margin-left: 0;
+
+  // @include md {
+  //   max-width: 495px;
+  // }
 
   @include sm {
     height: 363px;
@@ -85,6 +106,10 @@
     height: 209px;
     margin-bottom: 10px;
   }
+
+  // .view__fullsize-item {
+  //   max-width: 670px;
+  // }
 
   img {
     display: block;
@@ -165,17 +190,9 @@
 
 .view__slider {
   width: 100%;
-  max-width: 670px;
-  margin-left: 0;
-}
-
-.view__wrapper {
-  display: flex;
-  justify-content: space-between;
 }
 
 .view__item {
-  max-width: 146px;
   height: 67px;
   cursor: pointer;
 
@@ -185,4 +202,52 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+// specs block styles
+
+.specs__wrapper {
+  margin-bottom: 14px;
+}
+
+.specs__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0 30px;
+  padding: 16px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(227, 227, 227, 0.5);
+  }
+}
+
+.specs__name {
+  color: var(--color_light_grey, #4d5051);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 170%;
+
+  @include xxs {
+    font-size: 12px;
+  }
+}
+
+.specs__value {
+  flex-shrink: 0;
+  max-width: 50%;
+  color: var(--color_light_grey, #4d5051);
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 170%;
+
+  @include xxxs {
+    font-size: 14px;
+  }
+}
+
+.specs__button {
+  width: 100%;
+  padding: 10px 54px;
 }

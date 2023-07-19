@@ -34,7 +34,7 @@ block page
                                 img(src="./images/details/10010_d65px_1.jpg" alt="бульдозер")
                             .view__fullsize-item.swiper-slide
                                 img(src="./images/details/komatsu_d65px12_3.jpg" alt="бульдозер")
-                    .view__slider.swiper(thumbsSlider="")
+                    .view__slider.swiper
                         .view__wrapper.swiper-wrapper
                             .view__item.swiper-slide
                                 img(src="./images/details/details-full1.png" alt="бульдозер")
@@ -48,6 +48,27 @@ block page
                                 img(src="./images/details/komatsu_d65px12_3.jpg" alt="бульдозер")
 
                 .details__specs.specs
+                    .specs__wrapper 
+                        .specs__item 
+                            span.specs__name Мощность двигателя, л.с.
+                            span.specs__value 190
+                        .specs__item 
+                            span.specs__name Ширина отвала, мм
+                            span.specs__value 3970 
+                        .specs__item 
+                            span.specs__name Объем отвала, м.куб.
+                            span.specs__value 3,69
+                        .specs__item 
+                            span.specs__name Высота отвала, мм
+                            span.specs__value 1100
+                        .specs__item 
+                            span.specs__name Ширина трака (башмака), мм
+                            span.specs__value 915
+                        .specs__item 
+                            span.specs__name Стоимость за час (без НДС):
+                            span.specs__value 70 бел.руб
+
+                    button.specs__button.btn__link.btn__yellow Арендовать
 
             .details__block.details__block--second
 
