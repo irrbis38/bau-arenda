@@ -147,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     initForms();
     initViewSlider();
     initDetailsTabs();
+    initBookFormValidation();
+    initYoutubeVideo();
   }
 
   // init prices page
@@ -180,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // init rental page
   const rental_page = document.querySelector(".rental__page");
   if (rental_page) {
-    console.log("rental");
     const first = document.querySelector(".first");
     initToTopButton(first);
     initReviewsSlider();
@@ -788,14 +789,20 @@ function initDetailsTabs() {
         // get index of selected button
         const indexButton = buttons.indexOf(btn);
 
-        // reset all the button and tabs
-        buttons.forEach((btn) => btn.classList.remove("active"));
-        tabs_items.forEach((item) => item.classList.remove("show"));
+        requestAnimationFrame(() => {
+          // reset all the button and tabs
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          tabs_items.forEach((item) => item.classList.remove("show"));
 
-        // set classes to selected button and tab
-        buttons[indexButton].classList.add("active");
-        tabs_items[indexButton].classList.add("show");
+          // set classes to selected button and tab
+          buttons[indexButton].classList.add("active");
+          tabs_items[indexButton].classList.add("show");
+        });
       }
     })
   );
+}
+
+function initBookFormValidation() {
+  console.log("TODO: implement book__form validation");
 }

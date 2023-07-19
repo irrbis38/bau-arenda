@@ -99,14 +99,35 @@ block page
                         h3.backlink__title.block__title Есть вопросы по аренде?
                         p.backlink__text Задайте их нам удобным для Вас способом.
                         .backlink__nav
-                            .backlink__item
+                            //- TODO: set correct username to telegram
+                            .backlink__item: a(href="tg://resolve?domain=<USERNAME>")
                                 include ./blocks/_icon_telegram
-                            .backlink__item
+                            .backlink__item: a(href="viber://chat?number=%2B375291622365" target="_blank")
                                 include ./blocks/_icon_viber
-                            .backlink__item
+                            .backlink__item: a(href="tel:+375297477171")
                                 include ./blocks/_icon_phone
 
                     .details__book.book
+                        h3.book__title.block__title Заказать технику
+
+                        form.book__form(action="#" novalidate)
+
+                            .book__item
+                                p.book__error Номер телефона не менее 9 символов.
+                                input.book__phone(type="text" placeholder="Телефон*" name="phone" minlength="9" required)
+
+                            input.book__submit.btn__link.btn__yellow(type="submit" value="Отправить" name="submit")
+
+
+    section.video 
+        .container
+            .video__block(data-video="https://youtu.be/4xUZemOV4yc")
+                img(src="" alt="видео-превью")
+                button.video-play.btn-reset
+                    svg(width="68" height="48" viewBox="0 0 68 48")
+                        path(class="video-play-shape"
+                            d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z")
+                        path(class="video-play-icon" d="M 45,24 27,14 27,34")
 
 
 
