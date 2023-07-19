@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsFullScreen();
     initForms();
     initViewSlider();
+    initDetailsTabs();
   }
 
   // init prices page
@@ -769,4 +770,32 @@ function initViewSlider() {
       swiper: viewSlider,
     },
   });
+}
+
+function initDetailsTabs() {
+  // get all buttons and tabs
+  const buttons = Array.from(document.querySelectorAll(".description__button"));
+  const tabs_items = Array.from(
+    document.querySelectorAll(".description__item")
+  );
+
+  // add listener to every button
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const isActiveButton = btn.classList.contains("active");
+
+      if (!isActiveButton) {
+        // get index of selected button
+        const indexButton = buttons.indexOf(btn);
+
+        // reset all the button and tabs
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        tabs_items.forEach((item) => item.classList.remove("show"));
+
+        // set classes to selected button and tab
+        buttons[indexButton].classList.add("active");
+        tabs_items[indexButton].classList.add("show");
+      }
+    })
+  );
 }
