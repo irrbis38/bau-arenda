@@ -45,3 +45,15 @@
     gap: 10px 0;
   }
 }
+
+// catalog-item page
+
+.catalog-item__popular {
+  .popular__wrapper {
+    margin-bottom: 50px;
+
+    @include sm {
+      margin-bottom: 20px;
+    }
+  }
+}

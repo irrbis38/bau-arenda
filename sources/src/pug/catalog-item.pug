@@ -185,6 +185,39 @@ block page
                         p 3165
 
 
+    section.conditions 
+        .container 
+            h2.conditions__title.block__title Условия аренды бульдозера KOMATSU D65 PX-12 с рыхлителем
+
+            ul.conditions__list 
+
+                li
+                    span 01
+                    p Стоимость часа зависит от общего количество часов, запланированного на аренду техники
+
+                li
+                    span 02
+                    p Доставка стройтехники осуществляется за счет арендатора
+
+                li
+                    span 03
+                    p В стоимость аренды входит работа техники с водителем
+
+                li
+                    span 04
+                    p Минимальный срок аренды спецтехники - 4 часа
+
+                li
+                    span 05
+                    p Мы работаем как с юридическими, так и с физ.лицами
+
+                li
+                    span 06
+                    p Арендовать спецтехнику по желанию клиента можно в любые погодные условия
+
+                li
+                    span 07
+                    p Оплата аренды спецтехники осуществляется по безналичному расчету (с НДС)
 
 
 
@@ -192,6 +225,18 @@ block page
 
     include ./blocks/_feedback_full_width
 
-    include ./blocks/_popular
+    section.popular.catalog-item__popular
+        .container
+            h2.popular__title.block__title Также сдаем в аренду
+            .popular__wrapper
+
+                - let catalogCounter = 0
+
+                while catalogCounter < 4
+
+                    +catalog_card()
+                    - catalogCounter += 1;
+
+            a.catalog__more.btn__link.btn__grey(href="#") Все бульдозеры
 
     include ./blocks/_fixed_block
