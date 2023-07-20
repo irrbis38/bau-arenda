@@ -804,5 +804,21 @@ function initDetailsTabs() {
 }
 
 function initBookFormValidation() {
-  console.log("TODO: implement book__form validation");
+  const form = document.querySelector(".book__form");
+  const input_container = document.querySelector(".book__item");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!form.elements.phone.validity.valid) {
+      input_container.classList.add("error");
+    } else {
+      const formData = new FormData(form);
+      form.reset();
+    }
+  });
+
+  input_container.children[1].addEventListener("input", () => {
+    input_container.classList.remove("error");
+  });
 }
