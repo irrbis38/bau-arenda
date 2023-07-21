@@ -682,3 +682,49 @@
     }
   }
 }
+
+.services-list__page {
+  padding: 35px 0 80px;
+
+  @include sm {
+    padding: 20px 0 60px;
+  }
+
+  @include xxs {
+    padding: 0 0 35px;
+  }
+
+  @include xxxs {
+    padding: 30px 0 35px;
+  }
+
+  .btn__link {
+    padding: 13px 22px;
+    width: max-content;
+  }
+
+  .first__text.intro__text {
+    @include md {
+      margin-bottom: 30px;
+    }
+
+    @include sm {
+      margin-bottom: 20px;
+    }
+  }
+
+  .first__img {
+    position: relative;
+    top: 50px;
+    left: 80px;
+
+    @include md {
+      top: 50px;
+      left: 40px;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}
