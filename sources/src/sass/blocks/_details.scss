@@ -1,5 +1,5 @@
 .details {
-  margin: 100px 0 169px;
+  margin: 100px 0 150px;
 
   @include md {
     margin: 70px 0 100px;
@@ -19,6 +19,10 @@
 
   @include xxxs {
     margin-bottom: 10px;
+
+    a {
+      line-height: 200%;
+    }
   }
 }
 
@@ -31,6 +35,10 @@
 
   @include sm {
     margin-bottom: 20px;
+  }
+
+  @include xxxs {
+    margin-bottom: 22px;
   }
 }
 
@@ -45,12 +53,14 @@
     margin-bottom: 30px;
 
     @include md {
-      grid-template-columns: 57.27% 40.17%;
+      // grid-template-columns: 57.27% 40.17%;
+      grid-template-columns: 50.3% 47.76%;
+      gap: 0 1.94%;
     }
 
     @include sm {
       grid-template-columns: 100%;
-      gap: 31px 0;
+      gap: 15px 0;
       margin-bottom: 100px;
     }
 
@@ -59,7 +69,7 @@
     }
 
     @include xxxs {
-      gap: 24px 0;
+      gap: 10px 0;
     }
   }
 
@@ -91,6 +101,7 @@
 
   @include xxs {
     height: 317px;
+    margin-bottom: 10px;
   }
 
   @include xxxs {
@@ -183,6 +194,14 @@
   height: 67px;
   cursor: pointer;
 
+  @include sm {
+    height: 107px;
+  }
+
+  @include xxs {
+    height: 90px;
+  }
+
   img {
     display: block;
     width: 100%;
@@ -202,10 +221,14 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 0 30px;
-  padding: 16px 0;
+  padding: 16px 0 15px;
 
   &:not(:last-child) {
     border-bottom: 1px solid rgba(227, 227, 227, 0.5);
+  }
+
+  @include xxxs {
+    padding: 16px 0 17px;
   }
 }
 
@@ -302,6 +325,11 @@
       margin-right: 22px;
     }
   }
+
+  @include xxs {
+    height: 24px;
+    font-size: 14px;
+  }
 }
 
 .description__item {
@@ -319,6 +347,10 @@
 
     @include xxs {
       font-size: 12px;
+    }
+
+    @include xxxs {
+      line-height: 168%;
     }
 
     &:not(:last-child) {

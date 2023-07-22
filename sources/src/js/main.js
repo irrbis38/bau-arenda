@@ -743,9 +743,11 @@ function initViewSlider() {
     watchSlidesProgress: true,
     breakpoints: {
       480: {
+        spaceBetween: 10,
         slidesPerView: 3,
       },
       576: {
+        spaceBetween: 10,
         slidesPerView: 4,
       },
       767: {
