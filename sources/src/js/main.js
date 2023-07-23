@@ -190,6 +190,16 @@ document.addEventListener("DOMContentLoaded", function () {
     initQAaccordion();
     initYoutubeVideo();
   }
+
+  // init services-list page
+  const services_list_page = document.querySelector(".services-list__page");
+  if (services_list_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+  }
 });
 
 const body = document.body;
