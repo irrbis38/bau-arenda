@@ -29,7 +29,9 @@ block page
                     p Работаем не только в Минске, но и по всей Беларуси. К Вашим услугам 59 единиц полностью исправной техники. Если это необходимо, оборудование предоставляется вместе с опытным оператором. Наш главный принцип работы – создание комфортной среды для сотрудничества. Сделаем все, чтобы Вы порекомендовали нас своим партнерам.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/1.webp, images/services/1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/1.jpg" srcset="images/services/1.jpg, images/services/1@2x.jpg 2x" alt="")
 
 
                 li 
@@ -37,7 +39,9 @@ block page
                     p Мы поможем Вам вывезти грунт по самой низкой стоимости в Республике Беларусь.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/services1.webp, images/services/services1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/services1.png" srcset="images/services/services1.png, images/services/services1@2x.png 2x" alt="")
                         span Вывоз и утилизация грунта
                         a(href="#") Подробнее
 
@@ -46,7 +50,9 @@ block page
                     p Поможем пробурить в комфортное для Вас время и в любые погодные условия.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/services1.webp, images/services/services1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/services1.png" srcset="images/services/services1.png, images/services/services1@2x.png 2x" alt="")
                         span Бурение отверстий
                         a(href="#") Подробнее
 
@@ -55,7 +61,9 @@ block page
                     p Вывоз снега с компанией «БауАренда» – больше не проблема. Поможем и с транспортировкой.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/services1.webp, images/services/services1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/services1.png" srcset="images/services/services1.png, images/services/services1@2x.png 2x" alt="")
                         span Уборка и вывоз снега
                         a(href="#") Подробнее
 
@@ -64,7 +72,9 @@ block page
                     p Мы поможем провести земляные работы любой сложности и в любое время года.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/services1.webp, images/services/services1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/services1.png" srcset="images/services/services1.png, images/services/services1@2x.png 2x" alt="")
                         span Земляные работы
                         a(href="#") Подробнее
 
@@ -73,7 +83,9 @@ block page
                     p Мы поможем очистить строительную площадку от ненужного хлама.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/services1.webp, images/services/services1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/services1.png" srcset="images/services/services1.png, images/services/services1@2x.png 2x" alt="")
                         span Вывоз строительного мусора
                         a(href="#") Подробнее
 
@@ -82,7 +94,9 @@ block page
                     p Мы предлагаем своим клиентам самую оптимальную стоимость доставки в Беларуси.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/services1.webp, images/services/services1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/services1.png" srcset="images/services/services1.png, images/services/services1@2x.png 2x" alt="")
                         span Доставка негабаритных грузов
                         a(href="#") Подробнее
 
@@ -91,7 +105,9 @@ block page
                     p Мы предлагаем поставку сырья для строительства. У песка нет альтернативной замены.
 
                     div
-                        img(src="./images/services/1.jpg" alt="")
+                        picture(class="picture object-fit-cover")
+                            source(class="object-fit-cover" srcset="images/services/services1.webp, images/services/services1@2x.webp 2x" type="image/webp")
+                            img(class="picture__img object-fit-cover" src="images/services/services1.png" srcset="images/services/services1.png, images/services/services1@2x.png 2x" alt="")
                         span Продажа строительного песка
                         a(href="#") Подробнее
 
@@ -99,3 +115,46 @@ block page
     include ./blocks/_feedback_narrow
 
     include ./blocks/_advantage
+
+    section.work
+        .container 
+            h2.work__title.block__title Как мы работаем
+
+            ul.work__steps 
+
+                li.work__step
+                    h3 Консультируем
+                    +icon('work-icon1')
+
+                li.work__step
+                    h3 Заключаем договор
+                    +icon('work-icon2')
+
+                li.work__step
+                    h3 Проводим необходимые работы
+                    +icon('work-icon3')
+
+                li.work__step
+                    h3 Предоставляем отчетность
+                    +icon('work-icon4')
+
+                li.work__step
+                    h3 Предоставляем все закрывающие документы
+                    +icon('work-icon5')
+
+                li.work__step
+                    picture(class="picture object-fit-cover")
+                        source(class="object-fit-cover" srcset="images/work/work-bg.webp, images/work/work-bg@2x.webp 2x" type="image/webp")
+                        img(class="picture__img object-fit-cover" src="images/work/work-bg.png" srcset="images/work/work-bg.png, images/work/work-bg@2x.png 2x" alt="")
+
+
+    include ./blocks/_reviews
+
+    include ./blocks/_feedback_full_width
+
+    include ./blocks/_fixed_block
+
+    -   const company_block_title = 'У нас можно арендовать спецтехнику'
+    -   const company_block_button = {value: 'Аренда спецтехники', link: './rental.html'}
+
+    +company_block(company_block_title, company_block_button)

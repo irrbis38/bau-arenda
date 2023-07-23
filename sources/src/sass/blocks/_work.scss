@@ -1,0 +1,110 @@
+.work {
+  margin: 150px 0;
+
+  @include md {
+    margin: 100px 0;
+  }
+
+  @include xxs {
+    margin: 60px 0;
+  }
+}
+
+.work__title {
+  margin-bottom: 30px;
+
+  @include xxs {
+    margin-bottom: 20px;
+  }
+}
+
+.work__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xxs {
+    display: block;
+  }
+}
+
+.work__step {
+  position: relative;
+  height: 292px;
+  border-radius: 10px;
+  background-color: #fff;
+
+  @include md {
+    height: 190px;
+  }
+
+  @include sm {
+    height: 264px;
+  }
+
+  @include xxs {
+    height: 180px;
+  }
+
+  &:not(:last-child) {
+    padding: 30px;
+    border: 1px solid rgba(227, 227, 227, 0.5);
+
+    @include xxs {
+      padding: 20px;
+    }
+  }
+
+  &:last-child {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include md {
+      grid-column-end: 3;
+    }
+
+    @include xxs {
+      height: 238px;
+      grid-column-end: 2;
+    }
+
+    @include xxxs {
+      height: 278px;
+    }
+  }
+
+  h3 {
+    color: var(--color_dark, #1f1e1d);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include xxs {
+      font-size: 18px;
+    }
+  }
+
+  span {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 35px;
+    height: 35px;
+
+    @include xxs {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+}

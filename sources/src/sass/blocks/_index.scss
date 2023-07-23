@@ -766,7 +766,7 @@
 }
 
 .advantage__main {
-  width: 43%;
+  width: 44%;
   margin-right: 7.5%;
 }
 
@@ -1820,7 +1820,7 @@ form {
   }
 
   .advantage {
-    padding-bottom: $block_padding_small;
+    margin-bottom: $block_padding_small;
   }
 
   .advantage__main {
@@ -1829,6 +1829,7 @@ form {
   }
 
   .advantage__title {
+    max-width: 615px;
     margin-bottom: 35px;
   }
 
@@ -2543,7 +2544,7 @@ form {
   }
 
   .advantage {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 
   .advantage__title {

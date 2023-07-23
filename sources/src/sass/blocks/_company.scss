@@ -29,6 +29,7 @@
   grid-template-areas:
     "company1 company2 company2 company2"
     "company3 company3 company4 company5";
+  margin-bottom: 30px;
 
   @include md {
     grid-template-columns: 31.71% 18.09% 50.2%;
@@ -86,13 +87,13 @@
 
   &:nth-child(4) {
     grid-area: company4;
-    padding: 96px 30px 20px;
+    padding: 50px 30px 20px;
     border: 1px solid rgba(227, 227, 227, 0.5);
   }
 
   &:nth-child(5) {
     grid-area: company5;
-    padding: 96px 30px 20px;
+    padding: 50px 30px 20px;
     border: 1px solid rgba(227, 227, 227, 0.5);
   }
 
@@ -104,6 +105,11 @@
 
     &:nth-child(3) {
       padding: 105px 70px 105px 30px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      padding-top: 96px;
     }
   }
 
@@ -214,4 +220,10 @@
       font-size: 12px;
     }
   }
+}
+
+.company__link {
+  margin: 0 auto;
+  padding: 13px 24px;
+  width: max-content;
 }
