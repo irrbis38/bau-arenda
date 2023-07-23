@@ -728,3 +728,30 @@
     }
   }
 }
+
+.services-item__page {
+  padding: 71px 0 95px;
+  .first__info {
+    width: 100%;
+    max-width: 590px;
+  }
+
+  .first__text.intro__text {
+    max-width: 580px;
+  }
+
+  .first__img {
+    position: relative;
+    top: 35px;
+    left: 30px;
+
+    @include md {
+      top: 50px;
+      left: 40px;
+    }
+
+    @include r(991px) {
+      display: none;
+    }
+  }
+}

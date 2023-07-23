@@ -200,6 +200,17 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsFullScreen();
     initForms();
   }
+
+  // init services-item page
+  const services_item_page = document.querySelector(".services-item__page");
+  if (services_item_page) {
+    const first = document.querySelector(".first");
+    initToTopButton(first);
+    initReviewsSlider();
+    initReviewsFullScreen();
+    initForms();
+    initQAaccordion();
+  }
 });
 
 const body = document.body;

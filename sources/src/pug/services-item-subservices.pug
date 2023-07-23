@@ -1,0 +1,232 @@
+extends base/_layout
+block head
+    title БауАренда - аренда строительной техники
+block page
+
+    section.first.services-item__page
+        .container
+            .first__wrapper
+                .first__info
+                    .first__breadcrumps.breadcrumps
+                        a(href="./index.html") Главная
+                        a(href="./services-list.html") Услуги
+                        span Земляные работы
+                    h1.first__title.intro__title Земляные работы
+                    p.first__text.intro__text.
+                        Земляные работы — комплекс мероприятий, включающий выемку и переработку грунта, перемещение, укладку и уплотнение. Грунтовые работы входят в состав обязательных этапов строительства.
+
+                    button.first__link.btn__link.btn__yellow(type="button") Получить расчет
+                .first__img
+                    +picture('first/first-services-item', 'png', 'x2')
+
+
+
+    section.service-types
+        .container
+            h2.service-types__title.block__title Какие виды работ мы предлагаем
+
+            ul.service-types__wrapper
+
+                li 
+                    h3 Вертикальная планировка
+                    p Качественные и оперативные услуги по выравниванию участка
+
+                li 
+                    h3 Замена грунта
+                    p Проведем полную замену грунта
+
+                li 
+                    h3 Работы нулевого цикла
+                    p Мы подготовим участок к строительству и поможем проекту успешно стартовать
+
+                li 
+                    h3 Устройство искусственного основания
+                    p Подготовка основания под фундамент
+
+                li 
+                    h3 Снятие плодородного слоя почвы
+                    p Снимем плодородный слой земли, правильно организуем его хранение или немедленное применение
+
+                li 
+                    h3 Рытьё траншей
+                    p Разработка требовательна к точности и аккуратности, поэтому лучше доверить ее профессионалам нашей компании
+
+                li 
+                    h3 Доставка щебня
+                    p Предлагаем купить щебень и получить оперативную доставку по выгодным ценам
+
+                li 
+                    h3 Послойное уплотнение грунта
+                    p Нами внедряется комплексный подход для упрочнения основания из железобетона любого объекта
+
+                li
+                    h3 Обратная засыпка фундамента
+                    p Определим подходящий материал для засыпки и выполним работы по засыпке качественно
+
+                li 
+                    h3 Устройство откосов
+                    p Проведем геологические и гидрологические исследования, составим проект и выполним работы
+
+                li 
+                    h3 Бурение ям, скважин под столбы и заборы
+                    p Быстро обустроим ограждение вокруг частного дома, участка земли, дачи и другой постройки
+
+                li 
+                    h3 Планирование и разработка карьера
+                    p Комплексный подход, направленный на планировку и подготовку добычи полезных ископаемых
+
+                li 
+                    h3 Устройство водоемов
+                    p Проектирование, выемка грунта, добавление фонтанов или прочих декоративных элементов – все это входит в спектр работ под ключ
+
+
+    section.infoBlock.servisec-item__infoBlock
+        .container
+            h2.infoBlock__title.block__title К преимуществам сотруднечиства с компанией можно отнести:
+            .infoBlock__wrapper
+
+                p Аренда колесного экскаватора востребована для транспортировки во время дорожных, придорожных, городских или мостовых работ. Это самоходная техника, которая безопасно работает на любом дорожном покрытии, не нанося повреждения асфальту или бетону.
+
+                p Устройство ходовой части в виде резиновых шин открывает доступ к городской среде, асфальтированным дорогам, строительным плитам и парковкам. Машины с различным навесным оборудованием зачастую эксплуатируются в следующих областях:
+
+                ul
+
+                    li доступные цены
+
+                    li индивидуальный подход к каждому клиенту
+
+                    li наличие обширного парка спецтехники для выполнения любых земляных и строительных работ
+
+                p Если у вас остались какие-либо вопросы или вы хотите обсудить условия сотрудничества – позвоните нам прямо сейчас и мы с удовольствием проконсультируем вас по любым вопросам.
+
+                p Вы также можете взять в аренду ямобур. Дополнительно с услугой бурения предлагаем вывоз строительного мусора.
+
+
+    section.work
+        .container 
+            h2.work__title.block__title Как мы работаем
+
+            ul.work__steps 
+
+                li.work__step
+                    h3 Консультируем
+                    +icon('work-icon1')
+
+                li.work__step
+                    h3 Заключаем договор
+                    +icon('work-icon2')
+
+                li.work__step
+                    h3 Проводим необходимые работы
+                    +icon('work-icon3')
+
+                li.work__step
+                    h3 Предоставляем отчетность
+                    +icon('work-icon4')
+
+                li.work__step
+                    h3 Предоставляем все закрывающие документы
+                    +icon('work-icon5')
+
+                li.work__step
+                    picture(class="picture object-fit-cover")
+                        source(class="object-fit-cover" srcset="images/work/work-bg.webp, images/work/work-bg@2x.webp 2x" type="image/webp")
+                        img(class="picture__img object-fit-cover" src="images/work/work-bg.png" srcset="images/work/work-bg.png, images/work/work-bg@2x.png 2x" alt="")
+
+
+
+    include ./blocks/_feedback_narrow
+
+    section.prices.features
+        .container
+            h2.features__title.block__title Цены
+
+            .features__wrapper
+
+                .feature__header
+                    h3 Экскаваторы-погрузчики
+                    span Цена без НДС
+                ul.feature__list
+                    li
+                        p Venieri VF 10.23C
+                        p 60 BYN
+                    li
+                        p JCB 3CX
+                        p 60 BYN
+                    li
+                        p JCB 4CX
+                        p 60 BYN
+
+                .feature__header
+                    h3 Самосвалы
+                ul.feature__list
+                    li
+                        p MAN TGS 33.400
+                        p 45 BYN
+                    li
+                        p МАЗ
+                        p 45 BYN
+                    li
+                        p MАЗ-5516
+                        p 45 BYN
+                    li
+                        p MAN TGS 41.390
+                        p 50 BYN
+
+                .feature__header
+                    h3 Экскаваторы гусеничные
+                ul.feature__list
+                    li
+                        p JCB JS 220 болотный
+                        p 60 BYN
+                    li
+                        p Hitachi ZX210 LCK-3 полуболотный
+                        p 60 BYN
+                    li
+                        p JCB JS 260LC
+                        p 65 BYN
+                    li
+                        p Caterpillar 323 DL
+                        p 70 BYN
+                    li
+                        p Сaterpillar 325 DL
+                        p 70 BYN
+                    li
+                        p HITACHI ZX280 LC полуболотный
+                        p 70 BYN
+                    li
+                        p HITACHI ZX 350 H полуболотный
+                        p 70 BYN
+                    li
+                        p Сaterpillar 330BL UHD
+                        p 110 BYN
+
+                .feature__header
+                    h3 Бульдозеры
+                ul.feature__list
+                    li
+                        p KOMATSU D65 EX-12
+                        p 70 BYN
+                    li
+                        p KOMATSU D65 PX-12 болотный
+                        p 70 BYN
+                    li
+                        p KOMATSU D65 PX-12 с рыхлителем
+                        p 70 BYN
+                    li
+                        p KOMATSU D61 PX-12
+                        p 70 BYN
+                    li
+                        p Caterpillar D6R
+                        p 70 BYN
+
+
+    include ./blocks/_advantage
+
+    include ./blocks/_reviews
+
+    include ./blocks/_feedback_full_width
+
+    include ./blocks/_fixed_block
+
+    +qa_block('Часто задаваемые вопросы')

@@ -39,12 +39,9 @@
     }
   }
 
-  .infoBlock__list {
+  ul {
     padding-top: 10px;
     margin-bottom: 20px;
-  }
-
-  .infoBlock__list--columns {
     column-count: 2;
     column-gap: 28;
 
@@ -71,5 +68,23 @@
       height: 1px;
       background-color: var(--color_light_grey);
     }
+  }
+}
+
+.services-item__infoBlock {
+  .infoBlock__title {
+    max-width: 953px;
+  }
+}
+
+.infoBlock__cases {
+  margin-top: 75px;
+
+  @include sm {
+    margin-top: 100px;
+  }
+
+  @include xxs {
+    margin-top: 60px;
   }
 }
