@@ -264,12 +264,18 @@
 
 .fixed__feedback {
   position: fixed;
-  right: 83px;
-  bottom: 20px;
+  // right: 83px;
+  // bottom: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1200;
-  width: 381px;
-  height: 308px;
-  padding: 40px 30px;
+  // width: 381px;
+  // height: 308px;
+  width: 670px;
+  height: 500px;
+  // padding: 40px 30px;
+  padding: 93px 175px 90px 175px;
   background: #fff;
   border-radius: 10px;
   transition: opacity 0.2s ease-in-out;
@@ -278,7 +284,7 @@
   transform: scale(0);
 
   &.active {
-    transform: scale(1);
+    transform: scale(1) translate(-50%, -50%);
     visibility: visible;
     opacity: 1;
   }
@@ -286,8 +292,10 @@
 
 .fixed__close {
   position: absolute;
-  top: -24px;
-  right: -24px;
+  // top: -24px;
+  // right: -24px;
+  top: 30px;
+  right: 30px;
   width: 21px;
   height: 21px;
   z-index: 2;
@@ -295,11 +303,21 @@
 }
 
 .fixed__feedbackTitle {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 20px;
   line-height: 120%;
   color: #1f1e1d;
+  text-align: center;
+}
+
+.fixed__feedback-subtitle {
+  margin-bottom: 30px;
+  color: var(--color_dark, #1f1e1d);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 170%;
 }
 
 .fixed__item {
@@ -342,6 +360,10 @@
   font-size: 14px;
   line-height: 170%;
   color: #1f1e1d;
+}
+
+.fixed__submit {
+  margin: 0 auto;
 }
 
 /*===== technics styles =====*/
