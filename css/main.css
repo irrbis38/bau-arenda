@@ -1992,7 +1992,9 @@ body {
 }
 .intro {
   padding-top: 74px;
-  background: url(../images/intro/intro-bg.jpg) center/cover no-repeat
+  background: url(../images/intro/intro-bg.jpg) center/cover no-repeat;
+  background-image: -webkit-image-set(url("./../images/intro/intro-bg.webp") type("image/webp"), url("./../images/intro/intro-bg.jpg"));
+  background-image: image-set(url("./../images/intro/intro-bg.webp") type("image/webp"), url("./../images/intro/intro-bg.jpg"))
 }
 .intro__wrapper {
   display: -webkit-flex;
@@ -4097,7 +4099,10 @@ form {
 }
 @media (max-width:767px) {
   .intro {
-    padding-top: 80px
+    padding-top: 80px;
+    background-image: url(../images/intro/intro-bg-small.png);
+    background-image: -webkit-image-set(url("./../images/intro/intro-bg-small.webp") type("image/webp"), url("./../images/intro/intro-bg-small.png"));
+    background-image: image-set(url("./../images/intro/intro-bg-small.webp") type("image/webp"), url("./../images/intro/intro-bg-small.png"))
   }
   .intro__title {
     font-size: 28px;
