@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>БауАренда - аренда строительной техники</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header" id="top">
+      <div class="header__logo header__logo--small"><a href="./index.html"><img class="logo__image" src="./images/header/logo-small.svg" alt="logo"></a></div>
+      <div class="header__wrapper">
+        <div class="header__top">
+          <div class="container">
+            <nav class="header__menu">
+              <ul class="header__menu-list">
+                <li><a href="./rental.html">Аренда техники</a></li>
+                <li class="menu-item-has-children"><a href="./company.html">О компании</a>
+                  <ul class="sub-menu">
+                    <li><a href="./our-clients.html">Наши клиенты</a></li>
+                    <li><a href="./our-partners.html">Наши партнеры</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="./reviews.html">Отзывы</a></li>
+                    <li><a href="./warranties.html">Гарантии</a></li>
+                    <li><a href="./licenses.html">Лицензии и сертификаты</a></li>
+                    <li><a href="./jobs.html">Вакансии</a></li>
+                    <li><a href="qa.html">Вопрос/ответ</a></li>
+                  </ul>
+                </li>
+                <li><a href="./prices.html">Цены</a></li>
+                <li class="menu-item-has-children"><a href="./services-list.html">Услуги</a>
+                  <ul class="sub-menu">
+                    <li><a href="./services-item-subservices.html">Земляные работы</a></li>
+                    <li><a href="./services-item.html">Бурение отверстий</a></li>
+                    <li><a href="./services-item.html">Вывоз и утилизация грунта</a></li>
+                    <li><a href="./services-item.html">Вывоз строительного мусора</a></li>
+                    <li><a href="./services-item.html">Доставка негабаритных грузов</a></li>
+                    <li><a href="./services-item.html">Продажа строительного песка</a></li>
+                    <li><a href="./services-item.html">Уборка и вывоз снега</a></li>
+                  </ul>
+                </li>
+                <li><a href="./news.html">Новости</a></li>
+                <li><a href="./promotions.html">Акции</a></li>
+                <li class="menu-item-has-children"><a href="./contacts.html">Контакты</a>
+                  <ul class="sub-menu">
+                    <li><a href="./hotline.html">Горячая линия</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__search"><img class="header__icon" src="./images/header/search.svg" alt="icon">
+              <p>поиск</p>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__logo header__logo--big"><a href="./index.html"><img class="logo__image" src="./images/header/logo.svg" alt="logo"></a></div>
+            <nav class="header__contacts">
+              <div class="header__item"><a class="header__contact" href="mailto:info@bauarenda.by">info@bauarenda.by</a></div>
+              <div class="header__item"><a class="header__contact" href="tel:+375297477171">+375 29 747-71-71</a></div>
+              <div class="header__item"><a class="header__contact" href="tel:+375291622365">+375 29 162-23-65</a>
+                <div class="header__messengers">
+                  <div class="header__whatsapp"><a class="footer__contactsLink" href="https://wa.me/375291622365" target="_blank"></a>
+                    <svg class="whatsapp" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.60761 21.4866L7.0163 21.6893C8.7194 22.7028 10.6267 23.1758 12.5341 23.1758C18.5286 23.1758 23.4332 18.3109 23.4332 12.365C23.4332 9.5272 22.2751 6.75691 20.2316 4.72986C18.188 2.7028 15.4631 1.5542 12.5341 1.5542C6.53955 1.5542 1.63484 6.41906 1.703 12.4326C1.703 14.4596 2.31608 16.4191 3.33784 18.1082L3.6103 18.5137L2.52047 22.5002L6.60761 21.4866Z" fill="#E8EDF7"></path>
+                      <path d="M21.3896 3.64864C19.0735 1.28382 15.8719 0 12.6021 0C5.65401 0 0.068163 5.60809 0.136228 12.4324C0.136228 14.5946 0.749305 16.6892 1.77116 18.5811L0 25L6.60761 23.3108C8.44684 24.3244 10.4904 24.7974 12.5341 24.7974C19.4142 24.7974 25 19.1892 25 12.365C25 9.05409 23.7056 5.94595 21.3896 3.64864ZM12.6021 22.7028C10.7629 22.7028 8.92369 22.2299 7.35692 21.2839L6.94823 21.0812L2.99732 22.0947L4.01908 18.2434L3.74662 17.8379C0.749305 13.0407 2.17985 6.68918 7.08446 3.71616C11.9891 0.743231 18.3242 2.16218 21.3215 7.02704C24.3188 11.8919 22.8882 18.1757 17.9837 21.1487C16.4168 22.1622 14.5095 22.7028 12.6021 22.7028ZM18.5967 15.2029L17.8474 14.865C17.8474 14.865 16.7575 14.392 16.0763 14.0542C16.0081 14.0542 15.9401 13.9866 15.8719 13.9866C15.6675 13.9866 15.5313 14.0542 15.3951 14.1218C15.3951 14.1218 15.327 14.1893 14.3733 15.2704C14.3051 15.4055 14.1689 15.4731 14.0327 15.4731H13.9645C13.8965 15.4731 13.7602 15.4055 13.6921 15.338L13.3515 15.2029C12.6021 14.865 11.921 14.4595 11.376 13.919C11.2398 13.7839 11.0354 13.6488 10.8991 13.5137C10.4223 13.0407 9.94545 12.5001 9.60493 11.892L9.53676 11.7569C9.4687 11.6893 9.4687 11.6217 9.40054 11.4866C9.40054 11.3515 9.40054 11.2164 9.4687 11.1488C9.4687 11.1488 9.74116 10.8109 9.94545 10.6083C10.0818 10.473 10.1498 10.2704 10.2861 10.1353C10.4223 9.93254 10.4905 9.6623 10.4223 9.45956C10.3542 9.1217 9.53677 7.29738 9.33247 6.89201C9.19615 6.68927 9.06001 6.62176 8.85562 6.55415H8.10632C7.96999 6.55415 7.83386 6.62176 7.69754 6.62176L7.62937 6.68927C7.49314 6.75688 7.35692 6.89201 7.22069 6.95952C7.08446 7.09474 7.0163 7.22977 6.88007 7.36499C6.40322 7.9731 6.13076 8.71633 6.13076 9.45956C6.13076 10.0001 6.26699 10.5407 6.47138 11.0136L6.53955 11.2164C7.15262 12.5001 7.96999 13.6488 9.06001 14.6623L9.33247 14.9325C9.53677 15.1353 9.74116 15.2704 9.87739 15.473C11.3079 16.6893 12.9428 17.5677 14.782 18.0407C14.9864 18.1082 15.2588 18.1082 15.4632 18.1758H16.1444C16.485 18.1758 16.8937 18.0407 17.1662 17.9055C17.3705 17.7704 17.5068 17.7704 17.643 17.6353L17.7793 17.5001C17.9155 17.365 18.0518 17.2974 18.188 17.1623C18.3242 17.0272 18.4605 16.8921 18.5286 16.7568C18.6648 16.4866 18.7329 16.1487 18.8011 15.811V15.338C18.8011 15.338 18.7329 15.2704 18.5967 15.2029Z" fill="white"></path>
+                    </svg>
+                  </div>
+                  <div class="header__viber"><a class="footer__contactsLink" href="viber://chat?number=%2B375291622365" target="_blank"></a>
+                    <svg class="viber" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.49877 24.0822C7.49878 24.0822 7.49977 24.0816 7.50169 24.0806C7.49972 24.0817 7.49877 24.0822 7.49877 24.0822ZM8.75173 24.5735C8.75173 24.5735 8.75148 24.5728 8.75101 24.5714L8.75173 24.5735ZM7.86291 24.9986L7.56366 25.9528C7.79299 26.0247 7.98664 25.9969 8.0667 25.9821C8.16255 25.9644 8.23965 25.9369 8.28694 25.9181C8.38224 25.8804 8.46539 25.8342 8.52247 25.8006C8.64256 25.7297 8.77479 25.6376 8.90298 25.543C9.1655 25.3492 9.49348 25.0839 9.83563 24.7926C10.3815 24.3279 11.0029 23.7636 11.4989 23.2652C13.8011 23.4272 16.1155 23.2252 18.3566 22.6656L18.3545 22.6566C18.3787 22.6504 18.407 22.6435 18.4393 22.6356C18.908 22.5205 20.193 22.2051 21.3963 21.3612C22.8653 20.3309 24.2433 18.5396 24.6191 15.4567C25.3419 9.59603 24.3398 5.49465 22.0483 3.49665C21.2704 2.78929 18.7183 1.04457 13.3751 1.01636L13.3214 1.01378C13.2707 1.01154 13.1982 1.00875 13.1062 1.00627C12.9222 1.0013 12.6595 0.997556 12.3365 1.00194C11.6918 1.01068 10.7989 1.05187 9.80581 1.18257C7.86777 1.43764 5.34606 2.05773 3.62917 3.63326L3.61337 3.64777L3.59819 3.66294C1.67286 5.58827 1.08307 8.32865 1.01508 11.3998C0.982309 12.8802 0.935784 15.1958 1.64598 17.348C2.32452 19.4043 3.70573 21.3397 6.36631 22.3029C6.40584 22.6119 6.45735 23.0014 6.5137 23.3935C6.57578 23.8255 6.64569 24.2745 6.71354 24.6252C6.74672 24.7967 6.78399 24.969 6.82492 25.111C6.84411 25.1775 6.87408 25.2732 6.91832 25.3691C6.93962 25.4153 6.98013 25.497 7.04575 25.5843C7.09317 25.6475 7.25672 25.8565 7.56365 25.9528L7.86291 24.9986Z" fill="#E8EDF7" stroke="white" stroke-width="2"></path>
+                      <path d="M15.7129 11.2588V11.272C15.7109 11.3454 15.6808 11.4151 15.6289 11.4669C15.577 11.5187 15.5071 11.5486 15.4338 11.5504C15.3605 11.5523 15.2892 11.5258 15.2348 11.4767C15.1804 11.4275 15.1469 11.3593 15.1413 11.2861C15.1605 11.0895 15.1368 10.8902 15.0718 10.7036C15.0068 10.5171 14.9022 10.3469 14.765 10.2047C14.6279 10.0626 14.4615 9.95185 14.2774 9.88023C14.0933 9.80862 13.8959 9.7778 13.6987 9.7899H13.7025C13.6293 9.78423 13.5611 9.75067 13.512 9.69615C13.4628 9.64163 13.4365 9.57033 13.4384 9.49695C13.4404 9.42358 13.4704 9.35376 13.5224 9.30191C13.5743 9.25005 13.6442 9.22013 13.7176 9.21833H13.7336H13.7326L13.7976 9.21739C14.0605 9.2173 14.3206 9.27125 14.5617 9.3759C14.8029 9.48054 15.02 9.63365 15.1995 9.8257C15.379 10.0178 15.5171 10.2447 15.6053 10.4923C15.6934 10.74 15.7297 11.0031 15.7119 11.2654V11.2598L15.7129 11.2588ZM16.6084 11.7588C16.6526 9.88689 15.4831 8.42171 13.2627 8.25787C13.2242 8.25666 13.1863 8.24769 13.1514 8.23149C13.1164 8.21528 13.085 8.19218 13.0592 8.16357C13.0334 8.13496 13.0136 8.10143 13.001 8.06499C12.9885 8.02854 12.9834 7.98994 12.9862 7.95149C12.9889 7.91304 12.9993 7.87554 13.0169 7.84123C13.0345 7.80693 13.0588 7.77653 13.0884 7.75185C13.118 7.72717 13.1523 7.70873 13.1892 7.69763C13.2262 7.68652 13.2649 7.68299 13.3032 7.68724H13.3023H13.3183C13.8452 7.68722 14.3666 7.79492 14.8504 8.00371C15.3342 8.2125 15.7703 8.51799 16.1317 8.9014C16.4932 9.28482 16.7724 9.73808 16.9524 10.2333C17.1323 10.7286 17.2091 11.2554 17.178 11.7814L17.179 11.7711C17.1739 11.8441 17.1411 11.9123 17.0873 11.9619C17.0335 12.0115 16.9628 12.0385 16.8896 12.0376C16.8165 12.0366 16.7465 12.0077 16.694 11.9567C16.6415 11.9058 16.6105 11.8366 16.6074 11.7636V11.756L16.6084 11.7588ZM18.6799 12.3511V12.353C18.6761 12.426 18.6445 12.4948 18.5917 12.5452C18.5388 12.5957 18.4686 12.624 18.3955 12.6243C18.3224 12.6247 18.2519 12.5971 18.1986 12.5472C18.1452 12.4972 18.1129 12.4288 18.1084 12.3558C18.0858 8.75693 15.6856 6.7974 12.7769 6.77668C12.7394 6.77668 12.7023 6.7693 12.6677 6.75496C12.6331 6.74063 12.6016 6.71961 12.5751 6.69312C12.5486 6.66662 12.5276 6.63517 12.5133 6.60055C12.4989 6.56594 12.4916 6.52884 12.4916 6.49137C12.4916 6.4539 12.4989 6.4168 12.5133 6.38218C12.5276 6.34757 12.5486 6.31611 12.5751 6.28962C12.6016 6.26313 12.6331 6.24211 12.6677 6.22777C12.7023 6.21343 12.7394 6.20605 12.7769 6.20605C16.034 6.22865 18.6517 8.47632 18.6781 12.3502L18.6799 12.3511ZM18.1856 16.6807V16.6892C17.7091 17.5282 16.8174 18.4548 15.8993 18.1591L15.8908 18.1459C14.254 17.5436 12.7197 16.6927 11.3418 15.6233L11.3804 15.6515C10.6948 15.1071 10.0728 14.4871 9.52636 13.8031L9.50847 13.7796C9.01365 13.1567 8.57204 12.4933 8.18831 11.7965L8.15064 11.7221C7.69663 10.9736 7.32022 10.1808 7.02728 9.35581L6.99903 9.26353C6.70336 8.34544 7.62521 7.45371 8.46891 6.97725H8.47739C8.64337 6.871 8.84269 6.82964 9.03724 6.86108C9.2318 6.89253 9.40794 6.99456 9.53201 7.14768L9.53295 7.14957C9.53295 7.14957 10.08 7.80212 10.3145 8.1251C10.5348 8.42548 10.8315 8.90665 10.9849 9.17501C11.1005 9.35839 11.1475 9.5767 11.1177 9.7914C11.0879 10.0061 10.9832 10.2033 10.822 10.3483L10.8211 10.3492L10.2919 10.773C10.2094 10.8526 10.1456 10.9496 10.1052 11.0569C10.0649 11.1642 10.0488 11.2792 10.0584 11.3935V11.3907C10.3204 12.2639 10.7933 13.0591 11.4354 13.7063C12.0775 14.3535 12.8691 14.8327 13.7402 15.1016L13.7797 15.112C13.8934 15.121 14.0077 15.1048 14.1145 15.0646C14.2212 15.0244 14.3178 14.9612 14.3974 14.8794L14.8211 14.3502C14.9667 14.1883 15.1649 14.0833 15.3806 14.0538C15.5963 14.0244 15.8155 14.0723 15.9991 14.1892L15.9954 14.1873C16.7609 14.6233 17.4229 15.1026 18.0265 15.6459L18.0161 15.6365C18.1692 15.7586 18.2711 15.9335 18.3018 16.1269C18.3324 16.3203 18.2897 16.5182 18.1818 16.6817L18.1837 16.6789L18.1856 16.6807Z" fill="white"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item"><a class="header__contact" href="tel:+375173744808">+375 17 374-48-08</a></div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header__menu-small">
+        <div class="header__search-small"><img src="./images/header/search.svg" alt="поиск"></div>
+        <div class="header__burger"><span></span></div>
+      </div>
+      <div class="header__search-frame">
+        <div class="header__search-field">
+          <div class="header__search-closer"><img src="./images/header/header-search-closer.svg" alt="закрыть окно поиска"></div>
+          <div class="header__search-top">
+            <div class="header__search-request">
+              <input class="header__search-input" type="text" placeholder="Начните поиск">
+            </div>
+            <nav class="header__search-nav">
+              <ul class="header__search-categories">
+                <li class="header__search-category active">Аренда</li>
+                <li class="header__search-category">Новости</li>
+                <li class="header__search-category">Услуги</li>
+                <li class="header__search-category">Прочее</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__search-output">
+            <p class="header__search-init active">Популярное</p>
+            <div class="header__search-results">
+              <div class="header__search-item">
+                <p class="header__search-name">Аренда экскаваторов CATERPILLAR</p>
+                <p class="header__search-price">100 BYN</p><a href="#"></a>
+              </div>
+              <div class="header__search-item">
+                <p class="header__search-name">Аренда экскаватора-погрузчика JCB 4CX</p>
+                <p class="header__search-price">60 BYN</p><a href="#"></a>
+              </div>
+              <div class="header__search-item">
+                <p class="header__search-name">Аренда экскаватора JCB 3CX</p>
+                <p class="header__search-price">70 BYN</p><a href="#"></a>
+              </div>
+              <div class="header__search-item">
+                <p class="header__search-name">Аренда JCB JS260 LC полуболотный</p>
+                <p class="header__search-price">78 BYN</p><a href="#"></a>
+              </div>
+              <div class="header__search-item">
+                <p class="header__search-name">Аренда Сaterpillar 323 DL</p>
+                <p class="header__search-price">100 BYN</p><a href="#"></a>
+              </div>
+              <div class="header__search-item">
+                <p class="header__search-name">Аренда Сaterpillar 325 DL</p>
+                <p class="header__search-price">50 BYN</p><a href="#"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="details catalog-item-page">
+        <div class="container">
+          <div class="details__breadcrumps breadcrumps"><a href="./index.html">Главная</a><a href="./rental.html">Аренда</a><a href="./catalog.html">Аренда бульдозеров</a><span>Аренда бульдозера KOMATSU D65 PX-12 с рыхлителем</span></div>
+          <h2 class="details__title block__title">Аренда бульдозера KOMATSU D65 PX-12 с рыхлителем</h2>
+          <div class="details__block details__block--first">
+            <div class="details__view view">
+              <div class="view__fullsize swiper"><span class="view__status">Готов к работе</span>
+                <div class="view__nav">
+                  <button class="view__prev view__btn"><span class="icon svg-image-intro-prev"></span>
+                  </button>
+                  <button class="view__next view__btn"><span class="icon svg-image-intro-next"></span>
+                  </button>
+                </div>
+                <div class="view__fullsize-wrapper swiper-wrapper">
+                  <div class="view__fullsize-item swiper-slide"><img src="./images/details/details-full1.png" alt="бульдозер"></div>
+                  <div class="view__fullsize-item swiper-slide"><img src="./images/details/komatsu_d65px12_1_0.jpg" alt="бульдозер"></div>
+                  <div class="view__fullsize-item swiper-slide"><img src="./images/details/komatsu_d65px12_2_0.jpg" alt="бульдозер"></div>
+                  <div class="view__fullsize-item swiper-slide"><img src="./images/details/10010_d65px_1.jpg" alt="бульдозер"></div>
+                  <div class="view__fullsize-item swiper-slide"><img src="./images/details/komatsu_d65px12_3.jpg" alt="бульдозер"></div>
+                </div>
+              </div>
+              <div class="view__slider swiper">
+                <div class="view__wrapper swiper-wrapper">
+                  <div class="view__item swiper-slide"><img src="./images/details/details-full1.png" alt="бульдозер"></div>
+                  <div class="view__item swiper-slide"><img src="./images/details/komatsu_d65px12_1_0.jpg" alt="бульдозер"></div>
+                  <div class="view__item swiper-slide"><img src="./images/details/komatsu_d65px12_2_0.jpg" alt="бульдозер"></div>
+                  <div class="view__item swiper-slide"><img src="./images/details/10010_d65px_1.jpg" alt="бульдозер"></div>
+                  <div class="view__item swiper-slide"><img src="./images/details/komatsu_d65px12_3.jpg" alt="бульдозер"></div>
+                </div>
+              </div>
+            </div>
+            <div class="details__specs specs">
+              <div class="specs__wrapper"> 
+                <div class="specs__item"> <span class="specs__name">Мощность двигателя, л.с.</span><span class="specs__value">190</span></div>
+                <div class="specs__item"> <span class="specs__name">Ширина отвала, мм</span><span class="specs__value">3970 </span></div>
+                <div class="specs__item"> <span class="specs__name">Объем отвала, м.куб.</span><span class="specs__value">3,69</span></div>
+                <div class="specs__item"> <span class="specs__name">Высота отвала, мм</span><span class="specs__value">1100</span></div>
+                <div class="specs__item"> <span class="specs__name">Ширина трака (башмака), мм</span><span class="specs__value">915</span></div>
+                <div class="specs__item"> <span class="specs__name">Стоимость за час (без НДС):</span><span class="specs__value">70 бел.руб</span></div>
+              </div>
+              <button class="specs__button btn__link btn__yellow rental__button">Арендовать</button>
+            </div>
+          </div>
+          <div class="details__block details__block--second">
+            <div class="details__description description">
+              <div class="description__nav">
+                <button class="description__button active"><span>Описание</span></button>
+                <button class="description__button"><span>Характеристики</span></button>
+                <button class="description__button"><span>Техническая документация</span></button>
+              </div>
+              <div class="description__wrapper">
+                <div class="description__item show"> 
+                  <p>Компания Komatsu – производитель бульдозеров и строительной техники с мировым именем.</p>
+                  <p>Особенность продукции бренда – универсальность, которая достигается благодаря разнообразию навесного оборудования. В частности, бульдозер Komatsu D65 PX-12 с рыхлителем является яркой демонстрацией лучших разработок производителя.</p>
+                  <p>Кабина создана с учетом последних требований безопасности и оснащена системами ROPS и FOPS, которые защищают её от опрокидывания и падения тяжелых предметов. Опционально предлагается установка дополнительных систем, повышающих уровень комфорта оператора.</p>
+                  <p>В бульдозере Komatsu установлена гидростатическая трансмиссия нового поколения. Дизельный двигатель работает от двух реверсивных гидронасосов, которые, в свою очередь, связаны с рукавами высокого давления. Современный привод полностью контролирует все узлы системы управления, в результате чего обеспечивается необходимый баланс между скоростью движения, тяговым усилением, что исключает какие-либо перегрузки двигателя. Многостоечный рыхлитель расположен в задней части машины и предназначен для рыхления с глубиной 595 мм и меньше.</p>
+                  <p>Каждая гусеница контролируется отдельно и может иметь свою скорость. Это достигается за счет изменения работы гидронасосов.</p>
+                  <p>К особенностям конструкции Komatsu D65 PX-12 также можно отнести наличие поворотного прямого отвала, оснащенного гидравлической системой перекоса. </p>
+                  <p>Мы всегда рады рассказать больше о нашей технике, условиях сотрудничества и с радостью ответить на все ваши вопросы. Звоните по указанным на сайте телефонам или оставьте запрос через форму обратной связи – и наши специалисты свяжутся с вами в короткие сроки. Мы рады видеть вас среди наших клиентов!</p>
+                </div>
+                <div class="description__item">
+                  <p>К сожалению, в данный момент нет информации о характеристиках выбранной техники.</p>
+                </div>
+                <div class="description__item">
+                  <p>К сожалению, техническая документация отсутствует.</p>
+                </div>
+              </div>
+            </div>
+            <div class="details__cta">
+              <div class="details__backlink backlink">
+                <h3 class="backlink__title block__title">Есть вопросы по аренде?</h3>
+                <p class="backlink__text">Задайте их нам удобным для Вас способом.</p>
+                <div class="backlink__nav">
+                  <div class="backlink__item"><a href="tg://resolve?domain=&lt;USERNAME&gt;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+<path d="M25 50.0005C38.8104 50.0005 50 38.8109 50 25.0005C50 11.1901 38.8104 0.000488281 25 0.000488281C11.1896 0.000488281 0 11.1901 0 25.0005C0 38.8109 11.1896 50.0005 25 50.0005ZM11.4396 24.4588L35.5438 15.1651C36.6625 14.7609 37.6396 15.438 37.2771 17.1297L37.2792 17.1276L33.175 36.463C32.8708 37.8338 32.0562 38.1672 30.9167 37.5213L24.6667 32.9151L21.6521 35.8192C21.3187 36.1526 21.0375 36.4338 20.3917 36.4338L20.8354 30.0734L32.4187 19.6088C32.9229 19.1651 32.3062 18.9151 31.6417 19.3567L17.3271 28.3692L11.1562 26.4442C9.81667 26.0192 9.7875 25.1047 11.4396 24.4588Z" fill="#FFCB09"/>
+</svg></a></div>
+                  <div class="backlink__item"><a href="viber://chat?number=%2B375291622365" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+<path d="M25 0.000488281C11.195 0.000488281 0 11.1955 0 25.0005C0 38.8055 11.195 50.0005 25 50.0005C38.805 50.0005 50 38.8055 50 25.0005C50 11.1955 38.805 0.000488281 25 0.000488281ZM25.5299 39.5562C25.5295 39.5562 25.5302 39.5562 25.5299 39.5562H25.5238C23.0194 39.5551 20.5585 38.9272 18.3731 37.7355L10.4412 39.8156L12.5641 32.0642C11.2545 29.7959 10.5656 27.2225 10.5667 24.5862C10.5701 16.3388 17.2825 9.62917 25.5299 9.62917C29.5322 9.63069 33.2893 11.1886 36.1141 14.0157C38.9393 16.8431 40.4942 20.6014 40.4926 24.598C40.4892 32.8458 33.7761 39.5562 25.5299 39.5562Z" fill="#FFCB09"/>
+<path d="M25.5328 12.1558C18.6729 12.1558 13.0939 17.7325 13.0908 24.5875C13.0901 26.9366 13.7477 29.2242 14.9924 31.2037L15.2881 31.674L14.0315 36.262L18.7385 35.0275L19.1928 35.2969C21.1021 36.4298 23.2909 37.0291 25.5225 37.0299H25.5275C32.3821 37.0299 37.9611 31.4528 37.9642 24.5974C37.9653 21.2752 36.6729 18.1517 34.325 15.8018C31.977 13.452 28.8543 12.1569 25.5328 12.1558ZM32.8479 29.9326C32.5363 30.8054 31.0428 31.6023 30.3245 31.7099C29.6802 31.806 28.8654 31.8461 27.9697 31.5619C27.4265 31.3895 26.7303 31.1594 25.838 30.7745C22.0878 29.1556 19.6384 25.3806 19.4515 25.1311C19.2645 24.8816 17.9248 23.1043 17.9248 21.2645C17.9248 19.425 18.8907 18.5206 19.2333 18.1467C19.5762 17.7725 19.9813 17.6791 20.2304 17.6791C20.4795 17.6791 20.729 17.6814 20.9468 17.692C21.1765 17.7035 21.4847 17.6047 21.788 18.3337C22.0996 19.0821 22.8473 20.9216 22.9408 21.1085C23.0342 21.2958 23.0964 21.514 22.972 21.7635C22.8473 22.0129 22.433 22.5512 22.0374 23.0418C21.8715 23.2474 21.6552 23.4305 21.8734 23.8047C22.0912 24.1785 22.842 25.4027 23.9532 26.3937C25.3814 27.6671 26.5861 28.0615 26.9599 28.2488C27.3334 28.4357 27.5516 28.4045 27.7698 28.1554C27.9876 27.9059 28.7044 27.064 28.9535 26.6898C29.2026 26.3155 29.4521 26.3781 29.7946 26.5028C30.1376 26.6272 31.9755 27.5317 32.3493 27.7186C32.7232 27.9059 32.9723 27.9993 33.0657 28.1554C33.1596 28.3114 33.1596 29.0594 32.8479 29.9326Z" fill="#FFCB09"/>
+</svg></a></div>
+                  <div class="backlink__item"><a href="tel:+375297477171"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+<path d="M25.0005 0.000488281C11.1935 0.000488281 0 11.1922 0 24.9995C0 38.8068 11.1935 50.0005 25.0005 50.0005C38.8065 50.0005 50 38.8068 50 24.9995C50 11.1922 38.8065 0.000488281 25.0005 0.000488281ZM23.8301 13.2072C24.0337 13.0209 24.1765 12.995 24.8825 13.0167C25.2506 13.0296 25.792 13.0729 26.0864 13.1075C27.5762 13.2937 28.7802 13.6532 30.101 14.2984C31.4002 14.9351 32.2316 15.5371 33.3316 16.6327C34.3624 17.6678 34.934 18.4517 35.5403 19.6686C36.3848 21.3662 36.8655 23.3844 36.9479 25.6061C36.9782 26.3638 36.9565 26.5328 36.7833 26.7493C36.4541 27.1694 35.7309 27.1002 35.4841 26.6281C35.4061 26.4721 35.3845 26.3381 35.3585 25.7317C35.3151 24.8006 35.2503 24.1986 35.1203 23.4797C34.6093 20.6604 33.2581 18.4083 31.1014 16.793C29.3042 15.4418 27.4463 14.7836 25.0126 14.6407C24.1897 14.5931 24.0469 14.5627 23.8607 14.4198C23.514 14.1469 23.4966 13.506 23.8301 13.2072ZM28.9923 18.7852C28.1218 18.2656 26.8356 17.8801 25.6619 17.7849C25.2375 17.7501 25.0037 17.6636 24.8435 17.4773C24.5966 17.1958 24.5707 16.8148 24.7785 16.4986C25.0038 16.1478 25.3501 16.0915 26.3852 16.2474C29.014 16.6328 31.0494 17.8542 32.3832 19.8376C33.1324 20.9549 33.6002 22.2673 33.7604 23.6746C33.8166 24.1901 33.8166 25.1298 33.756 25.2858C33.6997 25.433 33.5177 25.6323 33.3619 25.7144C33.1931 25.801 32.8337 25.7924 32.6344 25.6885C32.3009 25.5196 32.2013 25.2511 32.2013 24.5235C32.2013 23.4018 31.9111 22.2196 31.4088 21.3014C30.8372 20.2534 30.0057 19.3873 28.9923 18.7852ZM30.4561 24.5581C30.2005 24.792 29.7285 24.8007 29.4426 24.5799C29.2347 24.4239 29.1698 24.2593 29.1221 23.8133C29.0659 23.22 28.9619 22.8043 28.7844 22.4188C28.4033 21.6002 27.732 21.1759 26.5974 21.0373C26.0647 20.9723 25.9044 20.9117 25.7313 20.7081C25.4151 20.3313 25.5364 19.7207 25.9737 19.4955C26.1384 19.4132 26.2076 19.4045 26.5714 19.4263C26.7966 19.4392 27.1301 19.4781 27.3077 19.5172C28.1608 19.6991 28.8148 20.0238 29.3734 20.5479C30.0923 21.2278 30.4864 22.0507 30.6596 23.233C30.7765 24.0038 30.7289 24.307 30.4561 24.5581ZM36.926 35.9351C36.6055 36.7623 35.3584 38.3127 34.4878 38.9753C33.6997 39.5729 33.1411 39.8024 32.4048 39.8371C31.7985 39.8674 31.5473 39.8154 30.7721 39.495C24.6918 36.9875 19.8372 33.2458 15.9829 28.1051C13.9691 25.42 12.436 22.6354 11.3879 19.7468C10.7774 18.0621 10.747 17.3302 11.2494 16.4684C11.466 16.1046 12.3884 15.2037 13.0597 14.7014C14.177 13.8699 14.6924 13.5624 15.1038 13.4758C15.3852 13.4151 15.8745 13.4628 16.1864 13.5754C16.338 13.6272 16.5718 13.7485 16.7061 13.8352C17.5289 14.3809 19.8199 17.3128 20.569 18.7766C20.9977 19.6124 21.1406 20.2317 21.0064 20.6908C20.8677 21.1845 20.6383 21.4443 19.6119 22.2715C19.2005 22.605 18.815 22.9471 18.7545 23.0381C18.5986 23.2633 18.473 23.705 18.473 24.0168C18.4773 24.7401 18.9451 26.0523 19.56 27.0614C20.0363 27.8453 20.8895 28.8499 21.7339 29.6209C22.7256 30.5305 23.6005 31.1496 24.5878 31.639C25.8567 32.2712 26.6319 32.4315 27.1993 32.1674C27.3422 32.1024 27.4938 32.0158 27.5415 31.9768C27.5847 31.9379 27.9182 31.5308 28.282 31.0805C28.9835 30.1968 29.1438 30.0541 29.6245 29.8895C30.2351 29.6816 30.8588 29.7378 31.4866 30.0584C31.963 30.3053 33.0024 30.9506 33.6737 31.4182C34.557 32.0376 36.4452 33.5794 36.7008 33.8868C37.1513 34.4411 37.2292 35.1512 36.926 35.9351Z" fill="#FFCB09"/>
+</svg></a></div>
+                </div>
+              </div>
+              <div class="details__book book">
+                <h3 class="book__title block__title">Заказать технику</h3>
+                <form class="book__form" action="#" novalidate>
+                  <div class="book__item">
+                    <p class="book__error">Номер телефона не менее 9 символов.</p>
+                    <input class="book__phone" type="text" placeholder="Телефон*" name="phone" minlength="9" required>
+                  </div>
+                  <input class="book__submit btn__link btn__yellow" type="submit" value="Отправить" name="submit">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="video"> 
+        <div class="container">
+          <div class="video__block" data-video="https://youtu.be/4xUZemOV4yc"><img src="" alt="видео-превью">
+            <button class="video-play btn-reset">
+              <svg width="68" height="48" viewBox="0 0 68 48">
+                <path class="video-play-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+                <path class="video-play-icon" d="M 45,24 27,14 27,34"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <h2 class="features__title block__title">Основные рабочие характеристики</h2>
+          <div class="features__wrapper">
+            <ul class="feature__list">
+              <li>
+                <p>Мощность двигателя, л.с.</p>
+                <p>190</p>
+              </li>
+              <li>
+                <p>Ширина отвала, мм</p>
+                <p>3970</p>
+              </li>
+              <li>
+                <p>Объём отвала, м.куб.</p>
+                <p>3,69</p>
+              </li>
+              <li>
+                <p>Высота отвала, мм</p>
+                <p>1100</p>
+              </li>
+              <li>
+                <p>Максимальная величина углубления отвала в грунт, мм</p>
+                <p>540</p>
+              </li>
+              <li>
+                <p>Угол резания, мм</p>
+                <p>25/25</p>
+              </li>
+              <li>
+                <p>Многостоечный рыхлитель с максимальной глубиной рыхления, мм</p>
+                <p>595</p>
+              </li>
+              <li>
+                <p>Максимальная скорость движения, км/ч</p>
+                <p>13,4</p>
+              </li>
+              <li>
+                <p>Эксплуатационная масса, т</p>
+                <p>21,8</p>
+              </li>
+              <li>
+                <p>Давление на грунт, кг/кв см</p>
+                <p>0,28</p>
+              </li>
+            </ul>
+            <div class="feature__header">
+              <h3>Габаритные размеры</h3>
+            </div>
+            <ul class="feature__list">
+              <li>
+                <p>Длина, м</p>
+                <p>5520 </p>
+              </li>
+              <li>
+                <p>Ширина (с отвалом), мм</p>
+                <p>3970</p>
+              </li>
+              <li>
+                <p>Ширина (без отвала), мм</p>
+                <p>2965</p>
+              </li>
+              <li>
+                <p>Высота, м</p>
+                <p>3165</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="conditions"> 
+        <div class="container"> 
+          <h2 class="conditions__title block__title">Условия аренды бульдозера KOMATSU D65 PX-12 с рыхлителем</h2>
+          <ul class="conditions__list"> 
+            <li><span>01</span>
+              <p>Стоимость часа зависит от общего количество часов, запланированного на аренду техники</p>
+            </li>
+            <li><span>02</span>
+              <p>Доставка стройтехники осуществляется за счет арендатора</p>
+            </li>
+            <li><span>03</span>
+              <p>В стоимость аренды входит работа техники с водителем</p>
+            </li>
+            <li><span>04</span>
+              <p>Минимальный срок аренды спецтехники - 4 часа</p>
+            </li>
+            <li><span>05</span>
+              <p>Мы работаем как с юридическими, так и с физ.лицами</p>
+            </li>
+            <li><span>06</span>
+              <p>Арендовать спецтехнику по желанию клиента можно в любые погодные условия</p>
+            </li>
+            <li><span>07</span>
+              <p>Оплата аренды спецтехники осуществляется по безналичному расчету (с НДС)</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <h2 class="reviews__title block__title">Отзывы</h2>
+          <div class="reviews__slider-container">
+            <div class="reviews__slider swiper">
+              <div class="reviews__wrapper swiper-wrapper">
+                <div class="reviews__item swiper-slide">
+                  <div class="reviews__preview">
+                    <div class="reviews__img"><img src="./images/reviews/rev1.png" alt="отзыв"/></div>
+                  </div>
+                  <div class="reviews__info">
+                    <h4 class="reviews__header">Строительная компания АгриПО, директор Ореховский В.В.</h4>
+                    <p class="reviews__text">Выражаем признательность за сотрудничество. Компания «БауАренда» предоставила в аренду тралы для транспортировки леса. Техника полностью отрабатывает потраченные деньги. Никаких «случайностей» в виде выхода из строя не произошло. По организации работы тоже все замечательно. Подписали договор, и уже на следующее утро тралы были в нашем распоряжении. Рекомендуем ООО «БауАренда» как надежного контрагента!</p><a class="reviews__link" href="#"></a>
+                  </div>
+                </div>
+                <div class="reviews__item swiper-slide">
+                  <div class="reviews__preview">
+                    <div class="reviews__img"><img src="./images/reviews/rev2.png" alt="отзыв"/></div>
+                  </div>
+                  <div class="reviews__info">
+                    <h4 class="reviews__header">Виктор Станиславович, главный механик ОАО «Белремстройсвязь»</h4>
+                    <p class="reviews__text">Заказывали экскаватор-погрузчик. С задачей справился на «отлично». Цены разумные, можно найти ниже, но и обслуживание с качеством и скоростью выполнения будет не сравнить.</p><a class="reviews__link" href="#"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__nav">
+              <button class="reviews__prev"><span class="reviews__navButton"></span><img src="./images/intro/intro-prev.svg" alt="prev"></button>
+              <button class="reviews__next"><span class="reviews__navButton"></span><img src="./images/intro/intro-next.svg" alt="next"></button>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__pagination">
+          <div class="reviews__dot"></div>
+          <div class="reviews__dot"></div>
+          <div class="reviews__dot"></div>
+        </div>
+        <div class="reviews__fullscreen">
+          <div class="reviews__fullscreen-wrapper"><img class="reviews__fullscreen-img" src="./images/reviews/rev1.png" alt="скриншот отзыва">
+            <div class="reviews__fullscreen-closer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.57617L22.5 22.5762M22.5 1.57617L1.5 22.5762" stroke="white" stroke-width="2"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback second__feedback">
+        <div class="container">
+          <h2 class="feedback__title block__title">Заказать спецтехнику</h2>
+          <p class="feedback__subtitle">Получите индивидуальное предложение на аренду техники.</p>
+          <form class="feedback__form" action="#" novalidate>
+            <p class="error__message">Заполните все обязательные для заполнения поля. Номер телефона должен быть не короче 9 символов.</p>
+            <div class="feedback__item">
+              <input class="feedback__name" type="text" placeholder="Имя*" name="name" required>
+            </div>
+            <div class="feedback__item">
+              <input class="feedback__phone" type="text" placeholder="Телефон*" name="phone" minlength="9" required>
+            </div>
+            <input class="feedback__submit btn__link btn__yellow" type="submit" value="Отправить" name="submit">
+          </form>
+        </div>
+      </section>
+      <section class="popular catalog-item__popular">
+        <div class="container">
+          <h2 class="popular__title block__title">Также сдаем в аренду</h2>
+          <div class="popular__wrapper">
+            <div class="catalog__card card">
+              <div class="card__picture"> <img src="./images/catalog/1.jpg" alt="Аренда экскаватора JCB JS260 LC полуболотный"/></div>
+              <div class="card__info">
+                <h4 class="card__title">Аренда экскаватора JCB JS260 LC полуболотный</h4>
+                <div class="card__features">
+                  <div class="card__feature"><span class="card__featureName">Объем фронтального ковша</span><span class="card__valueName">1,3 м3</span></div>
+                  <div class="card__feature"><span class="card__featureName">Высота выгрузки</span><span class="card__valueName">2690 мм</span></div>
+                  <div class="card__feature"><span class="card__featureName">Мощность двигателя</span><span class="card__valueName">100 л.с.</span></div>
+                  <div class="card__feature"><span class="card__featureName">4я характеристика</span><span class="card__valueName">4 м</span></div>
+                  <div class="card__feature"><span class="card__featureName">5я характеристика</span><span class="card__valueName">5 м</span></div>
+                </div>
+                <div class="card__prices">
+                  <div class="card__price"><span class="card__priceName">цена за час</span><span class="card__priceValue">80 BYN</span></div>
+                  <div class="card__price"><span class="card__priceName">цена за смену (8 ч.)</span><span class="card__priceValue">8650 BYN</span></div>
+                </div><a class="card__button btn__link btn__yellow" href="./catalog-item.html">Арендовать</a>
+              </div>
+            </div>
+            <div class="catalog__card card">
+              <div class="card__picture"> <img src="./images/catalog/1.jpg" alt="Аренда экскаватора JCB JS260 LC полуболотный"/></div>
+              <div class="card__info">
+                <h4 class="card__title">Аренда экскаватора JCB JS260 LC полуболотный</h4>
+                <div class="card__features">
+                  <div class="card__feature"><span class="card__featureName">Объем фронтального ковша</span><span class="card__valueName">1,3 м3</span></div>
+                  <div class="card__feature"><span class="card__featureName">Высота выгрузки</span><span class="card__valueName">2690 мм</span></div>
+                  <div class="card__feature"><span class="card__featureName">Мощность двигателя</span><span class="card__valueName">100 л.с.</span></div>
+                  <div class="card__feature"><span class="card__featureName">4я характеристика</span><span class="card__valueName">4 м</span></div>
+                  <div class="card__feature"><span class="card__featureName">5я характеристика</span><span class="card__valueName">5 м</span></div>
+                </div>
+                <div class="card__prices">
+                  <div class="card__price"><span class="card__priceName">цена за час</span><span class="card__priceValue">80 BYN</span></div>
+                  <div class="card__price"><span class="card__priceName">цена за смену (8 ч.)</span><span class="card__priceValue">8650 BYN</span></div>
+                </div><a class="card__button btn__link btn__yellow" href="./catalog-item.html">Арендовать</a>
+              </div>
+            </div>
+            <div class="catalog__card card">
+              <div class="card__picture"> <img src="./images/catalog/1.jpg" alt="Аренда экскаватора JCB JS260 LC полуболотный"/></div>
+              <div class="card__info">
+                <h4 class="card__title">Аренда экскаватора JCB JS260 LC полуболотный</h4>
+                <div class="card__features">
+                  <div class="card__feature"><span class="card__featureName">Объем фронтального ковша</span><span class="card__valueName">1,3 м3</span></div>
+                  <div class="card__feature"><span class="card__featureName">Высота выгрузки</span><span class="card__valueName">2690 мм</span></div>
+                  <div class="card__feature"><span class="card__featureName">Мощность двигателя</span><span class="card__valueName">100 л.с.</span></div>
+                  <div class="card__feature"><span class="card__featureName">4я характеристика</span><span class="card__valueName">4 м</span></div>
+                  <div class="card__feature"><span class="card__featureName">5я характеристика</span><span class="card__valueName">5 м</span></div>
+                </div>
+                <div class="card__prices">
+                  <div class="card__price"><span class="card__priceName">цена за час</span><span class="card__priceValue">80 BYN</span></div>
+                  <div class="card__price"><span class="card__priceName">цена за смену (8 ч.)</span><span class="card__priceValue">8650 BYN</span></div>
+                </div><a class="card__button btn__link btn__yellow" href="./catalog-item.html">Арендовать</a>
+              </div>
+            </div>
+            <div class="catalog__card card">
+              <div class="card__picture"> <img src="./images/catalog/1.jpg" alt="Аренда экскаватора JCB JS260 LC полуболотный"/></div>
+              <div class="card__info">
+                <h4 class="card__title">Аренда экскаватора JCB JS260 LC полуболотный</h4>
+                <div class="card__features">
+                  <div class="card__feature"><span class="card__featureName">Объем фронтального ковша</span><span class="card__valueName">1,3 м3</span></div>
+                  <div class="card__feature"><span class="card__featureName">Высота выгрузки</span><span class="card__valueName">2690 мм</span></div>
+                  <div class="card__feature"><span class="card__featureName">Мощность двигателя</span><span class="card__valueName">100 л.с.</span></div>
+                  <div class="card__feature"><span class="card__featureName">4я характеристика</span><span class="card__valueName">4 м</span></div>
+                  <div class="card__feature"><span class="card__featureName">5я характеристика</span><span class="card__valueName">5 м</span></div>
+                </div>
+                <div class="card__prices">
+                  <div class="card__price"><span class="card__priceName">цена за час</span><span class="card__priceValue">80 BYN</span></div>
+                  <div class="card__price"><span class="card__priceName">цена за смену (8 ч.)</span><span class="card__priceValue">8650 BYN</span></div>
+                </div><a class="card__button btn__link btn__yellow" href="./catalog-item.html">Арендовать</a>
+              </div>
+            </div>
+          </div><a class="catalog__more btn__link btn__grey" href="./catalog.html">Все бульдозеры</a>
+        </div>
+      </section>
+      <div class="fixed">
+        <button class="fixed__toTop"><span class="button-bg"></span><img src="./images/fixed/arrow-top.svg" alt="подняться наверх"></button>
+        <button class="fixed__showField">
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="25" fill="#FFCB09"></circle>
+            <path d="M22.9922 26.9067C24.4998 28.4361 26.324 29.6169 28.3366 30.3662L31.0594 28.1995C31.1401 28.1439 31.2358 28.1141 31.3338 28.1141C31.4319 28.1141 31.5276 28.1439 31.6083 28.1995L36.6638 31.4567C36.8558 31.5721 37.0182 31.7306 37.1384 31.9195C37.2586 32.1085 37.3332 32.3228 37.3563 32.5456C37.3794 32.7683 37.3504 32.9934 37.2716 33.203C37.1928 33.4126 37.0663 33.601 36.9022 33.7534L34.5333 36.0934C34.194 36.4286 33.7771 36.6746 33.3196 36.8094C32.8622 36.9443 32.3784 36.9638 31.9116 36.8662C27.2549 35.9044 22.9627 33.6519 19.5255 30.3662C16.1646 27.0477 13.8389 22.8253 12.8305 18.2112C12.7309 17.7516 12.7517 17.274 12.8909 16.8248C13.0301 16.3756 13.2829 15.97 13.625 15.6473L16.0805 13.2784C16.2325 13.1222 16.4178 13.0025 16.6226 12.9281C16.8274 12.8537 17.0463 12.8266 17.2631 12.8488C17.4798 12.8711 17.6887 12.9421 17.8742 13.0565C18.0596 13.1709 18.2168 13.3258 18.3338 13.5095L21.6994 18.5001C21.7575 18.5784 21.7888 18.6734 21.7888 18.7709C21.7888 18.8684 21.7575 18.9634 21.6994 19.0417L19.4822 21.7067C20.2518 23.6791 21.4508 25.4554 22.9922 26.9067Z" fill="white"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="fixed__feedback">
+        <div class="fixed__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+            <path d="M1 1L22 22M22 1L1 22" stroke="#474543" stroke-width="2"></path>
+          </svg>
+        </div>
+        <div class="fixed__wrapper">
+          <h3 class="fixed__feedbackTitle">Обратная связь</h3>
+          <p class="fixed__feedback-subtitle">Заполните заявку и сотрудник вас проконсультирует.</p>
+          <form class="fixed__form" action="#" novalidate>
+            <p class="error__message">Заполните все обязательные для заполнения поля.</p>
+            <div class="feedback__item fixed__item">
+              <input class="fixed__name feedback__name" type="text" placeholder="Имя*" name="name" required>
+            </div>
+            <div class="feedback__item fixed__item">
+              <input class="fixed__name feedback__name" type="text" placeholder="Телефон*" name="phone" minlength="9" required>
+            </div>
+            <input class="fixed__submit btn__yellow btn__link" type="submit" value="Отправить" name="submit">
+          </form>
+        </div>
+      </div>
+      <div class="fixed__bg"></div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo"><img src="./images/footer/footer-logo.svg" alt="logo"><a href="./index.html"></a></div>
+        <div class="footer__wrapper">
+          <div class="footer__info">
+            <p class="footer__text">г. Минск , 220090, ул. широкая, д. 3, пом. 148-2</p>
+            <p class="footer__text ft_link">
+              <svg class="footer__icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.07333 6.87991C5.76916 7.58579 6.61109 8.13078 7.54 8.47658L8.79667 7.47658C8.83392 7.45092 8.87809 7.43718 8.92333 7.43718C8.96857 7.43718 9.01274 7.45092 9.05 7.47658L11.3833 8.97991C11.4719 9.03317 11.5469 9.1063 11.6024 9.19351C11.6578 9.28073 11.6923 9.37965 11.7029 9.48246C11.7136 9.58526 11.7002 9.68914 11.6638 9.78589C11.6275 9.88264 11.5691 9.9696 11.4933 10.0399L10.4 11.1199C10.2434 11.2746 10.051 11.3882 9.83985 11.4504C9.62871 11.5126 9.40545 11.5216 9.19 11.4766C7.04074 11.0327 5.05971 9.99308 3.47333 8.47658C1.92216 6.945 0.848756 4.9962 0.383332 2.86658C0.337354 2.65446 0.34695 2.43406 0.41119 2.22674C0.475431 2.01942 0.592137 1.83221 0.749998 1.68325L1.88333 0.589913C1.95346 0.517842 2.03899 0.462571 2.13351 0.428239C2.22803 0.393907 2.3291 0.381402 2.42914 0.391663C2.52917 0.401923 2.62559 0.434682 2.71118 0.487486C2.79676 0.540291 2.86929 0.611773 2.92333 0.69658L4.47667 2.99991C4.50346 3.03608 4.51792 3.0799 4.51792 3.12491C4.51792 3.16992 4.50346 3.21374 4.47667 3.24991L3.45333 4.47991C3.80853 5.39023 4.36191 6.21005 5.07333 6.87991Z" fill="#4D5051"></path>
+              </svg><span>+375 29 162-23-65</span><a class="footer__cLink" href="tel:+375291622365"></a>
+            </p>
+            <p class="footer__text ft_link">
+              <svg class="footer__icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.07333 6.87991C5.76916 7.58579 6.61109 8.13078 7.54 8.47658L8.79667 7.47658C8.83392 7.45092 8.87809 7.43718 8.92333 7.43718C8.96857 7.43718 9.01274 7.45092 9.05 7.47658L11.3833 8.97991C11.4719 9.03317 11.5469 9.1063 11.6024 9.19351C11.6578 9.28073 11.6923 9.37965 11.7029 9.48246C11.7136 9.58526 11.7002 9.68914 11.6638 9.78589C11.6275 9.88264 11.5691 9.9696 11.4933 10.0399L10.4 11.1199C10.2434 11.2746 10.051 11.3882 9.83985 11.4504C9.62871 11.5126 9.40545 11.5216 9.19 11.4766C7.04074 11.0327 5.05971 9.99308 3.47333 8.47658C1.92216 6.945 0.848756 4.9962 0.383332 2.86658C0.337354 2.65446 0.34695 2.43406 0.41119 2.22674C0.475431 2.01942 0.592137 1.83221 0.749998 1.68325L1.88333 0.589913C1.95346 0.517842 2.03899 0.462571 2.13351 0.428239C2.22803 0.393907 2.3291 0.381402 2.42914 0.391663C2.52917 0.401923 2.62559 0.434682 2.71118 0.487486C2.79676 0.540291 2.86929 0.611773 2.92333 0.69658L4.47667 2.99991C4.50346 3.03608 4.51792 3.0799 4.51792 3.12491C4.51792 3.16992 4.50346 3.21374 4.47667 3.24991L3.45333 4.47991C3.80853 5.39023 4.36191 6.21005 5.07333 6.87991Z" fill="#4D5051"></path>
+              </svg><span>+375 29 747-71-71</span><a class="footer__cLink" href="tel:+375297477171"></a>
+            </p>
+            <p class="footer__text ft_link">
+              <svg class="footer__icon" width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.33515V7.26923C12 7.72826 11.8025 8.16849 11.4508 8.49307C11.0992 8.81765 10.6223 9 10.125 9H1.875C1.37772 9 0.900805 8.81765 0.549175 8.49307C0.197544 8.16849 0 7.72826 0 7.26923V2.33515L5.8095 5.49069C5.86722 5.52211 5.933 5.53868 6 5.53868C6.067 5.53868 6.13278 5.52211 6.1905 5.49069L12 2.33515ZM10.125 2.14288e-08C10.5864 -6.69572e-05 11.0316 0.156881 11.3754 0.44082C11.7193 0.724758 11.9376 1.11575 11.9888 1.539L6 4.79077L0.0112501 1.539C0.0623687 1.11575 0.280743 0.724758 0.624596 0.44082C0.968449 0.156881 1.41364 -6.69572e-05 1.875 2.14288e-08H10.125Z" fill="#4D5051"></path>
+              </svg><span>info@bauarenda.by</span><a class="footer__cLink" href="mailto:info@bauarenda.by"></a>
+            </p>
+            <p class="footer__text">Режим работы: пн-вс с 8.00 до 23.00</p>
+          </div>
+          <ul class="footer__nav">
+            <li><a class="footer__link ft_link" href="#">О компании</a></li>
+            <li><a class="footer__link ft_link" href="#">Цены</a></li>
+            <li><a class="footer__link ft_link" href="#">Акции</a></li>
+            <li><a class="footer__link ft_link" href="#">Аренда техники</a></li>
+            <li><a class="footer__link ft_link" href="#">Услуги</a></li>
+            <li><a class="footer__link ft_link" href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer__other">
+            <li><a class="footer__el ft_link" href="#">Политика конфиденциальности</a></li>
+            <li><a class="footer__el ft_link" href="#">Карта сайта</a></li>
+          </ul>
+          <div class="footer__social">
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15ZM22.9485 11.7225C22.9395 11.0507 22.8135 10.3855 22.5762 9.75685C22.3704 9.22655 22.056 8.74494 21.6532 8.34279C21.2504 7.94065 20.768 7.62681 20.2368 7.42133C19.6151 7.18836 18.9584 7.06239 18.2945 7.04879C17.4398 7.01064 17.1688 7 14.9991 7C12.8294 7 12.5513 7 11.7028 7.04879C11.0392 7.06249 10.3828 7.18846 9.76144 7.42133C9.23017 7.62667 8.74769 7.94045 8.34485 8.34262C7.94202 8.74478 7.62771 9.22646 7.42203 9.75685C7.18821 10.377 7.0623 11.0325 7.04976 11.695C7.01155 12.5492 7 12.8197 7 14.9858C7 17.1519 7 17.4287 7.04976 18.2766C7.06308 18.9401 7.18836 19.5947 7.42203 20.2165C7.62806 20.7468 7.9426 21.2283 8.34557 21.6302C8.74854 22.0322 9.23106 22.3459 9.76233 22.5512C10.382 22.7935 11.0385 22.9285 11.7037 22.9503C12.5593 22.9885 12.8303 23 15 23C17.1697 23 17.4478 23 18.2963 22.9503C18.9602 22.9373 19.6169 22.8116 20.2386 22.5787C20.7696 22.373 21.2519 22.059 21.6547 21.6569C22.0575 21.2548 22.3719 20.7733 22.578 20.2432C22.8116 19.6222 22.9369 18.9676 22.9502 18.3032C22.9884 17.4499 23 17.1794 23 15.0124L23 14.9826V14.9823C22.9982 12.8438 22.998 12.5674 22.9485 11.7225ZM14.9938 19.0821C12.7246 19.0821 10.8863 17.2468 10.8863 14.9814C10.8863 12.7159 12.7246 10.8807 14.9938 10.8807C16.0832 10.8807 17.1279 11.3127 17.8982 12.0818C18.6685 12.8508 19.1013 13.8938 19.1013 14.9814C19.1013 16.0689 18.6685 17.112 17.8982 17.881C17.1279 18.65 16.0832 19.0821 14.9938 19.0821ZM19.2648 11.6852C18.7343 11.6852 18.307 11.2577 18.307 10.729C18.307 10.6035 18.3317 10.4792 18.3798 10.3633C18.428 10.2473 18.4985 10.1419 18.5874 10.0532C18.6763 9.96444 18.7818 9.89404 18.898 9.84601C19.0141 9.79798 19.1386 9.77326 19.2643 9.77326C19.39 9.77326 19.5145 9.79798 19.6307 9.84601C19.7468 9.89404 19.8524 9.96444 19.9413 10.0532C20.0302 10.1419 20.1007 10.2473 20.1488 10.3633C20.1969 10.4792 20.2217 10.6035 20.2217 10.729C20.2217 11.2577 19.7934 11.6852 19.2648 11.6852ZM17.997 14.979C17.997 16.6375 16.6525 17.982 14.994 17.982C13.3355 17.982 11.991 16.6375 11.991 14.979C11.991 13.3205 13.3355 11.976 14.994 11.976C16.6525 11.976 17.997 13.3205 17.997 14.979Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM19.5782 17.9621C18.7471 18.4837 17.8342 18.8619 16.8777 19.0809L19.477 21.6786C19.722 21.9322 19.8589 22.271 19.8589 22.6236C19.8589 22.9762 19.722 23.315 19.477 23.5686C18.955 24.1103 18.0938 24.1221 17.5516 23.604L15.0001 21.0486L12.4334 23.6006C12.1757 23.8667 11.8276 23.9989 11.4788 23.9989C11.1301 23.9989 10.7813 23.8667 10.5231 23.6006L10.5001 23.5776C10.251 23.3225 10.1132 22.979 10.117 22.6225C10.1208 22.266 10.2659 21.9255 10.5203 21.6758L13.1191 19.0776C12.164 18.8602 11.2526 18.4827 10.4236 17.961L10.4213 17.9582C10.2701 17.8632 10.1391 17.7393 10.0358 17.5936C9.93255 17.4479 9.85907 17.2832 9.81956 17.109C9.78006 16.9349 9.77531 16.7546 9.8056 16.5786C9.83588 16.4026 9.90061 16.2343 9.99605 16.0834V16.0806C10.1892 15.7766 10.495 15.5616 10.8464 15.4826C11.1978 15.4037 11.5662 15.4672 11.8709 15.6593C12.8093 16.2451 13.8934 16.5557 14.9998 16.5557C16.1061 16.5557 17.1902 16.2451 18.1287 15.6593C18.4337 15.4806 18.7963 15.4276 19.1397 15.5114C19.4831 15.5953 19.7804 15.8095 19.9687 16.1087C20.1571 16.4078 20.2216 16.7685 20.1487 17.1145C20.0758 17.4604 19.8713 17.7644 19.5782 17.9621ZM18.2833 13.9294C17.4122 14.8001 16.2311 15.2895 14.9995 15.2903V15.2931C13.7676 15.2916 12.5866 14.8015 11.7155 13.9304C10.8445 13.0592 10.3546 11.8782 10.3532 10.6462C10.3532 8.08575 12.439 6 14.9995 6C17.56 6 19.6457 8.08575 19.6457 10.6462C19.6444 11.8779 19.1544 13.0587 18.2833 13.9294ZM16.3579 9.28787C15.9976 8.92759 15.509 8.72505 14.9995 8.72475V8.72194C14.4897 8.72372 14.0013 8.92703 13.6408 9.28752C13.2803 9.64801 13.077 10.1364 13.0752 10.6462C13.0762 11.1564 13.2793 11.6454 13.6399 12.0062C14.0005 12.367 14.4893 12.5703 14.9995 12.5717C15.5094 12.5705 15.9981 12.3671 16.3583 12.0062C16.7185 11.6452 16.9208 11.1562 16.921 10.6462C16.9207 10.1367 16.7182 9.64816 16.3579 9.28787Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM14.8937 10.0515C15.0708 10.0636 15.2213 10.0739 15.3328 10.0769C16.5746 10.111 16.7939 10.7099 16.778 11.2025C16.7738 11.3314 16.7549 11.5348 16.7317 11.7836C16.6251 12.9268 16.4292 15.0289 17.17 15.2733C18.3517 14.6708 19.1834 12.9272 19.8057 11.6227C19.8755 11.4764 19.9426 11.3356 20.0074 11.2025C20.0341 11.1475 20.0583 11.0968 20.0807 11.0501C20.329 10.53 20.3424 10.502 21.0288 10.5012L24.0009 10.4969C24.4562 10.4963 24.6106 10.4864 24.7216 10.551C24.7852 10.588 24.8346 10.6494 24.918 10.7508C25.4513 11.3992 23.2352 14.0962 22.5194 14.8419C21.2628 16.1511 21.8992 16.6971 22.1473 16.9099C22.16 16.9208 22.1716 16.9308 22.182 16.94C23.1677 17.8165 24.1202 18.7253 24.7122 19.5635C25.1828 20.2298 24.9885 20.8503 24.3899 20.8738L21.2029 20.9993C20.1453 21.0408 18.5008 19.2329 18.2383 18.8391C18.0261 18.5142 17.003 18.107 16.9066 18.9372L16.7719 20.0959C16.6789 20.8833 16.0947 20.9047 15.6024 20.9227C15.5768 20.9237 15.5515 20.9246 15.5265 20.9256C12.0231 21.0694 10.8285 19.7983 9.06501 17.9219L9.06169 17.9183C7.76784 16.1735 6.53313 14.4186 5.50999 12.3165C5.20374 11.6872 5.04153 11.2256 5 10.7363C5.38339 10.4506 6.48349 10.4693 7.52128 10.487C7.87698 10.493 8.22537 10.499 8.53507 10.4925C8.86691 10.4855 9.09082 10.6668 9.26599 11.0278C9.94949 12.4368 10.6949 13.8204 11.6812 15.0438C12.1108 15.4211 12.4905 15.5598 12.68 14.7927C12.7772 14.7842 12.7816 13.7926 12.7857 12.9009C12.7862 12.7829 12.7867 12.6666 12.7874 12.5546C12.7917 11.8966 12.7107 11.1076 11.542 10.7435C11.7784 10.1527 12.7066 10.0094 13.6092 10.0005C14.0775 9.99583 14.5389 10.0273 14.8937 10.0515Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM16.2806 15.7343V23.2473H13.2446V15.7288H10.721V12.7872H13.2391V10.6284C13.2391 8.11767 14.7772 6.75001 17.0176 6.75001C17.773 6.74707 18.5279 6.78593 19.279 6.86642V9.48901H17.7353C16.5171 9.48901 16.2806 10.0702 16.2806 10.919V12.7927H19.1919L18.8152 15.7343H16.2806Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM23.2017 9.57807C23.4851 9.86209 23.6891 10.2154 23.7936 10.6027C24.185 12.0382 24.1666 15.0312 24.1666 15.0312C24.1666 15.0312 24.1639 18.0076 23.7844 19.4422C23.6784 19.8292 23.4732 20.1819 23.1892 20.4653C22.9051 20.7488 22.5519 20.9531 22.1646 21.0582C20.7291 21.4341 14.9862 21.4277 14.9862 21.4277C14.9862 21.4277 9.25889 21.4212 7.80872 21.0271C7.02222 20.8153 6.40347 20.1947 6.19264 19.4092C5.81681 17.9883 5.82047 14.9963 5.82047 14.9963C5.82047 14.9963 5.82414 12.019 6.20272 10.5835C6.31023 10.1959 6.51559 9.84237 6.79907 9.55696C7.08256 9.27154 7.43465 9.0638 7.82156 8.95367C9.25797 8.57692 15 8.58333 15 8.58333C15 8.58333 20.7429 8.58975 22.1784 8.98392C22.5655 9.0892 22.9184 9.29405 23.2017 9.57807ZM13.1676 12.2546L13.163 17.7546L17.9406 15.0092L13.1676 12.2546Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM20.9785 10.7798C21.6072 10.7044 22.2052 10.5378 22.7618 10.2911L22.7605 10.2931C22.3438 10.9163 21.8194 11.4604 21.2118 11.8998C21.2178 12.0331 21.2212 12.1678 21.2212 12.3011C21.2212 16.4051 18.0978 21.1371 12.3845 21.1371C10.6967 21.139 9.04415 20.6545 7.6245 19.7418C7.87055 19.7707 8.11809 19.7852 8.36583 19.7851C9.76443 19.7871 11.1231 19.3187 12.2232 18.4551C11.5751 18.4432 10.947 18.229 10.4267 17.8424C9.9065 17.4558 9.52016 16.9162 9.32183 16.2991C9.78739 16.3878 10.267 16.3696 10.7245 16.2458C10.0215 16.1037 9.38939 15.7228 8.93529 15.1677C8.48119 14.6127 8.23312 13.9176 8.23317 13.2004V13.1604C8.66442 13.4001 9.14668 13.5334 9.63983 13.5491C9.21461 13.2651 8.86605 12.8806 8.62509 12.4296C8.38412 11.9786 8.2582 11.4751 8.2585 10.9638C8.2585 10.3958 8.41183 9.86242 8.6785 9.40242C9.45839 10.3619 10.4313 11.1466 11.5341 11.7057C12.6369 12.2648 13.845 12.5857 15.0798 12.6478C14.9235 11.9816 14.9915 11.2824 15.2733 10.6589C15.555 10.0353 16.0348 9.52223 16.638 9.19925C17.2412 8.87628 17.9342 8.7615 18.6094 8.87274C19.2845 8.98397 19.9041 9.315 20.3718 9.81442C21.0674 9.67788 21.7344 9.42308 22.3438 9.06109C22.1125 9.78073 21.6272 10.3916 20.9785 10.7798Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM11.4051 11.554V20.9998H8.18972V11.554H11.4051ZM11.6171 8.63181C11.6171 9.53822 10.9191 10.2635 9.79785 10.2635H9.79775H9.77686C8.69778 10.2635 8.00002 9.53826 8.00002 8.63181C8.00002 7.70496 8.71926 6.99976 9.81913 6.99976C10.9192 6.99976 11.5962 7.70495 11.6171 8.63181ZM16.4003 20.9998H13.1849L13.1849 20.9996C13.1849 20.9996 13.2271 12.4401 13.1849 11.5538H16.4004V12.8912C16.8277 12.2476 17.5925 11.3322 19.2982 11.3322C21.4137 11.3322 23 12.6822 23 15.5836V20.9997H19.7848V15.9464C19.7848 14.6766 19.3194 13.8104 18.1558 13.8104C17.2676 13.8104 16.7385 14.3946 16.5061 14.9586C16.4212 15.1605 16.4003 15.4425 16.4003 15.7248V20.9998Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+            <div class="footer__item"><a href="#"></a>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0ZM10.9942 24C12.7051 22.7589 13.282 20.3829 13.7554 17.9043C13.9695 18.0345 14.1588 18.166 14.3392 18.2914C14.8825 18.6689 15.3464 18.9912 16.1692 19.0554C20.2129 19.3686 22.471 15.0198 21.9193 11.0049C21.4288 7.44902 17.8801 5.63642 14.0992 6.06032C11.1094 6.39602 8.1295 8.81432 8.0053 12.2703C7.9279 14.3817 8.5273 15.9657 10.5352 16.4103C11.106 15.4016 10.8073 14.9093 10.4836 14.3756C10.3137 14.0955 10.1369 13.804 10.0753 13.4205C9.3373 8.86202 15.3322 5.75252 18.4687 8.93672C20.6404 11.1408 19.2112 17.9187 15.7093 17.2158C13.9619 16.8641 14.4816 15.2304 15.0013 13.5965C15.4789 12.0948 15.9566 10.5929 14.6743 10.086C12.499 9.22472 11.3425 12.7185 12.3748 14.4555C12.2154 15.2416 12.0076 16.0156 11.7977 16.7978C11.2103 18.9871 10.6056 21.2402 10.9942 24Z" fill="#FFCB09"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__company">© 2015-2021 БауАренда - аренда строительной техники (УНП 192485248)</p>
+          <div class="footer__dev"><a href="#">Разработка и продвижение сайта - Digital агенство «Веб Фокус»</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
