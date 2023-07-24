@@ -100,7 +100,7 @@ block page
                         p.backlink__text Задайте их нам удобным для Вас способом.
                         .backlink__nav
                             //- TODO: set correct username to telegram
-                            .backlink__item: a(href="tg://resolve?domain=<USERNAME>")
+                            .backlink__item: a(href="tg://resolve?domain=")
                                 include ./blocks/_icon_telegram
                             .backlink__item: a(href="viber://chat?number=%2B375291622365" target="_blank")
                                 include ./blocks/_icon_viber
@@ -119,10 +119,10 @@ block page
                             input.book__submit.btn__link.btn__yellow(type="submit" value="Отправить" name="submit")
 
 
-    section.video 
+    .video 
         .container
             .video__block(data-video="https://youtu.be/4xUZemOV4yc")
-                img(src="" alt="видео-превью")
+                img(src="./images/catalog/video-bg.png" alt="видео-превью")
                 button.video-play.btn-reset
                     svg(width="68" height="48" viewBox="0 0 68 48")
                         path(class="video-play-shape"
