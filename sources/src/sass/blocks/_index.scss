@@ -1425,6 +1425,7 @@
   transition: opacity 0.2s ease-in-out;
   visibility: hidden;
   opacity: 0;
+  cursor: pointer;
 
   &.active {
     visibility: visible;
@@ -1435,6 +1436,7 @@
 .reviews__fullscreen-wrapper {
   position: relative;
   height: 90vh;
+  cursor: default;
 }
 
 .reviews__fullscreen-img {

@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   initHeader();
   initHeaderSearch();
-  initToggleFeedbackField();
+  const fixedShowField = document.querySelector(".fixed__showField");
+  if (fixedShowField) {
+    initToggleFeedbackField(fixedShowField);
+  }
   initAnimationShowByScroll();
 
   // init index page
@@ -135,6 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsSlider();
     initReviewsFullScreen();
     initForms();
+    const showFixedFeedbackButton = document.querySelector(".rental__button");
+    if (showFixedFeedbackButton) {
+      initToggleFeedbackField(showFixedFeedbackButton);
+    }
   }
 
   // init catalog-item page
@@ -149,6 +156,10 @@ document.addEventListener("DOMContentLoaded", function () {
     initDetailsTabs();
     initBookFormValidation();
     initYoutubeVideo();
+    const showFixedFeedbackButton = document.querySelector(".rental__button");
+    if (showFixedFeedbackButton) {
+      initToggleFeedbackField(showFixedFeedbackButton);
+    }
   }
 
   // init prices page
@@ -177,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const news_item_title = document.querySelector(".news-item__title");
     initToTopButton(news_item_title);
     initForms();
+    initSmothScroll();
   }
 
   // init rental page
@@ -189,6 +201,10 @@ document.addEventListener("DOMContentLoaded", function () {
     initForms();
     initQAaccordion();
     initYoutubeVideo();
+    const showFixedFeedbackButton = document.querySelector(".rental__button");
+    if (showFixedFeedbackButton) {
+      initToggleFeedbackField(showFixedFeedbackButton);
+    }
   }
 
   // init services-list page
@@ -199,6 +215,10 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsSlider();
     initReviewsFullScreen();
     initForms();
+    const showFixedFeedbackButton = document.querySelector(".rental__button");
+    if (showFixedFeedbackButton) {
+      initToggleFeedbackField(showFixedFeedbackButton);
+    }
   }
 
   // init services-item page
@@ -210,6 +230,10 @@ document.addEventListener("DOMContentLoaded", function () {
     initReviewsFullScreen();
     initForms();
     initQAaccordion();
+    const showFixedFeedbackButton = document.querySelector(".rental__button");
+    if (showFixedFeedbackButton) {
+      initToggleFeedbackField(showFixedFeedbackButton);
+    }
   }
 });
 
@@ -438,26 +462,29 @@ function initToTopButton(first_block) {
 }
 
 // INIT TOGGLE FEEDBACK FIELD
-function initToggleFeedbackField() {
+function initToggleFeedbackField(showFixedButton) {
   // show / hide feedback field
 
   const body = document.querySelector("body");
-  const fixedShowField = document.querySelector(".fixed__showField");
   const fixedFeedback = document.querySelector(".fixed__feedback");
   const fixedBG = document.querySelector(".fixed__bg");
   const fixedClose = document.querySelector(".fixed__close");
 
-  fixedShowField.addEventListener("click", () => {
+  showFixedButton.addEventListener("click", () => {
     body.classList.add("lock");
     fixedFeedback.classList.add("active");
     fixedBG.classList.add("active");
   });
 
-  fixedClose.addEventListener("click", () => {
+  [fixedClose, fixedBG].forEach((el) =>
+    el.addEventListener("click", closeFeedbackHandler)
+  );
+
+  function closeFeedbackHandler() {
     body.classList.remove("lock");
     fixedFeedback.classList.remove("active");
     fixedBG.classList.remove("active");
-  });
+  }
 }
 
 // INIT ANIMATION BY SCROLL
@@ -844,4 +871,28 @@ function initBookFormValidation() {
   input_container.children[1].addEventListener("input", () => {
     input_container.classList.remove("error");
   });
+}
+
+function initSmothScroll() {
+  const news_links = Array.from(
+    document.querySelectorAll(".news-item__list li a")
+  );
+  const news_blocks = Array.from(
+    document.querySelectorAll(".news-item__block")
+  );
+
+  news_links.forEach((link) => link.addEventListener("click", handleNewsLinks));
+
+  function handleNewsLinks(e) {
+    e.preventDefault();
+    const index = news_links.indexOf(e.target);
+    const scrollTarget = news_blocks[index];
+
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+    window.scrollBy({
+      top: elementPosition,
+      behavior: "smooth",
+    });
+  }
 }

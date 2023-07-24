@@ -68,7 +68,7 @@ block page
                             span.specs__name Стоимость за час (без НДС):
                             span.specs__value 70 бел.руб
 
-                    button.specs__button.btn__link.btn__yellow Арендовать
+                    button.specs__button.btn__link.btn__yellow.rental__button Арендовать
 
             .details__block.details__block--second
 
@@ -237,6 +237,6 @@ block page
                     +catalog_card()
                     - catalogCounter += 1;
 
-            a.catalog__more.btn__link.btn__grey(href="#") Все бульдозеры
+            a.catalog__more.btn__link.btn__grey(href="./catalog.html") Все бульдозеры
 
     include ./blocks/_fixed_block
