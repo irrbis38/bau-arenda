@@ -201,8 +201,7 @@
 /*===== technics styles =====*/
 
 .technics {
-  padding-top: $block_padding;
-  padding-bottom: $block_padding;
+  margin: 150px 0;
 }
 
 .technics__title {
@@ -279,8 +278,8 @@
 /*===== about styles =====*/
 
 .about {
-  padding-top: $block_padding;
-  padding-bottom: $block_padding;
+  margin: 150px 0;
+  padding: 150px 0;
   background: #f5f7fb url("./../images/about/about-bg.png") top right no-repeat;
 }
 
@@ -487,8 +486,7 @@
 /*===== services styles =====*/
 
 .services {
-  padding-top: $block_padding;
-  padding-bottom: $block_padding;
+  margin: 150px 0;
 }
 
 .services__title {
@@ -703,7 +701,7 @@
 /*===== news styles =====*/
 
 .news {
-  padding-bottom: $block_padding;
+  margin: 150px 0;
 }
 
 .news__title {
@@ -837,8 +835,8 @@
 /*===== brands styles =====*/
 
 .brands {
-  padding-top: $block_padding;
-  padding-bottom: $block_padding;
+  margin: 150px 0;
+  padding: 150px 0;
   background-color: #f5f7fb;
 }
 
@@ -930,8 +928,7 @@
 /*===== need styles =====*/
 
 .need {
-  padding-top: $block_padding;
-  padding-bottom: $block_padding;
+  margin: 150px 0;
 }
 
 .need__title {
@@ -981,6 +978,7 @@
 /*===== causes styles =====*/
 
 .causes {
+  margin: 150px 0;
   padding-top: $block_padding;
   padding-bottom: $block_padding;
   background: url("./../images/causes/causes-bg.jpg");
@@ -1035,8 +1033,7 @@
 /*===== reasons styles =====*/
 
 .reasons {
-  padding-top: $block_padding;
-  padding-bottom: 134px;
+  margin: 150px 0 134px;
 }
 
 .reasons__title {
@@ -1121,7 +1118,7 @@
 /*===== machines styles =====*/
 
 .machines {
-  padding-bottom: $block_padding;
+  margin: 150px 0;
 }
 
 .machines__title {
@@ -1237,7 +1234,7 @@
 /*===== reviews styles =====*/
 
 .reviews {
-  padding-bottom: 120px;
+  margin: 150px 0;
 }
 
 .reviews__title {
@@ -1561,7 +1558,7 @@ form {
   }
 
   .technics {
-    padding: $block_padding_small 0;
+    margin: 100px 0;
   }
 
   .technics__wrapper {
@@ -1587,8 +1584,8 @@ form {
   }
 
   .about {
-    padding-top: $block_padding_small;
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
+    padding: 100px 0;
   }
 
   .about__title {
@@ -1630,8 +1627,7 @@ form {
   }
 
   .services {
-    padding-top: $block_padding_small;
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
   }
 
   .services__title {
@@ -1690,7 +1686,7 @@ form {
   }
 
   .news {
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
   }
 
   .news__wrapper {
@@ -1698,8 +1694,8 @@ form {
   }
 
   .brands {
-    padding-top: $block_padding_small;
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
+    padding: 100px 0;
   }
 
   .brands__title {
@@ -1712,8 +1708,7 @@ form {
   }
 
   .need {
-    padding-top: $block_padding_small;
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
   }
 
   .need__title {
@@ -1746,6 +1741,7 @@ form {
   }
 
   .causes {
+    margin: 100px 0;
     padding-top: $block_padding_small;
     padding-bottom: $block_padding_small;
   }
@@ -1777,8 +1773,7 @@ form {
   }
 
   .reasons {
-    padding-top: $block_padding_small;
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
   }
 
   .reasons__title {
@@ -1803,7 +1798,7 @@ form {
   }
 
   .machines {
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
   }
 
   .machines__title {
@@ -1838,7 +1833,7 @@ form {
   }
 
   .reviews {
-    padding-bottom: $block_padding_small;
+    margin: 100px 0;
   }
 
   .reviews__nav {
@@ -1907,7 +1902,7 @@ form {
   }
 
   .technics {
-    padding-top: 470px;
+    margin-top: 470px;
   }
 
   .technics__wrapper {
@@ -2213,8 +2208,8 @@ form {
   }
 
   .technics {
-    padding-top: 532px;
-    padding-bottom: 60px;
+    margin-top: 532px;
+    margin-bottom: 60px;
   }
 
   .technics__title {
@@ -2262,8 +2257,8 @@ form {
   }
 
   .about {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    margin: 60px 0;
+    padding: 60px 0;
   }
 
   .about__title {
@@ -2361,7 +2356,7 @@ form {
   }
 
   .services {
-    padding: 60px 0;
+    margin: 60px 0;
   }
 
   .services__title {
@@ -2435,7 +2430,7 @@ form {
   }
 
   .news {
-    padding-bottom: 60px;
+    margin: 60px 0;
   }
 
   .news__title {
@@ -2470,6 +2465,7 @@ form {
   }
 
   .brands {
+    margin: 60px 0;
     padding: 60px 0;
   }
 
@@ -2483,7 +2479,7 @@ form {
   }
 
   .need {
-    padding: 60px 0;
+    margin: 60px 0;
   }
 
   .need__title {
@@ -2517,6 +2513,7 @@ form {
   }
 
   .causes {
+    margin: 60px 0;
     padding: 60px 0;
   }
 
@@ -2540,7 +2537,7 @@ form {
   }
 
   .reasons {
-    padding: 60px 0;
+    margin: 60px 0;
   }
 
   .reasons__title {
@@ -2574,7 +2571,7 @@ form {
   }
 
   .machines {
-    padding-bottom: 60px;
+    margin: 60px 0;
   }
 
   .machines__title {
@@ -2611,7 +2608,7 @@ form {
   }
 
   .reviews {
-    padding-bottom: 60px;
+    margin: 60px 0;
   }
 
   .reviews__title {
@@ -2688,7 +2685,7 @@ form {
   }
 
   .technics {
-    padding-top: 622px;
+    margin-top: 622px;
   }
 
   .about__second {
