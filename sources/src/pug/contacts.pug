@@ -18,6 +18,9 @@ block page
                 .first__img
                     +picture('first/first-contacts', 'png', 'x2')
 
+    div(class="template__link" style="display: none;")
+        <?php echo bloginfo('template_url'); ?>/assets/images
+
     section.contacts
         .container
             h2.contacts__title.block__title Компания «БауАренда» – на связи круглые сутки

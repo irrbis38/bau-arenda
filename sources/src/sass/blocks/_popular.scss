@@ -27,7 +27,7 @@
   @include md {
     grid-template-columns: repeat(3, 1fr);
 
-    .card:last-child {
+    .card:nth-child(4) {
       display: none;
     }
   }

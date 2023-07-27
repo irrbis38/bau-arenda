@@ -693,6 +693,9 @@ function initQAaccordion() {
 // INIT MAP ON CONTACTS PAGE
 
 function initMap() {
+  const mark_link =
+    document.querySelector(".template__link").textContent +
+    "/contacts/mark.svg";
   function init() {
     let center = [53.94869157061366, 27.61157049999995];
     let map = new ymaps.Map("contactsMap", {
@@ -705,7 +708,7 @@ function initMap() {
       {},
       {
         iconLayout: "default#image",
-        iconImageHref: "./../images/contacts/mark.svg",
+        iconImageHref: mark_link,
         iconImageSize: [24, 32],
         iconImageOffset: [-5, -30],
       }
